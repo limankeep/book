@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-09 00:48:15
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-10 16:24:34
          compiled from "../Apps/Admin/View\Borrow\borrowlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:2958958e910a40e60b3-37681576%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef198a45a6a515f2f35457f61ce8575576018763' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\borrowlist.html',
-      1 => 1491670093,
+      1 => 1491812672,
       2 => 'file',
     ),
   ),
@@ -102,18 +102,19 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?>
 	     <tr>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['bwid'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['borrow_id'];?>
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
 </td>
-            <td>历史</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
+</td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['reader_name'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uid'];?>
 </td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['createtime'];?>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
 </td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['finishtime'];?>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['finish_time'];?>
 </td>
             <td>
                 <a href="edit.html">编辑</a>                

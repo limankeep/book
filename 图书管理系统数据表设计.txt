@@ -1,0 +1,102 @@
+三个角色：
+超级管理员：可以创建图书管理员
+图书管理员：只能创建读者
+读者：不能自行注册
+ 
+user表  登录的时候校验  uname  password
+uid   int  8
+uname  用户名  varchar 50
+password   varchar 100
+type   1、超级管理员  2、图书管理员  3、普通用户  tinyint 2
+now_time  登录当前时间 datetime 
+last_time     上次登录时间  datetime
+  每次登录更新nowtime     退出将nowtime值赋给lasttime
+500230199409180771
+
+
+读者：
+
+查询主要根据 reader_id reader_name
+reader_id  读者编号  int 8
+uid   用户id     varchar 50  关联user表  每次先注册user  再来编辑读者信息
+password  用户密码    varchar 50
+reader_name：用户名 	varchar 50   
+reader_img  读者头像地址  varchar 512
+sex 性别  tinyint 2
+reader_address 联系地址 varchar  255
+reader_IDcard  身份证号 int 18
+total_amount 可借的书的数量 tinyint 2
+now_amount  当前借的书的数量 tinyint 2
+reader_email 邮箱   varchar 255
+create_time 创建日期 datetime
+
+
+
+书：
+
+可以 按编号 类型 名称  入库时间查询
+book_id  书籍编号  int 12
+book_type 类型 分类  varchar 20
+book_name 名称   varchar 50
+status  状态 是否上架  tinyint 2
+book_img   图书封面图片地址  varcahr 255
+price 价格  double 10
+press 出版社 varchar 30
+create_time 入库日期 datetime
+book_detail  书籍详细信息  varchar 500   不超过两百字
+author  作者  varchar 20
+total_amount   入库数目  tinyint 3
+borrow_amount  借出数目  tinyint 3
+now_amount     当前数目  tinyint 3
+
+借阅表   按书的编号 名称 和读者的读者编号 查询    
+borrow_id  借阅编号 int 12
+status  状态  是否归还  0 没有   1  归还 tinyint 2
+book_id  被借的书编号   int 12
+book_name 被借的书的名字  varchar  50
+reader_id  读者的id  int 8 
+uname   读者的姓名varchar  50   
+create_time  借出时间 datetime 
+now_time     持续时间 datetime
+finish_time  归还时间 datetime
+
+
+
+图书分类
+booktype_id   类别编号 int 8 
+booktype_name  类别名  varchar 50
+booktype_detail  类别描述 varchar 255
+
+
+公告
+announcement_id    int 4
+content  内容      varchar 512
+author   公告人    varchar 20
+create_time  创建时间  datetime
+
+前台图片
+img_id  int 4
+img_name     名称  varchar 20
+img_address  图片路径  varchar 512
+
+
+bookrecommend  书籍推荐
+recommend_id  int 9
+book_id  书籍编号 int 12
+book_name 书籍名称 varchar 50
+reason  推荐理由   varchar 255
+recommend_score    推荐指数  满分100  按分数排行 tinyint 3
+
+
+
+文章表
+
+article_id 文章编号  int  12
+uid  作者id  int 8
+title 标题   varchar 100
+author 作者  varchar 20
+create_time 创建时间  datetime 
+推荐指数
+
+
+留言板

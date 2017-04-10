@@ -62,13 +62,13 @@
     </thead>
 	{foreach $info as $k => $v}
 	     <tr>
-            <td>{$v.bwid}</td>
+            <td>{$v.borrow_id}</td>
             <td>{$v.book_name}</td>
-            <td>历史</td>
+            <td>{$v.book_type}</td>
             <td>{$v.reader_name}</td>
 			<td>{$v.uid}</td>
-			<td>{$v.createtime}</td>
-			<td>{$v.finishtime}</td>
+			<td>{$v.create_time}</td>
+			<td>{$v.finish_time}</td>
             <td>
                 <a href="edit.html">编辑</a>                
             </td>
