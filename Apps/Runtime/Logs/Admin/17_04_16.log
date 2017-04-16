@@ -1,0 +1,51 @@
+[ 2017-04-16T21:01:59+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-04-16T21:06:21+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist%3E%E8%BF%94%E5%9B%9E%E5%88%97%E8%A1%A8%3C/a%3E%20%20%20%20%20%20%20%20%3C/td%3E%20%20%20%20%3C/tr%3E%3C/table%3E%3C/form%3E%3C!--%20%E5%BC%B9%E5%87%BA%E6%A1%86%E6%8F%90%E7%A4%BA%20--%3E%3C!--%20Button%20to%20trigger%20modal%20--%3E%3C!--a%20href=
+ERR: 非法操作:borrowlist>返回列表
+
+[ 2017-04-16T21:06:25+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist%3E%E8%BF%94%E5%9B%9E%E5%88%97%E8%A1%A8%3C/a%3E%20%20%20%20%20%20%20%20%3C/td%3E%20%20%20%20%3C/tr%3E%3C/table%3E%3C/form%3E%3C!--%20%E5%BC%B9%E5%87%BA%E6%A1%86%E6%8F%90%E7%A4%BA%20--%3E%3C!--%20Button%20to%20trigger%20modal%20--%3E%3C!--a%20href=
+ERR: 非法操作:borrowlist>返回列表
+
+[ 2017-04-16T21:07:20+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist%3E%E8%BF%94%E5%9B%9E%E5%88%97%E8%A1%A8%3C/a%3E%20%20%20%20%20%20%20%20%3C/td%3E%20%20%20%20%3C/tr%3E%3C/table%3E%3C/form%3E%3C!--%20%E5%BC%B9%E5%87%BA%E6%A1%86%E6%8F%90%E7%A4%BA%20--%3E%3C!--%20Button%20to%20trigger%20modal%20--%3E%3C!--a%20href=
+ERR: 非法操作:borrowlist>返回列表
+
+[ 2017-04-16T21:07:42+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist%3E%E8%BF%94%E5%9B%9E%E5%88%97%E8%A1%A8%3C/a%3E%20%20%20%20%20%20%20%20%3C/td%3E%20%20%20%20%3C/tr%3E%3C/table%3E%3C/form%3E%3C!--%20%E5%BC%B9%E5%87%BA%E6%A1%86%E6%8F%90%E7%A4%BA%20--%3E%3C!--%20Button%20to%20trigger%20modal%20--%3E%3C!--a%20href=
+ERR: 非法操作:borrowlist>返回列表
+
+[ 2017-04-16T21:07:58+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist%3E%E8%BF%94%E5%9B%9E%E5%88%97%E8%A1%A8%3C/a%3E%20%20%20%20%20%20%20%20%3C/td%3E%20%20%20%20%3C/tr%3E%3C/table%3E%3C/form%3E%3C!--%20%E5%BC%B9%E5%87%BA%E6%A1%86%E6%8F%90%E7%A4%BA%20--%3E%3C!--%20Button%20to%20trigger%20modal%20--%3E%3C!--a%20href=
+ERR: 非法操作:borrowlist>返回列表
+
+[ 2017-04-16T21:09:07+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-04-16T21:39:34+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-04-16T22:07:08+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\addborrow.html"  on line 40 "&lt;form action=&quot;{$smarty.const__URL__/Borrow/addborrow}&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot; enctype=&quot;multipart/form-data&quot;&gt;" $smarty.const__URL__ is invalid
+
+[ 2017-04-16T22:22:44+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-04-16T22:27:31+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\addborrow.html"  on line 40 "&lt;form action=&quot;{:U('Borrow/addborrow')}&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot; enctype=&quot;multipart/form-data&quot;&gt;"  - Unexpected ":"
+
+[ 2017-04-16T22:46:00+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: unable to write file ../Apps/Runtime/Cache\672dac25eb7beff8d6cdaf46a20b362deaecc7d8.file.booklist.html.php
+
+[ 2017-04-16T22:57:47+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 60 "&lt;td&gt;{v.$info.book_id}&lt;/td&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2017-04-16T22:59:04+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 60 "&lt;td&gt;{v.$info.book_id}&lt;/td&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2017-04-16T23:00:53+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 60 "&lt;td&gt;{v.$info.book_id}&lt;/td&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2017-04-16T23:00:56+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 60 "&lt;td&gt;{v.$info.book_id}&lt;/td&gt;"  - Unexpected ".", expected one of: "}" , " "
+
+[ 2017-04-16T23:07:00+08:00 ] 127.0.0.1 /index.php/Admin/Book/addbook.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\addbook.html"  on line 39 "&lt;form action=&quot;{$smarty.const.__SELF__]&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot;&gt;"  - Unexpected "]", expected one of: "}" , " "
+

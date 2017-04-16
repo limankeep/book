@@ -3,14 +3,14 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/style.css" />
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/jquery.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/bootstrap.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/ckform.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
 
  
 
@@ -35,27 +35,29 @@
     </style>
 </head>
 <body>
-<form action="" method="get" class="definewidth m20">
+{*/book/index.php/Admin/Borrow/addborrow*}
+
+<form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20" enctype="multipart/form-data">
 <table class="table table-bordered table-hover definewidth m10">
     <tr>
         <td width="10%" class="tableleft">图书编号</td>
-        <td><input type="text" name="username"/></td>
+        <td><input type="text" name="book_name"/></td>
     </tr>
     <tr>
         <td class="tableleft">图书名</td>
-        <td><input type="password" name="password"/></td>
+        <td><input type="text" name="book_id"/></td>
     </tr>
     <tr>
         <td class="tableleft">读者id</td>
-        <td><input type="text" name="realname"/></td>
+        <td><input type="text" name="uid"/></td>
     </tr>
     <tr>
         <td class="tableleft">读者编号</td>
-        <td ><input type="text" name="email"/></td>
+        <td ><input type="text" name="reader_id"/></td>
     </tr>
     <tr>
         <td width="10%" class="tableleft">现在添加的一行东西</td>
-        <td><input type="text" name="username"/></td>
+        <td width="30%"><input type="text" name="username"/></td>
     </tr>
     <tr>
         <td class="tableleft">状态</td>
@@ -66,16 +68,20 @@
     </tr>
     <tr>
         <td class="tableleft">角色</td>
-        <td>{$role_checkbox}</td>
+        <td>>33</td>
     </tr>
     <tr>
         <td class="tableleft"></td>
         <td>
-            <a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button" id="tijiao">保存</a> &nbsp;&nbsp;<a type="button" class="btn btn-success" name="backid" id="backid">返回列表</a>
+            <a href="#myModal" data-toggle="modal" type="button" class="btn btn-primary"  id="tijiao">保存 </a>&nbsp;&nbsp;<a type="button" class="btn btn-success" name="backid" id="backid" href="{$smarty.const.__MODULE__}/Borrow/borrowlist">返回列表</a>
         </td>
     </tr>
+	<tr>
+        <td colspan="2" align="center">
+        <input type="submit" value="添加">
+        </td>
+    </tr>  
 </table>
-</form>
 <!-- 弹出框提示 -->
 <!-- Button to trigger modal -->
 <!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->
@@ -91,9 +97,16 @@
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button class="btn btn-info">确定</button>
+        <button type="submit" class="btn btn-info">确定</button>
     </div>
 </div>
+</form>
+<!-- 弹出框提示 -->
+<!-- Button to trigger modal -->
+<!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->
+ 
+<!-- Modal -->
+
 
 </body>
 </html>

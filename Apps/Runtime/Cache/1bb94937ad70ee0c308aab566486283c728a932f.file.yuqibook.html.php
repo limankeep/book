@@ -1,30 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 23:03:37
-         compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
-<?php /*%%SmartyHeaderCode:1544158f383ac582e80-80333574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 22:46:09
+         compiled from "../Apps/Admin/View\Book\yuqibook.html" */ ?>
+<?php /*%%SmartyHeaderCode:351158f383b17f9980-71952664%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
+    '1bb94937ad70ee0c308aab566486283c728a932f' => 
     array (
-      0 => '../Apps/Admin/View\\Book\\booklist.html',
-      1 => 1492355014,
+      0 => '../Apps/Admin/View\\Book\\yuqibook.html',
+      1 => 1492353956,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1544158f383ac582e80-80333574',
+  'nocache_hash' => '351158f383b17f9980-71952664',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58f383ac66408',
-  'variables' => 
-  array (
-    'info' => 0,
-    'v' => 0,
-  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58f383b190e05',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58f383ac66408')) {function content_58f383ac66408($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_58f383b190e05')) {function content_58f383b190e05($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -49,7 +44,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  
 
     <style type="text/css">
-	
         body {
             padding-bottom: 40px;
         }
@@ -66,7 +60,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             }
         }
 
-	
+
     </style>
 </head>
 <body>
@@ -80,45 +74,24 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <tr>
         <th>图书编号</th>
         <th>图书名称</th>
-		<th>作者</th>
         <th>图书分类</th>
         <th>出版社</th>
-		<th>价格</th>
         <th>入库总数</th>
 		<th>当前数目</th>
 		<th>操作</th>
     </tr>
     </thead>
-	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
-?>
 	     <tr>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
-</td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
-</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
-</td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
-</td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['press'];?>
-</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['price'];?>
-</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['total_amount'];?>
-</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['now_amount'];?>
-</td>
+            <td>2</td>
+            <td>php操作手册</td>
+            <td>计算机</td>
+            <td>中华出版社</td>
+			<td>10</td>
+			<td>5</td>
             <td>
-                <a href="edit.html" type="button" class="btn btn-primary">编辑</a>
-				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
+                <a href="edit.html">编辑</a>                
             </td>
-        </tr>
-	<?php } ?>
+        </tr>	
 </table>
 </body>
 </html>

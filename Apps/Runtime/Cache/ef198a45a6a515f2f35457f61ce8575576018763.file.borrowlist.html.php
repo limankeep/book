@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-10 16:24:34
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 21:09:30
          compiled from "../Apps/Admin/View\Borrow\borrowlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:2958958e910a40e60b3-37681576%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef198a45a6a515f2f35457f61ce8575576018763' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\borrowlist.html',
-      1 => 1491812672,
+      1 => 1492348167,
       2 => 'file',
     ),
   ),
@@ -79,7 +79,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp; 
      时间：
     <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增借阅</button>
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" >新增借阅</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
@@ -108,9 +108,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
 </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['reader_name'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
 </td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uid'];?>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
 </td>

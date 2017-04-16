@@ -3,18 +3,19 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/style.css" />
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/jquery.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/bootstrap.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/ckform.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
 
  
 
     <style type="text/css">
+	{literal}
         body {
             padding-bottom: 40px;
         }
@@ -31,7 +32,7 @@
             }
         }
 
-
+	{/literal}
     </style>
 </head>
 <body>
@@ -45,24 +46,31 @@
     <tr>
         <th>图书编号</th>
         <th>图书名称</th>
+		<th>作者</th>
         <th>图书分类</th>
         <th>出版社</th>
+		<th>价格</th>
         <th>入库总数</th>
 		<th>当前数目</th>
 		<th>操作</th>
     </tr>
     </thead>
+	{foreach $info as $k => $v}
 	     <tr>
-            <td>2</td>
-            <td>php操作手册</td>
-            <td>计算机</td>
-            <td>中华出版社</td>
-			<td>10</td>
-			<td>5</td>
+            <td>{$v.book_id}</td>
+            <td>{$v.book_name}</td>
+			<td>{$v.uname}</td>
+            <td>{$v.book_type}</td>
+            <td>{$v.press}</td>
+			<td>{$v.price}</td>
+			<td>{$v.total_amount}</td>
+			<td>{$v.now_amount}</td>
             <td>
-                <a href="edit.html">编辑</a>                
+                <a href="edit.html" type="button" class="btn btn-primary">编辑</a>
+				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
             </td>
-        </tr>	
+        </tr>
+	{/foreach}
 </table>
 </body>
 </html>

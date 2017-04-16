@@ -24,6 +24,7 @@ function show_bug($msg){
     var_dump($msg);
     echo "</pre>";
 }
+define("SITE_URL","www.tpbook.com");
 // 定义应用目录
 //define("SITE_URL","http://www.tpbook.com/");
 define('APP_PATH','../Apps/');

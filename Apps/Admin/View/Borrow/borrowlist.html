@@ -45,7 +45,7 @@
     <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp; 
      时间：
     <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增借阅</button>
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" >新增借阅</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
@@ -65,8 +65,8 @@
             <td>{$v.borrow_id}</td>
             <td>{$v.book_name}</td>
             <td>{$v.book_type}</td>
-            <td>{$v.reader_name}</td>
-			<td>{$v.uid}</td>
+            <td>{$v.uname}</td>
+			<td>{$v.reader_id}</td>
 			<td>{$v.create_time}</td>
 			<td>{$v.finish_time}</td>
             <td>

@@ -1,25 +1,29 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 22:43:31
-         compiled from "../Apps/Admin/View\Borrow\addborrow.html" */ ?>
-<?php /*%%SmartyHeaderCode:705358e91040a07435-60590796%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 23:07:50
+         compiled from "../Apps/Admin/View\Book\addbook.html" */ ?>
+<?php /*%%SmartyHeaderCode:714658f3837af14016-07368598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'd27b6269d2219b3e22e803fda49ab8636ba20aa5' => 
+    'f6735c0d3ff2b9bb8d37ee83842783c9ef381334' => 
     array (
-      0 => '../Apps/Admin/View\\Borrow\\addborrow.html',
-      1 => 1492353701,
+      0 => '../Apps/Admin/View\\Book\\addbook.html',
+      1 => 1492355267,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '705358e91040a07435-60590796',
+  'nocache_hash' => '714658f3837af14016-07368598',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58e91040ba9a9',
+  'unifunc' => 'content_58f3837b0fb11',
+  'variables' => 
+  array (
+    'role_checkbox' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58e91040ba9a9')) {function content_58e91040ba9a9($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_58f3837b0fb11')) {function content_58f3837b0fb11($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -44,6 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  
 
     <style type="text/css">
+	
         body {
             padding-bottom: 40px;
         }
@@ -60,59 +65,60 @@ $_valid = $_smarty_tpl->decodeProperties(array (
             }
         }
 
-
+	
     </style>
 </head>
 <body>
-
 <form action="<?php echo @__SELF__;?>
-" method="post" class="definewidth m20" enctype="multipart/form-data">
+" method="post" class="definewidth m20">
 <table class="table table-bordered table-hover definewidth m10">
-    <tr>
-        <td width="10%" class="tableleft">图书编号</td>
-        <td><input type="text" name="book_name"/></td>
+	<tr>
+        <td class="tableleft">作者</td>
+        <td><input type="text" name="author"/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">图书类别</td>
+        <td><input type="text" name="book_type"/></td>
     </tr>
     <tr>
-        <td class="tableleft">图书名</td>
-        <td><input type="text" name="book_id"/></td>
+        <td class="tableleft">出版社</td>
+        <td><input type="text" name="press"/></td>
     </tr>
     <tr>
-        <td class="tableleft">读者id</td>
-        <td><input type="text" name="uid"/></td>
+        <td class="tableleft">价格</td>
+        <td><input type="text" name="price"/></td>
     </tr>
-    <tr>
-        <td class="tableleft">读者编号</td>
-        <td ><input type="text" name="reader_id"/></td>
+	<tr>
+        <td class="tableleft">入库数目</td>
+        <td><input type="text" name="total_amount"/></td>
     </tr>
-    <tr>
-        <td width="10%" class="tableleft">现在添加的一行东西</td>
-        <td width="30%"><input type="text" name="username"/></td>
+	<tr>
+        <td class="tableleft">当前数目</td>
+        <td><input type="text" name="now_amount"/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">图书详情介绍</td>
+        <td><input type="text" name="book_detail"/></td>
     </tr>
     <tr>
         <td class="tableleft">状态</td>
         <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-           <input type="radio" name="status" value="0"/> 禁用
+            <input type="radio" name="status" value="1" checked/> 上架
+           <input type="radio" name="status" value="0"/> 不上架
         </td>
     </tr>
     <tr>
         <td class="tableleft">角色</td>
-        <td>>33</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['role_checkbox']->value;?>
+</td>
     </tr>
     <tr>
         <td class="tableleft"></td>
         <td>
-            <a href="#myModal" data-toggle="modal" type="button" class="btn btn-primary"  id="tijiao">保存 </a>&nbsp;&nbsp;<a type="button" class="btn btn-success" name="backid" id="backid" href="<?php echo @__MODULE__;?>
-/Borrow/borrowlist">返回列表</a>
+            <a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
-	<tr>
-        <td colspan="2" align="center">
-        <input type="submit" value="添加">
-        </td>
-    </tr>  
-</table>
-<!-- 弹出框提示 -->
+	<!-- 弹出框提示 -->
 <!-- Button to trigger modal -->
 <!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->
  
@@ -130,22 +136,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <button type="submit" class="btn btn-info">确定</button>
     </div>
 </div>
+</table>
 </form>
-<!-- 弹出框提示 -->
-<!-- Button to trigger modal -->
-<!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->
- 
-<!-- Modal -->
-
-
 </body>
 </html>
 <script>
     $(function () {       
 		$('#backid').click(function(){
-				window.location.href="list.html";
+				window.location.href="boolist.html";
 		 });
 
     });
-    
 </script><?php }} ?>
