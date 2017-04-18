@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 22:43:31
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-18 19:56:46
          compiled from "../Apps/Admin/View\Borrow\addborrow.html" */ ?>
 <?php /*%%SmartyHeaderCode:705358e91040a07435-60590796%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'd27b6269d2219b3e22e803fda49ab8636ba20aa5' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\addborrow.html',
-      1 => 1492353701,
+      1 => 1492515346,
       2 => 'file',
     ),
   ),
@@ -131,11 +131,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
 </div>
 </form>
-<!-- 弹出框提示 -->
-<!-- Button to trigger modal -->
-<!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->
- 
-<!-- Modal -->
 
 
 </body>

@@ -6,7 +6,8 @@ class BookController extends Controller {
 		
 		$book = D('Book');
 		$info = $book ->select();
-		show_bug($info);
+		//打印出列表数组
+		//show_bug($info);
 		$this -> assign('info',$info);
 		$this -> display();
     }
@@ -39,4 +40,7 @@ class BookController extends Controller {
 		
 		$this -> display();
     }
+	public function update(){
+		
+	}
 }

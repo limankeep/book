@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 23:07:50
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-18 19:53:58
          compiled from "../Apps/Admin/View\Book\addbook.html" */ ?>
 <?php /*%%SmartyHeaderCode:714658f3837af14016-07368598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6735c0d3ff2b9bb8d37ee83842783c9ef381334' => 
     array (
       0 => '../Apps/Admin/View\\Book\\addbook.html',
-      1 => 1492355267,
+      1 => 1492515721,
       2 => 'file',
     ),
   ),
@@ -73,6 +73,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 " method="post" class="definewidth m20">
 <table class="table table-bordered table-hover definewidth m10">
 	<tr>
+        <td class="tableleft">图书名</td>
+        <td><input type="text" name="book_name"/></td>
+    </tr>
+	<tr>
         <td class="tableleft">作者</td>
         <td><input type="text" name="author"/></td>
     </tr>
@@ -129,7 +133,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <h3 id="myModalLabel">系统提示</h3>
     </div>
     <div class="modal-body">
-    <p>您确定借阅该图书吗？</p>
+    <p>您确定保存该图书吗？</p>
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>

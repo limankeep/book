@@ -16,3 +16,6 @@ ERR: 无法加载控制器:Public
 [ 2017-04-18T00:06:22+08:00 ] 127.0.0.1 /index.php/Admin/Public/Admin/assets/css/main-min.css
 ERR: 无法加载控制器:Public
 
+[ 2017-04-18T19:42:45+08:00 ] 127.0.0.1 /index.php/Admin/Book/edit.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\edit.html"  on line 38 "&lt;form action=&quot;{:U('User/edit')}&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot;&gt;"  - Unexpected ":"
+
