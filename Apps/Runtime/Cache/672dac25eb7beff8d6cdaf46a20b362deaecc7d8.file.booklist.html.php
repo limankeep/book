@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-18 21:01:23
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-20 16:22:40
          compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
 <?php /*%%SmartyHeaderCode:1544158f383ac582e80-80333574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booklist.html',
-      1 => 1492520479,
+      1 => 1492676416,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'info' => 0,
     'v' => 0,
+    'pagelist' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -120,7 +121,14 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         </tr>
 	<?php } ?>
 </table>
+<!--分页-->
+<div class="pagination">
 
+  <ul>
+  <?php echo $_smarty_tpl->tpl_vars['pagelist']->value;?>
+
+  </ul>
+</div>
 	<!-- 弹出框提示 -->
 <!-- Button to trigger modal -->
 <!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->

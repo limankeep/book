@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-09 00:30:42
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-20 16:34:00
          compiled from "../Apps/Admin/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:2973258e910327a3045-99526588%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1712058f87252eafd61-33800636%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8afd212666d42f9374922f923bebdbec4280e350' => 
     array (
       0 => '../Apps/Admin/View\\Index\\index.html',
-      1 => 1491669040,
+      1 => 1492677235,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2973258e910327a3045-99526588',
+  'nocache_hash' => '1712058f87252eafd61-33800636',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58e91032869ed',
+  'unifunc' => 'content_58f8725304d30',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58e91032869ed')) {function content_58e91032869ed($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_58f8725304d30')) {function content_58f8725304d30($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
  <head>
   <title>三峡枫叶图书馆后台管理系统</title>
@@ -118,7 +118,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               }]
           },{
             id:'Article',
-            homePage : 'aeticlelist',
+            homePage : 'articlelist',
             menu:[{
                 text:'文章管理',
                 items:[

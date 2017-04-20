@@ -1,16 +1,49 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-20 16:17:31
+         compiled from "../Apps/Admin/View\Article\addarticle.html" */ ?>
+<?php /*%%SmartyHeaderCode:1510958f86e9b35ecf6-23687707%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    'ff51c9381d138c41d6406938c5539c0726b25987' => 
+    array (
+      0 => '../Apps/Admin/View\\Article\\addarticle.html',
+      1 => 1492676023,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1510958f86e9b35ecf6-23687707',
+  'function' => 
+  array (
+  ),
+  'variables' => 
+  array (
+    'role_checkbox' => 0,
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58f86e9b4706f',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58f86e9b4706f')) {function content_58f86e9b4706f($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
+/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
+/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
+/Css/style.css" />
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/jquery.js"></script>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/ckform.js"></script>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/common.js"></script>
 
  
 
@@ -62,7 +95,8 @@
     </tr>
     <tr>
         <td class="tableleft">角色</td>
-        <td>{$role_checkbox}</td>
+        <td><?php echo $_smarty_tpl->tpl_vars['role_checkbox']->value;?>
+</td>
     </tr>
     <tr>
         <td class="tableleft"></td>
@@ -81,4 +115,4 @@
 		 });
 
     });
-</script>
+</script><?php }} ?>

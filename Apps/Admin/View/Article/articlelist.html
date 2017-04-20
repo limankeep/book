@@ -3,14 +3,14 @@
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="{$Think.const.PUBLIC_URL}/Css/style.css" />
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/jquery.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/bootstrap.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/ckform.js"></script>
-    <script type="text/javascript" src="{$Think.const.PUBLIC_URL}/Js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
 
  
 
@@ -43,27 +43,36 @@
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>图书编号</th>
-        <th>图书名称</th>
-        <th>图书分类</th>
+        <th>文章编号</th>
+        <th>作者id</th>
+        <th>文章名称</th>
         <th>出版社</th>
-        <th>入库总数</th>
-		<th>当前数目</th>
+        <th>文章详情</th>
+		<th>创建日期</th>
 		<th>操作</th>
     </tr>
     </thead>
+	{foreach $info as $k => $v}
 	     <tr>
-            <td>2</td>
-            <td>php操作手册</td>
-            <td>计算机</td>
+            <td>{$v.id}</td>
+            <td>{$v.uid}</td>
+            <td>{$v.article_name}</td>
             <td>中华出版社</td>
-			<td>10</td>
-			<td>5</td>
+			<td>{$v.content}</td>
+			<td>{$v.create_time}</td>
             <td>
                 <a href="edit.html">编辑</a>                
             </td>
         </tr>	
+	{/foreach}
 </table>
+<!--分页-->
+<div class="pagination">
+
+  <ul>
+  {$pagelist}
+  </ul>
+</div>
 </body>
 </html>
 <script>

@@ -1,11 +1,35 @@
-<!DOCTYPE HTML>
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-20 16:33:17
+         compiled from "../Apps/Admin/View\Index\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:2973258e910327a3045-99526588%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '8afd212666d42f9374922f923bebdbec4280e350' => 
+    array (
+      0 => '../Apps/Admin/View\\Index\\index.html',
+      1 => 1492677195,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2973258e910327a3045-99526588',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58e91032869ed',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58e91032869ed')) {function content_58e91032869ed($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
  <head>
   <title>三峡枫叶图书馆后台管理系统</title>
    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-   <link href="{$smarty.const.PUBLIC_URL}/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
-   <link href="{$smarty.const.PUBLIC_URL}/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
-   <link href="{$smarty.const.PUBLIC_URL}/assets/css/main-min.css" rel="stylesheet" type="text/css" />
+   <link href="<?php echo @PUBLIC_URL;?>
+/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
+   <link href="<?php echo @PUBLIC_URL;?>
+/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
+   <link href="<?php echo @PUBLIC_URL;?>
+/assets/css/main-min.css" rel="stylesheet" type="text/css" />
  </head>
  <body>
 
@@ -25,8 +49,8 @@
       <div class="dl-inform"><div class="dl-inform-title">贴心小秘书<s class="dl-inform-icon dl-up"></s></div></div>
       <ul id="J_Nav"  class="nav-list ks-clear">
         <li class="nav-item dl-selected"><div class="nav-item-inner nav-home">借阅管理</div></li>
-        <li class="nav-item"><div class="nav-item-inner nav-order">图书管理</div></li>
-        <li class="nav-item"><div class="nav-item-inner nav-inventory">读者管理</div></li>
+        <li class="nav-item"><div class="nav-item-inner nav-book">图书管理</div></li>
+        <li class="nav-item"><div class="nav-item-inner nav-reader">读者管理</div></li>
         <li class="nav-item"><div class="nav-item-inner nav-article">文章管理</div></li>
         <li class="nav-item"><div class="nav-item-inner nav-system">系统管理</div></li>
       </ul>
@@ -35,12 +59,15 @@
 
     </ul>
    </div>
-  <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/assets/js/jquery-1.8.1.min.js"></script>
-  <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/assets/js/bui.js"></script>
-  <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/assets/js/config.js"></script>
+  <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/assets/js/jquery-1.8.1.min.js"></script>
+  <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/assets/js/bui.js"></script>
+  <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/assets/js/config.js"></script>
 
   <script>
-  {literal}
+  
     BUI.use('common/main',function(){
       var config = [{
           id:'Borrow', 
@@ -91,7 +118,7 @@
               }]
           },{
             id:'Article',
-            homePage : 'articlelist',
+            homePage : 'aeticlelist',
             menu:[{
                 text:'文章管理',
                 items:[
@@ -117,7 +144,8 @@
         modulesConfig : config
       });
     });
-	{/literal}
+	
   </script>
  </body>
 </html>
+<?php }} ?>

@@ -11,7 +11,7 @@ class LoginController extends Controller {
             } else {
                 //判断用户名和密码，在model模型里边制作一个专门方法进行验证
                 $user = new \Model\ManagerModel();
-                $rst = $user -> checkNamePwd($_POST['mg_username'],$_POST['mg_password']);
+                $rst = $user -> checkNamePwd($_POST['muname'],$_POST['password']);
                 if($rst === false){
                     echo "用户名或密码错误";
                 } else {

@@ -4,12 +4,25 @@ use Think\Controller;
 class BookController extends Controller {
     public function booklist(){
 		
+		//建立数据模型
 		$book = D('Book');
-		$info = $book ->select();
-		//打印出列表数组
+		//获取记录总条数
+		$total = $book -> count();
+		//设置每页展示数据条数
+		$per = 3;
+		//实例化分页对象
+		$page = new \Component\Page($total, $per); //autoload
+		//拼装sql语句获取每页的记录
+		$sql = "select * from tp_book ".$page->limit;
+		$info = $book -> query($sql);
+        //4. 获得页码列表
+        $pagelist = $page -> fpage();
+		
 		//show_bug($info);
-		$this -> assign('info',$info);
-		$this -> display();
+
+		$this -> assign('info', $info);
+        $this -> assign('pagelist', $pagelist);
+        $this -> display();
     }
 	public function addbook(){
 		echo( U('Borrow/addborrow'));
