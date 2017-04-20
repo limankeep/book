@@ -1,18 +1,46 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-19 22:57:46
+         compiled from "../Apps/Admin/View\Login\login.html" */ ?>
+<?php /*%%SmartyHeaderCode:1891858f775165df282-48370112%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '5b363ced7d08f7327c3e375de3c20493cc7f90aa' => 
+    array (
+      0 => '../Apps/Admin/View\\Login\\login.html',
+      1 => 1492613468,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '1891858f775165df282-48370112',
+  'function' => 
+  array (
+  ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58f775166affc',
+  'has_nocache_code' => false,
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58f775166affc')) {function content_58f775166affc($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>登录</title>
 		<!-- Bootstrap -->
-    <link href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.min.css" rel="stylesheet" media="screen">
-    <link href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" rel="stylesheet" media="screen">
-    <link href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" rel="stylesheet">
-    <script src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
-    <script src="{$smarty.const.PUBLIC_URL}/Js/jquery.min.js"></script>
-    <script src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.min.js"></script>
-    <script src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
+    <link href="<?php echo @PUBLIC_URL;?>
+/Css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <link href="<?php echo @PUBLIC_URL;?>
+/Css/bootstrap.css" rel="stylesheet" media="screen">
+    <link href="<?php echo @PUBLIC_URL;?>
+/Css/bootstrap-responsive.css" rel="stylesheet">
+    <script src="<?php echo @PUBLIC_URL;?>
+/Js/jquery.js"></script>
+    <script src="<?php echo @PUBLIC_URL;?>
+/Js/jquery.min.js"></script>
+    <script src="<?php echo @PUBLIC_URL;?>
+/Js/bootstrap.min.js"></script>
+    <script src="<?php echo @PUBLIC_URL;?>
+/Js/bootstrap.js"></script>
     <style type="text/css">
-	{literal}
+	
       body {
         padding-top: 50px;
         padding-bottom: 40px;
@@ -77,19 +105,21 @@
       .container .credit {
         margin: 20px 0;
       }
-	  {/literal}
+	  
     </style>
 	</head>
 	<body>
 		<div id="wrap">
 			<div class="container">
-				<form class="form-signin" action="{$smarty.const.__SELF__}" method="post">
+				<form class="form-signin" action="<?php echo @__SELF__;?>
+" method="post">
 					<p><h1 class="form-signin-heading">登录</h1></p>
 					<div>账号：<input type="text" name="name" value="请输入账号"  id="LoginId" class="input-block-level" placeholder="Email address" /></div>
 					
 					<div>密码：<input type="password" name="password" value="请输入密码" id="LoginPassword" class="input-block-level" placeholder="Password" /></div>
 					<div>请输入验证码： 
-						<img src="{$smarty.const.__CONTROLLER__}/verifyImg"  alt="" >
+						<img src="<?php echo @__CONTROLLER__;?>
+/verifyImg"  alt="" >
 						<input class="TxtValidateCodeCssClass" id="captcha" name="captcha" type="text">
                         
 					</div>
@@ -112,3 +142,4 @@
 		</script>
 	</body>
 </html>
+<?php }} ?>

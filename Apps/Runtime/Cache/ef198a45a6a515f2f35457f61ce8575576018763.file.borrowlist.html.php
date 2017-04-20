@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-16 21:09:30
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-19 21:15:18
          compiled from "../Apps/Admin/View\Borrow\borrowlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:2958958e910a40e60b3-37681576%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'ef198a45a6a515f2f35457f61ce8575576018763' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\borrowlist.html',
-      1 => 1492348167,
+      1 => 1492607716,
       2 => 'file',
     ),
   ),
@@ -21,6 +21,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   array (
     'info' => 0,
     'v' => 0,
+    'pagelist' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -124,7 +125,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </table>
 <!--分页-->
 <div class="pagination">
-  <ul>
+  <!--ul>
     <li><a href="#">前一页</a></li>
     <li><a href="#">1</a></li>
     <li><a href="#">2</a></li>
@@ -132,6 +133,10 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
     <li><a href="#">4</a></li>
     <li><a href="#">5</a></li>
     <li><a href="#">下一页</a></li>
+  </ul-->
+  <ul>
+  <?php echo $_smarty_tpl->tpl_vars['pagelist']->value;?>
+
   </ul>
 </div>
 </body>

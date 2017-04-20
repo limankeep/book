@@ -1,0 +1,30 @@
+[ 2017-04-19T12:21:27+08:00 ] 127.0.0.1 /index.php/Admin/Book/index.html?username=
+ERR: 非法操作:index
+
+[ 2017-04-19T18:53:28+08:00 ] 127.0.0.1 /index.php/Admin/Index/Article/aeticlelist.html
+ERR: 非法操作:Article
+
+[ 2017-04-19T18:53:30+08:00 ] 127.0.0.1 /index.php/Admin/Index/system/list.html
+ERR: 非法操作:system
+
+[ 2017-04-19T18:56:20+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-04-19T22:31:54+08:00 ] 127.0.0.1 /index.php/Admin/Login/login.html
+ERR: Syntax Error in template "../Apps/Admin/View\Login\login.html"  on line 84 "&lt;form class=&quot;form-signin&quot; action=&quot;{:U('Login/login')}&quot; method=&quot;post&quot;&gt;"  - Unexpected ":"
+
+[ 2017-04-19T22:40:55+08:00 ] 127.0.0.1 /index.php/Admin/Login/verifyImg
+ERR: 非法操作:verifyImg
+
+[ 2017-04-19T22:41:14+08:00 ] 127.0.0.1 /index.php/Admin/Login/verifyImg
+ERR: 非法操作:verifyImg
+
+[ 2017-04-19T22:41:14+08:00 ] 127.0.0.1 /index.php/Admin/Login/verifyImg
+ERR: 非法操作:verifyImg
+
+[ 2017-04-19T22:41:16+08:00 ] 127.0.0.1 /index.php/Admin/Login/verifyImg
+ERR: 非法操作:verifyImg
+
+[ 2017-04-19T22:41:16+08:00 ] 127.0.0.1 /index.php/Admin/Login/verifyImg
+ERR: 非法操作:verifyImg
+
