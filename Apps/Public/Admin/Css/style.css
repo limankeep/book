@@ -40,6 +40,9 @@ form{
     padding: 0;
     margin: 0;
 }
+.table td input[type="text"]{
+   line-height:20p=px;
+}
 
 .table th input[type="checkbox"]{
     padding: 0;
@@ -49,7 +52,7 @@ form{
 .table td, .table th{
     padding-top: 8px;
     padding-bottom: 4px;
-	line-height:20ppx;
+	line-height:20px;
 	
 }
 .table th{

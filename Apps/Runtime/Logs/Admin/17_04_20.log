@@ -55,3 +55,33 @@ ERR: 非法操作:system
 [ 2017-04-20T16:56:06+08:00 ] 127.0.0.1 /index.php/Admin/Index/system/list.html
 ERR: 非法操作:system
 
+[ 2017-04-20T23:21:38+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;{?php if($v.book_type = &quot;历史&quot;) echo &quot;nan&quot;;?}&lt;/td&gt;"  - Unexpected "?"
+
+[ 2017-04-20T23:22:03+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;{?php if ($v.book_type = &quot;历史&quot;){ echo &quot;nan&quot;;?}}&lt;/td&gt;"  - Unexpected "?"
+
+[ 2017-04-20T23:28:46+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;{?php echo  &quot;dd&quot;;}&lt;/td&gt;"  - Unexpected "?"
+
+[ 2017-04-20T23:30:10+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;{php}{$v.book_type}{/php}&lt;/td&gt;" unknown tag "php"
+
+[ 2017-04-20T23:35:02+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;{php}{$v.book_type}{/php}&lt;/td&gt;" unknown tag "php"
+
+[ 2017-04-20T23:35:05+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;{php}{$v.book_type}{/php}&lt;/td&gt;" unknown tag "php"
+
+[ 2017-04-20T23:36:27+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;&lt;?php if({$v.book_type})= &quot;历史&quot;）{echo &quot;2&quot;;}&gt;&lt;/td&gt;"  - Unexpected ";", expected one of: "}" , " "
+
+[ 2017-04-20T23:36:52+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;&lt;?php if($v.book_type = &quot;历史&quot;）{echo &quot;2&quot;;}&gt;&lt;/td&gt;"  - Unexpected ";", expected one of: "}" , " "
+
+[ 2017-04-20T23:36:57+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;&lt;?php if($v.book_type = &quot;历史&quot;）{echo &quot;2&quot;;}&gt;&lt;/td&gt;"  - Unexpected ";", expected one of: "}" , " "
+
+[ 2017-04-20T23:41:51+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 63 "&lt;td&gt;{if}{$v.book_type == &quot;历史&quot;}男{/if}&gt;&lt;/td&gt;" missing if condition
+

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-20 16:22:40
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-22 22:42:34
          compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
 <?php /*%%SmartyHeaderCode:1544158f383ac582e80-80333574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booklist.html',
-      1 => 1492676416,
+      1 => 1492872151,
       2 => 'file',
     ),
   ),
@@ -46,6 +46,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
+	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/common.js"></script>
+	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/froala_editor.min.js"></script>
 
  
 
@@ -104,8 +108,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
 </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
-</td>
+            <td><?php if ($_smarty_tpl->tpl_vars['v']->value['book_type']=="历史"){?>
+	男人.
+<?php }elseif($_smarty_tpl->tpl_vars['v']->value['book_id']=="Wilma"){?>
+	Welcome Ma'am.
+<?php }else{ ?>
+	Welcome, whatever you are.
+<?php }?></td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['press'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['price'];?>
@@ -173,7 +182,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
     </tr>
 	<tr>
         <td class="tableleft">图书详情介绍</td>
-        <td><input type="text" name="book_detail"/></td>
+        <td><input type="text" name="book_detail" id="edit"/></td>
     </tr>
     <tr>
         <td class="tableleft">状态</td>
@@ -213,14 +222,11 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </html>
 <script>
     $(function () {
-        
-
+       
 		$('#addnew').click(function(){
 
 				window.location.href="add.html";
 		 });
-
-
     });
 
 	function del(id)
@@ -235,9 +241,6 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 			window.location.href=url;		
 		
 		}
-	
-	
-	
-	
 	}
+	
 </script><?php }} ?>

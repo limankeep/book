@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-18 19:53:58
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-22 23:31:26
          compiled from "../Apps/Admin/View\Book\addbook.html" */ ?>
 <?php /*%%SmartyHeaderCode:714658f3837af14016-07368598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6735c0d3ff2b9bb8d37ee83842783c9ef381334' => 
     array (
       0 => '../Apps/Admin/View\\Book\\addbook.html',
-      1 => 1492515721,
+      1 => 1492875083,
       2 => 'file',
     ),
   ),
@@ -34,6 +34,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/style.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
+/Css/bootstrap-select.css" />
+	<link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
+/Css/froala_editor.min.css" />
+	<link href="<?php echo @PUBLIC_URL;?>
+/Css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
@@ -44,7 +50,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
-
+	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/bootstrap-select.js"></script>
+	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/froala_editor.min.js"></script>
  
 
     <style type="text/css">
@@ -70,11 +79,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body>
 <form action="<?php echo @__SELF__;?>
-" method="post" class="definewidth m20">
+" method="post" class="definewidth m20 form-control">
 <table class="table table-bordered table-hover definewidth m10">
-	<tr>
+	<tr  class="col-xs-14">
         <td class="tableleft">图书名</td>
-        <td><input type="text" name="book_name"/></td>
+        <td><input type="text" name="book_name" class="form-control input-lg"/></td>
     </tr>
 	<tr>
         <td class="tableleft">作者</td>
@@ -82,7 +91,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </tr>
 	<tr>
         <td class="tableleft">图书类别</td>
-        <td><input type="text" name="book_type"/></td>
+        <td><select class="selectpicker">
+  <option>1</option>
+  <option>2</option>
+  <option>3</option>
+  <option>4</option>
+  <option>5</option>
+</select>
+</td>
     </tr>
     <tr>
         <td class="tableleft">出版社</td>
@@ -102,7 +118,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </tr>
 	<tr>
         <td class="tableleft">图书详情介绍</td>
-        <td><input type="text" name="book_detail"/></td>
+        <!--td><div rows="3" name="book_detail" id="edit">dddddddddddddddddddddddddd</div></td-->
     </tr>
     <tr>
         <td class="tableleft">状态</td>
@@ -142,13 +158,29 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </div>
 </table>
 </form>
+<!-- 加载编辑器的容器 -->
+    <script id="container" name="content" type="text/plain">
+        这里写你的初始化内容
+    </script>
+    <!-- 配置文件 -->
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/ueditor.config.js"></script>
+    <!-- 编辑器源码文件 -->
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/ueditor.all.js"></script>
+    <!-- 实例化编辑器 -->
+    <script type="text/javascript">
+        var ue = UE.getEditor('container');
+    </script>
+</body>
 </body>
 </html>
+
 <script>
+
     $(function () {       
 		$('#backid').click(function(){
 				window.location.href="boolist.html";
 		 });
 
-    });
 </script><?php }} ?>

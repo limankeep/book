@@ -92,9 +92,11 @@ recommend_score    推荐指数  满分100  按分数排行 tinyint 3
 文章表
 
 article_id 文章编号  int  12
+status   文章状态    tinyint 1    0：待审核 1：审核通过 2 ：审核不通过
 uid  作者id  int 8
 title 标题   varchar 100
 author 作者  varchar 20
+content_text varchar 50000   文章内容
 create_time 创建时间  datetime 
 推荐指数
 

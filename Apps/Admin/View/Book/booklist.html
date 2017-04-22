@@ -11,6 +11,8 @@
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
+	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
+	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/froala_editor.min.js"></script>
 
  
 
@@ -60,7 +62,13 @@
             <td>{$v.book_id}</td>
             <td>{$v.book_name}</td>
 			<td>{$v.uname}</td>
-            <td>{$v.book_type}</td>
+            <td>{if $v.book_type eq "历史"}
+	男人.
+{elseif $v.book_id eq "Wilma"}
+	Welcome Ma'am.
+{else}
+	Welcome, whatever you are.
+{/if}</td>
             <td>{$v.press}</td>
 			<td>{$v.price}</td>
 			<td>{$v.total_amount}</td>
@@ -122,7 +130,7 @@
     </tr>
 	<tr>
         <td class="tableleft">图书详情介绍</td>
-        <td><input type="text" name="book_detail"/></td>
+        <td><input type="text" name="book_detail" id="edit"/></td>
     </tr>
     <tr>
         <td class="tableleft">状态</td>
@@ -162,14 +170,11 @@
 </html>
 <script>
     $(function () {
-        
-
+       
 		$('#addnew').click(function(){
 
 				window.location.href="add.html";
 		 });
-
-
     });
 
 	function del(id)
@@ -184,9 +189,6 @@
 			window.location.href=url;		
 		
 		}
-	
-	
-	
-	
 	}
+	
 </script>
