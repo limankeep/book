@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-09 15:45:28
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-23 10:57:52
          compiled from "../Apps/Admin/View\Typebook\wenxue.html" */ ?>
 <?php /*%%SmartyHeaderCode:2489858e9e698ef93d9-14119050%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '514c663c8bc2c62ebc9010ee51dabc4d46692818' => 
     array (
       0 => '../Apps/Admin/View\\Typebook\\wenxue.html',
-      1 => 1491654776,
+      1 => 1492676230,
       2 => 'file',
     ),
   ),
@@ -15,34 +15,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'Think' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_58e9e6990d5d3',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_58e9e6990d5d3')) {function content_58e9e6990d5d3($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/style.css" />
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/ckform.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
 
  

@@ -1,31 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-23 12:13:23
-         compiled from "../Apps/Admin/View\Article\articlelist.html" */ ?>
-<?php /*%%SmartyHeaderCode:166058f86e9a1696e4-84364635%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-23 10:57:54
+         compiled from "../Apps/Admin/View\Typebook\history.html" */ ?>
+<?php /*%%SmartyHeaderCode:1769758fc1832a9fd59-29737651%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '346fec045fe951c52b1c1268b76e0d1a6fcbeee6' => 
+    '478afdfec94ed6768e2ea3e9829d584b69bbb6ce' => 
     array (
-      0 => '../Apps/Admin/View\\Article\\articlelist.html',
-      1 => 1492702513,
+      0 => '../Apps/Admin/View\\Typebook\\history.html',
+      1 => 1492676231,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '166058f86e9a1696e4-84364635',
+  'nocache_hash' => '1769758fc1832a9fd59-29737651',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58f86e9a38991',
-  'variables' => 
-  array (
-    'info' => 0,
-    'v' => 0,
-    'pagelist' => 0,
-  ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58fc1832b973a',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58f86e9a38991')) {function content_58f86e9a38991($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_58fc1832b973a')) {function content_58fc1832b973a($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -78,48 +72,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>文章编号</th>
-        <th>作者id</th>
-        <th>文章名称</th>
+        <th>图书编号</th>
+        <th>图书名称</th>
         <th>出版社</th>
-        <th>文章详情</th>
-		<th>创建日期</th>
+        <th>入库总数</th>
+		<th>入库日期</th>
+		<th>当前数目</th>
 		<th>操作</th>
     </tr>
     </thead>
-	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
- $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
- $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
-foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
-$_smarty_tpl->tpl_vars['v']->_loop = true;
- $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
-?>
 	     <tr>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
-</td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['uid'];?>
-</td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['article_name'];?>
-</td>
+            <td>2</td>
+            <td>php操作手册</td>
+            <td>计算机</td>
             <td>中华出版社</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['content'];?>
-</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
-</td>
+			<td>10</td>
+			<td>5</td>
             <td>
                 <a href="edit.html">编辑</a>                
             </td>
         </tr>	
-	<?php } ?>
 </table>
-<!--分页-->
-<div class="pagination">
-
-  <ul>
-  <?php echo $_smarty_tpl->tpl_vars['pagelist']->value;?>
-
-  </ul>
-</div>
 </body>
 </html>
 <script>
