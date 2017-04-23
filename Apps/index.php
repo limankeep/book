@@ -29,6 +29,7 @@ define("SITE_URL","www.tpbook.com");
 //define("SITE_URL","http://www.tpbook.com/");
 define('APP_PATH','../Apps/');
 define("PUBLIC_URL","/Public/Admin"); //css
+define("HOME_URL","/Public/Home"); //css
 
 // 引入ThinkPHP入口文件
 require '../ThinkPHP/ThinkPHP.php';

@@ -3,9 +3,9 @@
 	<head>
 		<meta charset="utf-8" />
 		<title>图书搜索</title>
-		<link rel="stylesheet" href="../pub-ui/css/pc-common.css" />
-		<link rel="stylesheet" href="../pub-ui/asset/css/bootstrap.css" />
-		<link rel="stylesheet" href="../pub-ui/css/main.css" />
+		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/pc-common.css" />
+		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/asset/css/bootstrap.css" />
+		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/main.css" />
 	</head>
 	<body class="book-search">
 		<!--<header></header>-->
@@ -195,12 +195,14 @@
 		</div>
 		<hr>
 		<p class="tc">&copy;三峡枫叶图书馆<a href="#" class="mgl-10 mgr-10">关于我们</a>联系电话1234567890</p>
-		<script type="text/javascript" src="../pub-ui/js/jquery.min.js" ></script>
-		<script type="text/javascript" src="../pub-ui/js/ui.js" ></script>
+		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/js/jquery.min.js" ></script>
+		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/js/ui.js" ></script>
 		<script>
+		{literal}
 			$(function(){
 				$("#collaspeContent").mcollaspe({contentWrapper:"#collaspeContent ul",activeName:"collaspe1"});
 			})
+			{/literal}
 		</script>
 	</body>
 </html>

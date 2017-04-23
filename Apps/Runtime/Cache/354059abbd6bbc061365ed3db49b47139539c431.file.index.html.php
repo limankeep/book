@@ -1,11 +1,35 @@
-<!DOCTYPE html>
+<?php /* Smarty version Smarty-3.1.6, created on 2017-04-24 21:58:20
+         compiled from "../Apps/Home/View\Index\index.html" */ ?>
+<?php /*%%SmartyHeaderCode:2840958fe047ce86ff8-79266398%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+$_valid = $_smarty_tpl->decodeProperties(array (
+  'file_dependency' => 
+  array (
+    '354059abbd6bbc061365ed3db49b47139539c431' => 
+    array (
+      0 => '../Apps/Home/View\\Index\\index.html',
+      1 => 1493042193,
+      2 => 'file',
+    ),
+  ),
+  'nocache_hash' => '2840958fe047ce86ff8-79266398',
+  'function' => 
+  array (
+  ),
+  'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_58fe047d11c82',
+),false); /*/%%SmartyHeaderCode%%*/?>
+<?php if ($_valid && !is_callable('content_58fe047d11c82')) {function content_58fe047d11c82($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
 		<title>首页</title>
-		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/pc-common.css" />
-		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/asset/css/bootstrap.css" />
-		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/main.css" />
+		<link rel="stylesheet" href="<?php echo @HOME_URL;?>
+/pub-ui/css/pc-common.css" />
+		<link rel="stylesheet" href="<?php echo @HOME_URL;?>
+/pub-ui/asset/css/bootstrap.css" />
+		<link rel="stylesheet" href="<?php echo @HOME_URL;?>
+/pub-ui/css/main.css" />
 	</head>
 	<body>
 		<h3>阅读是你更快乐</h3>
@@ -108,8 +132,10 @@
 		</div>
 		<hr>
 		<p class="tc">&copy;三峡枫叶图书馆<a href="#" class="mgl-10 mgr-10">关于我们</a>联系电话1234567890</p>
-		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/js/jquery.min.js" ></script>
-		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/asset/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="<?php echo @HOME_URL;?>
+/pub-ui/js/jquery.min.js" ></script>
+		<script type="text/javascript" src="<?php echo @HOME_URL;?>
+/pub-ui/asset/js/bootstrap.min.js" ></script>
 		<script>
 			$(function(){
 				$(".carousel").carousel();
@@ -118,3 +144,4 @@
 		</script>
 	</body>
 </html>
+<?php }} ?>

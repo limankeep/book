@@ -1,8 +1,8 @@
 <?php
 namespace Home\Controller;
 use Think\Controller;
-class IndexController extends Controller {
-    public function index(){
+class BookController extends Controller {
+    public function book_search(){
 		$this -> display();
     }
 }

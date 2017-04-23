@@ -35,10 +35,10 @@ class BookController extends Controller {
             if($z){
                 //展现一个提示页面，并做页面跳转
                 //success(提示信息，跳转的url路由地址)
-                //$this ->success('添加商品成功', U('Goods/showlist'));
+                //$this ->success('添加书籍成功', U('Goods/showlist'));
                 echo "success";
             } else {
-                //$this ->error('添加商品失败', U('Goods/showlist'));
+                //$this ->error('添加书籍失败', U('Goods/showlist'));
                 echo "error";
             }
         }else {
