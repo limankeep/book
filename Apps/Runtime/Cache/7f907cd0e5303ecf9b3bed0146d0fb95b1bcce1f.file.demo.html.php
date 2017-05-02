@@ -1,17 +1,17 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 11:32:34
-         compiled from "../Apps/Admin/View\Article\articlelist.html" */ ?>
-<?php /*%%SmartyHeaderCode:113615907fdd2c511e7-70561918%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-01 09:45:33
+         compiled from "../Apps/Admin/View\System\demo.html" */ ?>
+<?php /*%%SmartyHeaderCode:299225906933d7a9294-59871747%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '346fec045fe951c52b1c1268b76e0d1a6fcbeee6' => 
+    '7f907cd0e5303ecf9b3bed0146d0fb95b1bcce1f' => 
     array (
-      0 => '../Apps/Admin/View\\Article\\articlelist.html',
-      1 => 1492702513,
+      0 => '../Apps/Admin/View\\System\\demo.html',
+      1 => 1493600732,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '113615907fdd2c511e7-70561918',
+  'nocache_hash' => '299225906933d7a9294-59871747',
   'function' => 
   array (
   ),
@@ -23,9 +23,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5907fdd2daa3e',
+  'unifunc' => 'content_5906933d8f179',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5907fdd2daa3e')) {function content_5907fdd2daa3e($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5906933d8f179')) {function content_5906933d8f179($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -46,7 +46,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
-
+	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+/Js/layer.js"></script>
  
 
     <style type="text/css">
@@ -70,23 +71,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">    
+<form class="form-inline definewidth m20" action="<?php echo @__MODULE__/'System'/'demo';?>
+" method="post" id="demo">    
     用户名称：
-    <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <input type="text" name="book_name" id="book_name"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>文章编号</th>
-        <th>作者id</th>
-        <th>文章名称</th>
+        <th>图书编号</th>
+        <th>图书名称</th>
+        <th>图书分类</th>
         <th>出版社</th>
-        <th>文章详情</th>
-		<th>创建日期</th>
+        <th>图书简介</th>
+		<th>当前数目</th>
 		<th>操作</th>
     </tr>
     </thead>
+	<?php if ($_smarty_tpl->tpl_vars['info']->value!=0){?>
 	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -95,31 +98,50 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?>
 	     <tr>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
 </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['uid'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
 </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['article_name'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
 </td>
-            <td>中华出版社</td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['content'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['press'];?>
+</td>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_detail'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
 </td>
-            <td>
-                <a href="edit.html">编辑</a>                
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['finish_time'];?>
+</td>
+            <td >
+                <a href="<?php echo @__MODULE__;?>
+/System/edit/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
+				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
             </td>
-        </tr>	
-	<?php } ?>
+        </tr>
+	<?php } ?> 
+	<?php }else{ ?>
+	<tr><td>暂无数据</td><tr>
+	<?php }?>
+	
 </table>
-<!--分页-->
 <div class="pagination">
-
+  <!--ul>
+    <li><a href="#">前一页</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">下一页</a></li>
+  </ul-->
   <ul>
   <?php echo $_smarty_tpl->tpl_vars['pagelist']->value;?>
 
   </ul>
 </div>
+
+
 </body>
 </html>
 <script>
@@ -133,7 +155,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 
 
     });
-
+ 
 	function del(id)
 	{
 		
@@ -146,9 +168,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 			window.location.href=url;		
 		
 		}
-	
-	
-	
-	
 	}
+	$('#edit_btn1').click(function(){
+		$('#myModal').show();
+	});
+
 </script><?php }} ?>

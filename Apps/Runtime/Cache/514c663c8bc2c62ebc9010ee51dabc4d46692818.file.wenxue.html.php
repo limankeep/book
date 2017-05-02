@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:40:23
-         compiled from "../Apps/Admin/View\Typebook\history.html" */ ?>
-<?php /*%%SmartyHeaderCode:347859086217642902-32190613%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:40:15
+         compiled from "../Apps/Admin/View\Typebook\wenxue.html" */ ?>
+<?php /*%%SmartyHeaderCode:134895908620f140d70-96552047%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '478afdfec94ed6768e2ea3e9829d584b69bbb6ce' => 
+    '514c663c8bc2c62ebc9010ee51dabc4d46692818' => 
     array (
-      0 => '../Apps/Admin/View\\Typebook\\history.html',
-      1 => 1492676231,
+      0 => '../Apps/Admin/View\\Typebook\\wenxue.html',
+      1 => 1492676230,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '347859086217642902-32190613',
+  'nocache_hash' => '134895908620f140d70-96552047',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590862177c405',
+  'unifunc' => 'content_5908620f3d087',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590862177c405')) {function content_590862177c405($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5908620f3d087')) {function content_5908620f3d087($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>

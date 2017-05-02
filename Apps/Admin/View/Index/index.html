@@ -6,6 +6,7 @@
    <link href="{$smarty.const.PUBLIC_URL}/assets/css/dpl-min.css" rel="stylesheet" type="text/css" />
    <link href="{$smarty.const.PUBLIC_URL}/assets/css/bui-min.css" rel="stylesheet" type="text/css" />
    <link href="{$smarty.const.PUBLIC_URL}/assets/css/main-min.css" rel="stylesheet" type="text/css" />
+   
  </head>
  <body>
 
@@ -102,12 +103,12 @@
               }]
           },{
             id:'System',
-            homePage : 'list',
+            homePage : 'demo',
             menu:[{
                 text:'系统管理',
                 items:[
-                  {id:'list',text:'公告管理',href:'system/list.html'},
-                  {id:'example',text:'图书馆介绍',href:'system/example.html'},
+                  {id:'demo',text:'公告管理',href:'../System/demo.html'},
+                  {id:'edit',text:'图书馆介绍',href:'../System/edit.html'},
                   {id:'introduce',text:'修改密码',href:'system/introduce.html'},
                   {id:'backup',text:'数据备份',href:'system/backup.html'}
                 ]

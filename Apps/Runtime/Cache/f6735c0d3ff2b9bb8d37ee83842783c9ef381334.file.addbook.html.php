@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-22 23:31:26
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:30:15
          compiled from "../Apps/Admin/View\Book\addbook.html" */ ?>
-<?php /*%%SmartyHeaderCode:714658f3837af14016-07368598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:2952459085fb739e354-21212397%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f6735c0d3ff2b9bb8d37ee83842783c9ef381334' => 
     array (
       0 => '../Apps/Admin/View\\Book\\addbook.html',
-      1 => 1492875083,
+      1 => 1493602939,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '714658f3837af14016-07368598',
+  'nocache_hash' => '2952459085fb739e354-21212397',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58f3837b0fb11',
   'variables' => 
   array (
     'role_checkbox' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59085fb76c83d',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58f3837b0fb11')) {function content_58f3837b0fb11($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59085fb76c83d')) {function content_59085fb76c83d($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -92,13 +92,13 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<tr>
         <td class="tableleft">图书类别</td>
         <td><select class="selectpicker">
-  <option>1</option>
-  <option>2</option>
-  <option>3</option>
-  <option>4</option>
-  <option>5</option>
-</select>
-</td>
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+			</select>
+		</td>
     </tr>
     <tr>
         <td class="tableleft">出版社</td>
@@ -135,7 +135,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <tr>
         <td class="tableleft"></td>
         <td>
-            <a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+            <a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a> &nbsp;&nbsp;
+			<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
         </td>
     </tr>
 	<!-- 弹出框提示 -->
@@ -159,19 +160,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </table>
 </form>
 <!-- 加载编辑器的容器 -->
-    <script id="container" name="content" type="text/plain">
+    <!--script id="container" name="content" type="text/plain">
         这里写你的初始化内容
     </script>
     <!-- 配置文件 -->
-    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+    <!--script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/ueditor.config.js"></script>
     <!-- 编辑器源码文件 -->
-    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
+    <!--script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/ueditor.all.js"></script>
     <!-- 实例化编辑器 -->
-    <script type="text/javascript">
+    <!--script type="text/javascript">
         var ue = UE.getEditor('container');
-    </script>
+    </script-->
 </body>
 </body>
 </html>
