@@ -1,22 +1,22 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-20 16:47:37
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 20:16:04
          compiled from "../Apps/Admin/View\Reader\readerlist.html" */ ?>
-<?php /*%%SmartyHeaderCode:1290858e9147f478f16-95983484%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:132565907fdd0219191-94228477%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6af1a5b792d95f0838c1ab2f3aab2f15c7de0eef' => 
     array (
       0 => '../Apps/Admin/View\\Reader\\readerlist.html',
-      1 => 1492678023,
+      1 => 1493727362,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1290858e9147f478f16-95983484',
+  'nocache_hash' => '132565907fdd0219191-94228477',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58e9147f57600',
+  'unifunc' => 'content_5907fdd0335b6',
   'variables' => 
   array (
     'info' => 0,
@@ -25,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58e9147f57600')) {function content_58e9147f57600($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5907fdd0335b6')) {function content_5907fdd0335b6($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -70,18 +70,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">    
+<form class="form-inline definewidth m20" action="<?php echo @__SELF__;?>
+" method="post">    
     用户名称：
-    <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <input type="text" name="uname" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
+		<th>读者编号</th>
         <th>用户id</th>
-        <th>用户名称</th>
         <th>真实姓名</th>
-		<th>是否有逾期图书</th>
+        <th>性别</th>
+		<th>家庭住址</th>
         <th>最后登录时间</th>
         <th>操作</th>
     </tr>
@@ -94,7 +96,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
  $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
 ?>
 	     <tr>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['id'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['uid'];?>
 </td>
@@ -102,10 +104,14 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['sex'];?>
 </td>
-            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['reader_address'];?>
+</td>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
 </td>
             <td>
-                <a href="edit.html">编辑</a> 
+                <a href="<?php echo @__MODULE__;?>
+/Reader/edit/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
                 <button type="submit" class="btn btn-primary">详情</button>				
             </td>
         </tr>	

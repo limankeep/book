@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-18 19:56:46
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 13:16:01
          compiled from "../Apps/Admin/View\Borrow\addborrow.html" */ ?>
-<?php /*%%SmartyHeaderCode:705358e91040a07435-60590796%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:32046590730e8b7bb61-57470761%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd27b6269d2219b3e22e803fda49ab8636ba20aa5' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\addborrow.html',
-      1 => 1492515346,
+      1 => 1493702155,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '705358e91040a07435-60590796',
+  'nocache_hash' => '32046590730e8b7bb61-57470761',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58e91040ba9a9',
+  'unifunc' => 'content_590730e8c797f',
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58e91040ba9a9')) {function content_58e91040ba9a9($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590730e8c797f')) {function content_590730e8c797f($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -30,6 +30,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/style.css" />
+	<link rel="stylesheet" href="<?php echo @PUBLIC_URL;?>
+/Css/easyform.css">
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
@@ -40,6 +42,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
+	<script src="<?php echo @PUBLIC_URL;?>
+/Js/easyform.js"></script>
 
  
 
@@ -65,44 +69,26 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body>
 
+
 <form action="<?php echo @__SELF__;?>
-" method="post" class="definewidth m20" enctype="multipart/form-data">
+" method="post" class="definewidth m20" enctype="multipart/form-data" id="form1">
 <table class="table table-bordered table-hover definewidth m10">
     <tr>
-        <td width="10%" class="tableleft">图书编号</td>
-        <td><input type="text" name="book_name"/></td>
+        <td width="10%" class="tableleft">图书编号</td> 
+        <td width="30%"><input type="text" name="book_id"  data-easyform="length:2 8;char-normal;real-time;" data-message="编号必须为必须为12位的英文字母或数字" data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
-    <tr>
-        <td class="tableleft">图书名</td>
-        <td><input type="text" name="book_id"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">读者id</td>
-        <td><input type="text" name="uid"/></td>
-    </tr>
+  
     <tr>
         <td class="tableleft">读者编号</td>
-        <td ><input type="text" name="reader_id"/></td>
+        <td width="30%"><input type="text" name="reader_id" data-easyform="length:2 8;char-normal;real-time;" data-message="用户名必须为12位的shuzi " data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
-    <tr>
-        <td width="10%" class="tableleft">现在添加的一行东西</td>
-        <td width="30%"><input type="text" name="username"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">状态</td>
-        <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-           <input type="radio" name="status" value="0"/> 禁用
-        </td>
-    </tr>
-    <tr>
-        <td class="tableleft">角色</td>
-        <td>>33</td>
-    </tr>
+ 
+ 
     <tr>
         <td class="tableleft"></td>
         <td>
-            <a href="#myModal" data-toggle="modal" type="button" class="btn btn-primary"  id="tijiao">保存 </a>&nbsp;&nbsp;<a type="button" class="btn btn-success" name="backid" id="backid" href="<?php echo @__MODULE__;?>
+            <input href="#myModal2222" data-toggle="modal" type="submit" class="btn btn-primary"  id="tijiao" value="提交申请">&nbsp;&nbsp;
+			<a type="button" class="btn btn-success" name="backid" id="backid" href="<?php echo @__MODULE__;?>
 /Borrow/borrowlist">返回列表</a>
         </td>
     </tr>
@@ -127,7 +113,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button type="submit" class="btn btn-info">确定</button>
+        <input type="submit" class="btn btn-info" value="确定"></input>
     </div>
 </div>
 </form>
@@ -136,11 +122,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </body>
 </html>
 <script>
-    $(function () {       
-		$('#backid').click(function(){
-				window.location.href="list.html";
-		 });
+$("#tijiao").click(function(){
+	
 
-    });
+        $("#form1").easyform();
+
+
+});
+
+
     
 </script><?php }} ?>

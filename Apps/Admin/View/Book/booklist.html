@@ -13,6 +13,7 @@
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
 	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
 	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/froala_editor.min.js"></script>
+	<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 
  
 
@@ -38,15 +39,19 @@
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">    
-    用户名称：
-    <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
+<form class="form-inline definewidth m20" action="{$smarty.const.__SELF__}" method="post">    
+    图书名称：
+    <input type="text" name="book_name" id="book_name"class="abc input-default">&nbsp;&nbsp;  
+	时间：
+	 <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="{$start_time}" size="17" class="date"  style="width:120px;">&nbsp;&nbsp; 
+	 - 
+	 <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="{$end_time}" size="17"  class="date" style="width:120px;">  &nbsp;&nbsp; 
+    <button type="submit" class="btn btn-primary">查询</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>图书编号daasasasasasas</th>
+        <th>图书编号</th>
         <th>图书名称</th>
 		<th>作者</th>
         <th>图书分类</th>
@@ -57,28 +62,26 @@
 		<th>操作</th>
     </tr>
     </thead>
+	{if $info != ""}
 	{foreach $info as $k => $v}
 	     <tr>
             <td>{$v.book_id}</td>
             <td>{$v.book_name}</td>
 			<td>{$v.uname}</td>
-            <td>{if $v.book_type eq "历史"}
-	男人.
-{elseif $v.book_id eq "Wilma"}
-	Welcome Ma'am.
-{else}
-	Welcome, whatever you are.
-{/if}</td>
+            <td>{$v.book_type}</td>
             <td>{$v.press}</td>
 			<td>{$v.price}</td>
 			<td>{$v.total_amount}</td>
 			<td>{$v.now_amount}</td>
             <td>
-                <a href="#myModal" type="button" class="btn btn-primary" data-toggle="modal">编辑</a>
+                 <a href="{$smarty.const.__MODULE__}/System/edit/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
 				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
             </td>
         </tr>
 	{/foreach}
+	{else if $info == ""}
+	<tr><td>暂无数据</td><tr>
+	{/if}
 </table>
 <!--分页-->
 <div class="pagination">
@@ -169,6 +172,7 @@
 </body>
 </html>
 <script>
+{literal}
     $(function () {
        
 		$('#addnew').click(function(){
@@ -190,5 +194,22 @@
 		
 		}
 	}
-	
+	function selecttime(flag){
+    if(flag==1){
+        var endTime = $("#countTimeend").val();
+        if(endTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }
+    }else{
+        var startTime = $("#countTimestart").val();
+        if(startTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }    
+    }
+}
+{/literal}
 </script>

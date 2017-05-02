@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-20 16:34:00
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-01 09:45:32
          compiled from "../Apps/Admin/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:1712058f87252eafd61-33800636%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:147655906933cdc41a8-71115924%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8afd212666d42f9374922f923bebdbec4280e350' => 
     array (
       0 => '../Apps/Admin/View\\Index\\index.html',
-      1 => 1492677235,
+      1 => 1493600637,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1712058f87252eafd61-33800636',
+  'nocache_hash' => '147655906933cdc41a8-71115924',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58f8725304d30',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5906933ceacbe',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58f8725304d30')) {function content_58f8725304d30($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_5906933ceacbe')) {function content_5906933ceacbe($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
  <head>
   <title>三峡枫叶图书馆后台管理系统</title>
@@ -30,6 +30,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /assets/css/bui-min.css" rel="stylesheet" type="text/css" />
    <link href="<?php echo @PUBLIC_URL;?>
 /assets/css/main-min.css" rel="stylesheet" type="text/css" />
+   
  </head>
  <body>
 
@@ -129,12 +130,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               }]
           },{
             id:'System',
-            homePage : 'list',
+            homePage : 'demo',
             menu:[{
                 text:'系统管理',
                 items:[
-                  {id:'list',text:'公告管理',href:'system/list.html'},
-                  {id:'example',text:'图书馆介绍',href:'system/example.html'},
+                  {id:'demo',text:'公告管理',href:'../System/demo.html'},
+                  {id:'edit',text:'图书馆介绍',href:'../System/edit.html'},
                   {id:'introduce',text:'修改密码',href:'system/introduce.html'},
                   {id:'backup',text:'数据备份',href:'system/backup.html'}
                 ]

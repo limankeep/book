@@ -1,31 +1,33 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-04-22 22:42:34
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 19:22:35
          compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
-<?php /*%%SmartyHeaderCode:1544158f383ac582e80-80333574%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1732159072d30641d99-33139258%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booklist.html',
-      1 => 1492872151,
+      1 => 1493724152,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1544158f383ac582e80-80333574',
+  'nocache_hash' => '1732159072d30641d99-33139258',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_58f383ac66408',
+  'unifunc' => 'content_59072d308336e',
   'variables' => 
   array (
+    'start_time' => 0,
+    'end_time' => 0,
     'info' => 0,
     'v' => 0,
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_58f383ac66408')) {function content_58f383ac66408($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59072d308336e')) {function content_59072d308336e($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -50,6 +52,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/common.js"></script>
 	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/froala_editor.min.js"></script>
+	<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 
  
 
@@ -75,10 +78,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">    
-    用户名称：
-    <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
+<form class="form-inline definewidth m20" action="<?php echo @__SELF__;?>
+" method="post">    
+    图书名称：
+    <input type="text" name="book_name" id="book_name"class="abc input-default">&nbsp;&nbsp;  
+	时间：
+	 <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="<?php echo $_smarty_tpl->tpl_vars['start_time']->value;?>
+" size="17" class="date"  style="width:120px;">&nbsp;&nbsp; 
+	 - 
+	 <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="<?php echo $_smarty_tpl->tpl_vars['end_time']->value;?>
+" size="17"  class="date" style="width:120px;">  &nbsp;&nbsp; 
+    <button type="submit" class="btn btn-primary">查询</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
@@ -94,6 +104,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<th>操作</th>
     </tr>
     </thead>
+	<?php if ($_smarty_tpl->tpl_vars['info']->value!=''){?>
 	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
  $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
  $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
@@ -108,13 +119,8 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
 </td>
-            <td><?php if ($_smarty_tpl->tpl_vars['v']->value['book_type']=="历史"){?>
-	男人.
-<?php }elseif($_smarty_tpl->tpl_vars['v']->value['book_id']=="Wilma"){?>
-	Welcome Ma'am.
-<?php }else{ ?>
-	Welcome, whatever you are.
-<?php }?></td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
+</td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['press'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['price'];?>
@@ -124,11 +130,16 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['now_amount'];?>
 </td>
             <td>
-                <a href="#myModal" type="button" class="btn btn-primary" data-toggle="modal">编辑</a>
+                 <a href="<?php echo @__MODULE__;?>
+/System/edit/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
 				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
             </td>
         </tr>
 	<?php } ?>
+	<?php }elseif($_smarty_tpl->tpl_vars['info']->value==''){?>
+	<tr><td>暂无数据</td><tr>
+	<?php }?>
 </table>
 <!--分页-->
 <div class="pagination">
@@ -221,6 +232,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </body>
 </html>
 <script>
+
     $(function () {
        
 		$('#addnew').click(function(){
@@ -242,5 +254,22 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 		
 		}
 	}
-	
+	function selecttime(flag){
+    if(flag==1){
+        var endTime = $("#countTimeend").val();
+        if(endTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }
+    }else{
+        var startTime = $("#countTimestart").val();
+        if(startTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }    
+    }
+}
+
 </script><?php }} ?>

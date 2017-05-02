@@ -35,31 +35,33 @@
     </style>
 </head>
 <body>
-<form class="form-inline definewidth m20" action="index.html" method="get">    
+<form class="form-inline definewidth m20" action="{$smarty.const.__SELF__}" method="post">    
     用户名称：
-    <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <input type="text" name="uname" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
     <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
+		<th>读者编号</th>
         <th>用户id</th>
-        <th>用户名称</th>
         <th>真实姓名</th>
-		<th>是否有逾期图书</th>
+        <th>性别</th>
+		<th>家庭住址</th>
         <th>最后登录时间</th>
         <th>操作</th>
     </tr>
     </thead>
 	{foreach $info as $k => $v}
 	     <tr>
-            <td>{$v.id}</td>
+            <td>{$v.reader_id}</td>
             <td>{$v.uid}</td>
             <td>{$v.reader_name}</td>
 			<td>{$v.sex}</td>
-            <td>{$v.create_time}</td>
+            <td>{$v.reader_address}</td>
+			<td>{$v.create_time}</td>
             <td>
-                <a href="edit.html">编辑</a> 
+                <a href="{$smarty.const.__MODULE__}/Reader/edit/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
                 <button type="submit" class="btn btn-primary">详情</button>				
             </td>
         </tr>	

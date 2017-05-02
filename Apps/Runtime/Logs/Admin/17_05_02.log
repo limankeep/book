@@ -1,0 +1,215 @@
+[ 2017-05-02T09:16:33+08:00 ] 127.0.0.1 /index.php/Admin/Index/Borrow/borrowlist3.html
+ERR: 非法操作:Borrow
+
+[ 2017-05-02T11:08:27+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from tp_borrow where book_name like '%%'Limit 0, 
+
+[ 2017-05-02T11:08:56+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from tp_borrow where (create_time between '2017-04-10 11:08:45' and '2017-05-02 11:08:54') And (book_name like '%%')Limit 0, 
+
+[ 2017-05-02T11:23:36+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from tp_borrow where create_time between '' and ''Limit 0, 
+
+[ 2017-05-02T11:26:01+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from tp_borrow where create_time between '' and ''Limit 0, 
+
+[ 2017-05-02T11:27:42+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from tp_borrow Limit 0, 
+
+[ 2017-05-02T11:31:15+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1065:Query was empty
+
+[ 2017-05-02T11:32:27+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-05-02T11:36:18+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/edit.html
+ERR: 非法操作:edit
+
+[ 2017-05-02T16:50:33+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T16:51:37+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T16:52:27+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T16:53:52+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T18:12:43+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\borrowlist.html"  on line 110 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:12:44+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\borrowlist.html"  on line 110 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:12:45+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\borrowlist.html"  on line 110 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:12:46+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\borrowlist.html"  on line 110 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:12:54+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\borrowlist.html"  on line 110 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:12:56+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\borrowlist.html"  on line 110 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:20:05+08:00 ] 127.0.0.1 /index.php/Admin/System/edit.html
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T18:20:07+08:00 ] 127.0.0.1 /index.php/Admin/System/edit.html
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T18:24:27+08:00 ] 127.0.0.1 /index.php/Admin/System/demo.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create_time descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_book where book_name like '%%' create_time descLimit 0, 8
+
+[ 2017-05-02T18:24:29+08:00 ] 127.0.0.1 /index.php/Admin/System/demo.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create_time descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_book where book_name like '%%' create_time descLimit 0, 8
+
+[ 2017-05-02T18:24:50+08:00 ] 127.0.0.1 /index.php/Admin/System/demo.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'create_time desc Limit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_book where book_name like '%%' order create_time desc Limit 0, 8
+
+[ 2017-05-02T18:25:52+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow order by create_time descLimit 0, 8
+
+[ 2017-05-02T18:27:17+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow order by create_time descLimit 0, 8
+
+[ 2017-05-02T18:27:43+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 3' at line 1
+ [ SQL语句 ] : select * from tp_book order by create_time descLimit 0, 3
+
+[ 2017-05-02T18:28:04+08:00 ] 127.0.0.1 /index.php/Admin/System/edit.html
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T18:28:59+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow order by create_time descLimit 0, 8
+
+[ 2017-05-02T18:28:59+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow order by create_time descLimit 0, 8
+
+[ 2017-05-02T18:29:00+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow order by create_time descLimit 0, 8
+
+[ 2017-05-02T18:29:00+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow order by create_time descLimit 0, 8
+
+[ 2017-05-02T18:29:25+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow order by create_time descLimit 0, 8
+
+[ 2017-05-02T18:29:34+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-02T18:29:35+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-02T18:29:57+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'descLimit 0, 3' at line 1
+ [ SQL语句 ] : select * from tp_book order by create_time descLimit 0, 3
+
+[ 2017-05-02T18:30:10+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 3' at line 1
+ [ SQL语句 ] : select * from tp_bookLimit 0, 3
+
+[ 2017-05-02T18:30:12+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 3' at line 1
+ [ SQL语句 ] : select * from tp_bookLimit 0, 3
+
+[ 2017-05-02T18:30:14+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 3' at line 1
+ [ SQL语句 ] : select * from tp_bookLimit 0, 3
+
+[ 2017-05-02T18:30:16+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 3' at line 1
+ [ SQL语句 ] : select * from tp_bookLimit 0, 3
+
+[ 2017-05-02T18:32:53+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 196 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:32:56+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklist.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booklist.html"  on line 196 "WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});"  - Unexpected ":", expected one of: "}" , " "
+
+[ 2017-05-02T18:35:45+08:00 ] 127.0.0.1 /index.php/Admin/Book/index.html?username=%E5%8E%86%E5%8F%B2&start_time=&end_time=
+ERR: 非法操作:index
+
+[ 2017-05-02T18:40:21+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/shengwu.html
+ERR: 非法操作:shengwu
+
+[ 2017-05-02T18:40:22+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 非法操作:wuli
+
+[ 2017-05-02T18:40:23+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/xiaoshuo.html
+ERR: 非法操作:xiaoshuo
+
+[ 2017-05-02T18:40:24+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/computer.html
+ERR: 非法操作:computer
+
+[ 2017-05-02T18:40:24+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/xiaoshuo.html
+ERR: 非法操作:xiaoshuo
+
+[ 2017-05-02T18:40:25+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 非法操作:wuli
+
+[ 2017-05-02T18:56:28+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 非法操作:wuli
+
+[ 2017-05-02T18:56:51+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 模板不存在:../Apps/Admin/View/Typebook/wuli.html
+
+[ 2017-05-02T18:56:52+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 模板不存在:../Apps/Admin/View/Typebook/wuli.html
+
+[ 2017-05-02T18:57:00+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 模板不存在:../Apps/Admin/View/Typebook/wuli.html
+
+[ 2017-05-02T18:58:36+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 模板不存在:../Apps/Admin/View/Typebook/wuli.html
+
+[ 2017-05-02T18:58:44+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 模板不存在:../Apps/Admin/View/Typebook/wuli.html
+
+[ 2017-05-02T18:58:46+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
+ERR: 模板不存在:../Apps/Admin/View/Typebook/wuli.html
+
+[ 2017-05-02T19:33:19+08:00 ] 127.0.0.1 /index.php/Admin/System/edit/book_id/
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T19:33:46+08:00 ] 127.0.0.1 /index.php/Admin/System/editreader/book_id/
+ERR: 非法操作:editreader
+
+[ 2017-05-02T19:36:21+08:00 ] 127.0.0.1 /index.php/Admin/System/edit/book_id/
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T19:36:38+08:00 ] 127.0.0.1 /index.php/Admin/System/edit/reader_id/1
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T19:37:26+08:00 ] 127.0.0.1 /index.php/Admin/System/edit/reader_id/1
+ERR: 参数错误或者未定义:book_id
+
+[ 2017-05-02T19:38:03+08:00 ] 127.0.0.1 /index.php/Admin/Reader/edit/reader_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Reader\edit.html"  on line 38 "&lt;form action=&quot;{:U('User/edit')}&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot;&gt;"  - Unexpected ":"
+
+[ 2017-05-02T19:38:54+08:00 ] 127.0.0.1 /index.php/Admin/Reader/edit/reader_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Reader\edit.html"  on line 83 "window.location.href=&quot;{:U('User/index')}&quot;;"  - Unexpected ":"
+
+[ 2017-05-02T19:39:11+08:00 ] 127.0.0.1 /index.php/Admin/Reader/edit/reader_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Reader\edit.html"  on line 83 "window.location.href=&quot;{:U('User/index')}&quot;;"  - Unexpected ":"
+
