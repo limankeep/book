@@ -5,6 +5,10 @@ class BorrowController extends Controller {
 	public function borrowlist(){
 		//获取当前时间
 		$now_time = date('Y-m-d H:i:s',time());
+<<<<<<< HEAD
+=======
+		echo $now_time;
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
 		//传入post参数  book_name reader_id start_time end_time
 		$book_name = $_POST['book_name'];
 		$start_time = $_POST['start_time'];
@@ -73,6 +77,7 @@ class BorrowController extends Controller {
 		//判断
         if(!empty($_POST)){			
 		
+<<<<<<< HEAD
 			$sqlbook = "select total_amount from tp_book where book_id = ' ".$book_id."'";
 			$sqlbook2 = "select book_name from tp_book where book_id = ' ".$book_id."'";
 			$sqlbook3 = "select book_type from tp_book where book_id = ' ".$book_id."'";
@@ -125,6 +130,33 @@ class BorrowController extends Controller {
 						$data2['reader_id'] = $reader_id;
 						$result1 = $book -> save($data1); 
 						$result2 = $reader -> save($data2); 						
+=======
+			$sqlbook = "select now_amount from tp_book where book_id = ' ".$book_id."'";
+			$book_now_amount = $book -> query($sqlbook);
+			$sqlreader = "select now_amount from tp_reader where reader_id = ' ".$reader_id."'";
+			$reader_now_amount = $reader -> query($sqlreader);
+			//必须同时有书本编号和读者编号才能进入此方法完成借书
+			if(($book_now_amount) && ($reader_now_amount)){
+				$arr1 = array_map('array_shift', $book_now_amount);   
+				$book_now_amount = $arr1[0];
+				$arr2 = array_map('array_shift', $reader_now_amount);   
+				$reader_now_amount = $arr2[0];
+				//判断如果书借完了或者读者的可借数为0就不能借书
+				if(($book_now_amount == 0) || ($reader_now_amount == 0)){ 
+					echo "图书借完了";
+				}
+				if(($book_now_amount > 0) && ($reader_now_amount > 0)){
+					$borrow  -> create(); 			
+					$borrow -> create_time = $create_time;
+					$borrow -> finish_time = $finish_time;					
+					$z = $borrow -> add();
+					if($z){						
+						//每次借书后书本数减少一				
+						$data1['now_amount'] = $book_now_amount -1;
+						$data2['now_amount'] = $reader_now_amount -1;					
+						$result1 = $book ->where($book_id)-> save($data1); 
+						$result2 = $reader -> where($reader_id)->save($data2); 						
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
 							echo "alert('success')";												
 					} else {
 						echo "alert('error')";

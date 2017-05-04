@@ -1,0 +1,36 @@
+[ 2017-05-03T11:31:12+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:31:15+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:31:18+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:31:25+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:31:27+08:00 ] 127.0.0.1 /index.php/Home/Center/book-search.html
+ERR: 非法操作:book-search
+
+[ 2017-05-03T11:31:30+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:34:36+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:34:38+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:34:42+08:00 ] 127.0.0.1 /index.php/Home/Center/index.html
+ERR: 非法操作:index
+
+[ 2017-05-03T11:35:06+08:00 ] 127.0.0.1 /index.php/Home/Book/book-search.html
+ERR: 非法操作:book-search
+
+[ 2017-05-03T11:35:51+08:00 ] 127.0.0.1 /index.php/Home/Book/book-search.html
+ERR: 非法操作:book-search
+
+[ 2017-05-03T11:37:07+08:00 ] 127.0.0.1 /index.php/Home/Book/book-search.html
+ERR: 非法操作:book-search
+

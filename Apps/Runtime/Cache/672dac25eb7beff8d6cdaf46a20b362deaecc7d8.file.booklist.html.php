@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 19:22:35
+=======
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:39:36
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
          compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
 <?php /*%%SmartyHeaderCode:1732159072d30641d99-33139258%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booklist.html',
+<<<<<<< HEAD
       1 => 1493724152,
+=======
+      1 => 1493721572,
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
       2 => 'file',
     ),
   ),

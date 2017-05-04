@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:40:15
-         compiled from "../Apps/Admin/View\Typebook\wenxue.html" */ ?>
-<?php /*%%SmartyHeaderCode:134895908620f140d70-96552047%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 19:29:23
+         compiled from "../Apps/Admin/View\Book\booktype.html" */ ?>
+<?php /*%%SmartyHeaderCode:1470259086d934a0946-26481528%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '514c663c8bc2c62ebc9010ee51dabc4d46692818' => 
+    '1918efacd4b3c6d151a35c9a9d14ec230a6fbf86' => 
     array (
-      0 => '../Apps/Admin/View\\Typebook\\wenxue.html',
-      1 => 1492676230,
+      0 => '../Apps/Admin/View\\Book\\booktype.html',
+      1 => 1492353955,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '134895908620f140d70-96552047',
+  'nocache_hash' => '1470259086d934a0946-26481528',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5908620f3d087',
+  'unifunc' => 'content_59086d9373ff5',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5908620f3d087')) {function content_5908620f3d087($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59086d9373ff5')) {function content_59086d9373ff5($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -72,22 +72,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
     <tr>
-        <th>图书编号</th>
-        <th>图书名称</th>
-        <th>出版社</th>
-        <th>入库总数</th>
-		<th>入库日期</th>
-		<th>当前数目</th>
-		<th>操作</th>
+        <th>类别编号</th>
+        <th>类别名</th>
+        <th>类别描述</th>
+        <th>添加时间</th>
+        <th>操作</th>
     </tr>
     </thead>
 	     <tr>
             <td>2</td>
-            <td>php操作手册</td>
-            <td>计算机</td>
-            <td>中华出版社</td>
-			<td>10</td>
-			<td>5</td>
+            <td>it</td>
+            <td>计算机和软件相关</td>
+            <td>2016年12月7日</td>
             <td>
                 <a href="edit.html">编辑</a>                
             </td>

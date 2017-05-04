@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 <?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 19:29:22
+=======
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:30:15
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
          compiled from "../Apps/Admin/View\Book\addbook.html" */ ?>
 <?php /*%%SmartyHeaderCode:2952459085fb739e354-21212397%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +11,11 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'f6735c0d3ff2b9bb8d37ee83842783c9ef381334' => 
     array (
       0 => '../Apps/Admin/View\\Book\\addbook.html',
+<<<<<<< HEAD
       1 => 1493724485,
+=======
+      1 => 1493602939,
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
       2 => 'file',
     ),
   ),
@@ -15,13 +23,18 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+<<<<<<< HEAD
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_59085fb76c83d',
+=======
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
   'variables' => 
   array (
     'role_checkbox' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_59085fb76c83d',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_59085fb76c83d')) {function content_59085fb76c83d($_smarty_tpl) {?><!DOCTYPE html>
 <html>
@@ -93,12 +106,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </tr>
 	<tr>
         <td class="tableleft">图书类别</td>
+<<<<<<< HEAD
         <td><select class="selectpicker" name="book_type">
 				<option>历史</option>
 				<option>文学</option>
 				<option>计算机</option>
 				<option>语言</option>
 				<option>物理</option>
+=======
+        <td><select class="selectpicker">
+				<option>1</option>
+				<option>2</option>
+				<option>3</option>
+				<option>4</option>
+				<option>5</option>
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
 			</select>
 		</td>
     </tr>

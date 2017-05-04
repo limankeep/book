@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:40:15
-         compiled from "../Apps/Admin/View\Typebook\wenxue.html" */ ?>
-<?php /*%%SmartyHeaderCode:134895908620f140d70-96552047%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-03 09:31:41
+         compiled from "../Apps/Admin/View\Book\yuqibook.html" */ ?>
+<?php /*%%SmartyHeaderCode:10255590932fd262db7-32943503%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '514c663c8bc2c62ebc9010ee51dabc4d46692818' => 
+    '1bb94937ad70ee0c308aab566486283c728a932f' => 
     array (
-      0 => '../Apps/Admin/View\\Typebook\\wenxue.html',
-      1 => 1492676230,
+      0 => '../Apps/Admin/View\\Book\\yuqibook.html',
+      1 => 1492353956,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '134895908620f140d70-96552047',
+  'nocache_hash' => '10255590932fd262db7-32943503',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5908620f3d087',
+  'unifunc' => 'content_590932fd4e423',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5908620f3d087')) {function content_5908620f3d087($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590932fd4e423')) {function content_590932fd4e423($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -74,9 +74,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <tr>
         <th>图书编号</th>
         <th>图书名称</th>
+        <th>图书分类</th>
         <th>出版社</th>
         <th>入库总数</th>
-		<th>入库日期</th>
 		<th>当前数目</th>
 		<th>操作</th>
     </tr>

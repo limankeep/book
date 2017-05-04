@@ -168,6 +168,7 @@ ERR: 非法操作:xiaoshuo
 [ 2017-05-02T18:40:25+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
 ERR: 非法操作:wuli
 
+<<<<<<< HEAD
 [ 2017-05-02T18:56:28+08:00 ] 127.0.0.1 /index.php/Admin/Typebook/wuli.html
 ERR: 非法操作:wuli
 
@@ -213,3 +214,5 @@ ERR: Syntax Error in template "../Apps/Admin/View\Reader\edit.html"  on line 83 
 [ 2017-05-02T19:39:11+08:00 ] 127.0.0.1 /index.php/Admin/Reader/edit/reader_id/1
 ERR: Syntax Error in template "../Apps/Admin/View\Reader\edit.html"  on line 83 "window.location.href=&quot;{:U('User/index')}&quot;;"  - Unexpected ":"
 
+=======
+>>>>>>> f2ed431902361750018034b30002f461cba1e717
