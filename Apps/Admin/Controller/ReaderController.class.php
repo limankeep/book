@@ -31,35 +31,49 @@ class ReaderController extends Controller {
 		$uid = $_POST['uid'];
 		$reader_IDcard =$_POST['reader_IDcard'];
         $reader = D('reader');
-		$re1 = $reader -> where()
-        if(!empty($_POST)){
+		//查询注册的用户是否注册过
+		$quchong['uid'] = $uid;
+		$quchong['reader_IDcard'] = $reader_IDcard ;
+		$re1 = $reader -> where($quchong)->select();
+		if($re1){
+			echo '信息已被注册，请重新注册';
+		}else{
+			if(!empty($_POST)){
 			
-            $reader  -> create(); //收集post表单数据
+				$reader  -> create(); //收集post表单数据
 						
-            $z = $reader -> add();
-            if($z){
-                //
-                echo "success";//每次借书后书本数减少一				
-				$data1['password'] = 123456;
-				$data1['create_time'] = $now_time;
-				$reader_id = $z;
-				$result1 = $reader ->where($reader_id)-> save($data1); 
-				$user = D('user');
-				$ar = array(
+				$z = $reader -> add();
+				if($z){
+					//
+					echo "success";
+					//同步登录的表格
+					//初始密码统一设为123456
+					$data1['password'] = 123456;
+					$data1['create_time'] = $now_time;
+					$reader_id = $z;
+					$result1 = $reader ->where($reader_id)-> save($data1);
+					$sqlreader_uname = "select uid from tp_reader where reader_id = ' ".$reader_id."'";
+					$uname = $reader -> query($sqlreader_uname);					
+					$arr1 = array_map('array_shift', $uname);   
+					$uname= $arr1[0];
+					$user = D('user');
+					$ar = array(
 							'uid'=> $reader_id,
-							'uname'=> 11,
+							'uname'=> $uname,
 							'password'=> 123456,
 							'now_time' => $now_time
 						);
-				$result2 = $user->add($ar); 	
+					$result2 = $user->add($ar); 	
 				
-            } else {
-                //$this ->error('添加书籍失败', U('Goods/showlist'));
-                echo "error";
-            }
-        }else {
-            $this -> display();
-        }
+				} else {
+					
+					echo "error";
+				}
+			}else{
+				$this -> display();
+			}
+		}
+        
     }
 	public function edit(){
 		

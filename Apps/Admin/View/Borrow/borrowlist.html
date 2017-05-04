@@ -58,7 +58,7 @@
         <th>借阅人id</th>
         <th>借阅日期{$nowtime}</th>
         <th>应该归还日期</th>
-		<th>是否逾期</th>
+		<th>是否归还</th>
         <th>操作</th>
     </tr>
     </thead>
@@ -72,9 +72,9 @@
 			<td>{$v.reader_id}</td>
 			<td>{$v.create_time}</td>
 			<td>{$v.finish_time}</td>
-			<td>{if $v.finish_time }是{else if $v.status == "0"}否{/if}</td>
+			<td>{if $v.status != "0" }是{else if $v.status == "0"}否{/if}</td>
             <td>
-                <a href="edit.html" type="button" class=" btn btn-primary">归还{$nowtime}</a>
+                <a href="{$smarty.const.__MODULE__}/Borrow/del/borrow_id/{$v.borrow_id}" type="button" class=" btn btn-primary">删除</a>
 				
             </td>
         </tr>

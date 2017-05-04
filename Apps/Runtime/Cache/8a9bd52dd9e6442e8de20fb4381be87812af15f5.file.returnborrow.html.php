@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-01 21:36:53
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-03 10:28:05
          compiled from "../Apps/Admin/View\Borrow\returnborrow.html" */ ?>
 <?php /*%%SmartyHeaderCode:18620590739f57eb8e5-79830131%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '8a9bd52dd9e6442e8de20fb4381be87812af15f5' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\returnborrow.html',
-      1 => 1491654724,
+      1 => 1493778482,
       2 => 'file',
     ),
   ),
@@ -15,40 +15,46 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
-  'variables' => 
-  array (
-    'Think' => 0,
-    'role_checkbox' => 0,
-  ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
   'unifunc' => 'content_590739f59052f',
+  'variables' => 
+  array (
+    'start_time' => 0,
+    'end_time' => 0,
+    'nowtime' => 0,
+    'info' => 0,
+    'v' => 0,
+    'pagelist' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_590739f59052f')) {function content_590739f59052f($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/style.css" />
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.sorted.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/ckform.js"></script>
-    <script type="text/javascript" src="<?php echo $_smarty_tpl->tpl_vars['Think']->value['const']['PUBLIC_URL'];?>
+    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
+	<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 
  
 
     <style type="text/css">
+	
         body {
             padding-bottom: 40px;
         }
@@ -64,56 +70,115 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 padding-right: 5px;
             }
         }
-
-
+        .pagination{
+            margin:30px;
+        }
+    
     </style>
 </head>
 <body>
-<form action="index.html" method="post" class="definewidth m20">
-<table class="table table-bordered table-hover definewidth m10">
-    <tr>
-        <td width="10%" class="tableleft">图书编号</td>
-        <td><input type="text" name="username"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">图书名</td>
-        <td><input type="password" name="password"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">读者id</td>
-        <td><input type="text" name="realname"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">读者编号</td>
-        <td><input type="text" name="email"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">状态</td>
-        <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-           <input type="radio" name="status" value="0"/> 禁用
-        </td>
-    </tr>
-    <tr>
-        <td class="tableleft">角色</td>
-        <td><?php echo $_smarty_tpl->tpl_vars['role_checkbox']->value;?>
-</td>
-    </tr>
-    <tr>
-        <td class="tableleft"></td>
-        <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
-        </td>
-    </tr>
-</table>
+<form class="form-inline definewidth m20" action="<?php echo @__SELF__;?>
+" method="post">    
+    图书名称：
+    <input type="text" name="book_name" id="book_name"class="abc input-default" placeholder="" value="">&nbsp;&nbsp; 
+     时间：
+	 <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="<?php echo $_smarty_tpl->tpl_vars['start_time']->value;?>
+" size="17" class="date"  style="width:120px;">&nbsp;&nbsp; 
+	 - 
+	 <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="<?php echo $_smarty_tpl->tpl_vars['end_time']->value;?>
+" size="17"  class="date" style="width:120px;">  &nbsp;&nbsp; 
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" >新增借阅</button>
 </form>
+<table class="table table-bordered table-hover definewidth m10">
+    <thead>
+    <tr>
+        <th>借阅编号</th>
+        <th>图书名称</th>
+        <th>图书分类</th>
+        <th>借阅人</th>
+        <th>借阅人id</th>
+        <th>借阅日期<?php echo $_smarty_tpl->tpl_vars['nowtime']->value;?>
+</th>
+        <th>应该归还日期</th>
+		<th>是否逾期</th>
+        <th>操作</th>
+    </tr>
+    </thead>
+	<?php if ($_smarty_tpl->tpl_vars['info']->value!=''){?>
+	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+	     <tr>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['borrow_id'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
+</td>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
+</td>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
+</td>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['finish_time'];?>
+</td>
+			<td><?php if ($_smarty_tpl->tpl_vars['v']->value['status']!="0"){?>是<?php }elseif($_smarty_tpl->tpl_vars['v']->value['status']=="0"){?>否<?php }?></td>
+            <td>
+                <a href="<?php echo @__MODULE__;?>
+/Borrow/returnbook/borrow_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['borrow_id'];?>
+" type="button" class=" btn btn-primary">归还</a>
+				
+            </td>
+        </tr>
+	<?php } ?> 
+	<?php }elseif($_smarty_tpl->tpl_vars['info']->value==''){?>
+	<tr><td>暂无数据</td><tr>
+	<?php }?>
+</table>
+<!--分页-->
+<div class="pagination">
+  <!--ul>
+    <li><a href="#">前一页</a></li>
+    <li><a href="#">1</a></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">下一页</a></li>
+  </ul-->
+  <ul>
+  <?php echo $_smarty_tpl->tpl_vars['pagelist']->value;?>
+
+  </ul>
+</div>
+
 </body>
 </html>
 <script>
-    $(function () {       
-		$('#backid').click(function(){
-				window.location.href="index.html";
-		 });
 
-    });
+
+//时间选择
+function selecttime(flag){
+    if(flag==1){
+        var endTime = $("#countTimeend").val();
+        if(endTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }
+    }else{
+        var startTime = $("#countTimestart").val();
+        if(startTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }    
+    }
+}
+
 </script><?php }} ?>

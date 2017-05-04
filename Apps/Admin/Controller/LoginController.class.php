@@ -3,21 +3,21 @@ namespace Admin\Controller;
 use Think\Controller;
 class LoginController extends Controller {
 	function login(){
-	if(!empty($_POST)){
+        if(!empty($_POST)){
             //验证码校验
             $verify = new \Think\Verify();
             if(!$verify->check($_POST['captcha'])){
                 echo "验证码错误";
             } else {
                 //判断用户名和密码，在model模型里边制作一个专门方法进行验证
-                $user = new \Model\ManagerModel();
-                $rst = $user -> checkNamePwd($_POST['muname'],$_POST['password']);
+                $user = new \Model\LoginModel();
+                $rst = $user -> checkNamePwd($_POST['uname'],$_POST['password']);
                 if($rst === false){
                     echo "用户名或密码错误";
                 } else {
                     //登录信息持久化$_SESSION
-                    session('mg_username',$rst['mg_name']);
-                    session('mg_id',$rst['mg_id']);
+                    session('uname',$rst['uname']);
+                    session('uid',$rst['uid']);
                     //$this ->redirect($url, $params, $delay, $msg)
                     //$this -> redirect('Index/index',array('id'=>100,'name'=>'tom'),2,'用户马上登陆到后台');
                     $this -> redirect('Index/index');
