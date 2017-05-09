@@ -1,29 +1,22 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 20:16:04
-=======
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 11:32:32
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 16:50:21
          compiled from "../Apps/Admin/View\Reader\readerlist.html" */ ?>
-<?php /*%%SmartyHeaderCode:132565907fdd0219191-94228477%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3451590d6210ebe430-41520450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6af1a5b792d95f0838c1ab2f3aab2f15c7de0eef' => 
     array (
       0 => '../Apps/Admin/View\\Reader\\readerlist.html',
-      1 => 1493727362,
+      1 => 1494319817,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '132565907fdd0219191-94228477',
+  'nocache_hash' => '3451590d6210ebe430-41520450',
   'function' => 
   array (
   ),
-<<<<<<< HEAD
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5907fdd0335b6',
-=======
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+  'unifunc' => 'content_590d621115ff3',
   'variables' => 
   array (
     'info' => 0,
@@ -31,10 +24,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5907fdd0335b6',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5907fdd0335b6')) {function content_5907fdd0335b6($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d621115ff3')) {function content_590d621115ff3($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -121,7 +112,10 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 <a href="<?php echo @__MODULE__;?>
 /Reader/edit/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
 " type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-                <button type="submit" class="btn btn-primary">详情</button>				
+                <button type="submit" class="btn btn-primary">详情</button>
+				<a href="<?php echo @__MODULE__;?>
+/Reader/del/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
             </td>
         </tr>	
 	<?php } ?>

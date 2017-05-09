@@ -3,7 +3,7 @@ namespace Admin\Controller;
 use Think\Controller;
 class BookController extends Controller {
     public function booklist(){
-		
+
 		//获取当前时间
 		$now_time = date('Y-m-d H:i:s',time());
 		//传入post参数  book_name reader_id start_time end_time
@@ -54,39 +54,106 @@ class BookController extends Controller {
 		else{
 			$info = 0 ;
 			$this -> assign('info', $info);
+			
 			$this -> display();
 		}
     }
 	public function addbook(){
-		 
+		//获取当前时间
+		$now_time = date('Y-m-d H:i:s',time());
 		//两个逻辑① 展现表单 ② 接收表单数据
         $book = D('Book');
+		$booktype = D('booktype');
+		//获取图书分类
+		$sql = "select * from tp_booktype";				
+		$booktypeinfo = $booktype -> query($sql);
+		$this -> assign('booktypeinfo', $booktypeinfo);
         if(!empty($_POST)){
             
             $book  -> create(); 
+			//$book ->now_amount = $book['total_amount'];
             $z = $book -> add();
             if($z){
                 //展现一个提示页面，并做页面跳转
                 //success(提示信息，跳转的url路由地址)
                 //$this ->success('添加书籍成功', U('Goods/showlist'));
+				
+				
+				$this -> display();
                 echo "success";
             } else {
                 //$this ->error('添加书籍失败', U('Goods/showlist'));
                 echo "error";
             }
         }else {
+			
             $this -> display();
         }
     }
-	public function editbook(){
-		
-		$this -> display();
+	public function edit($book_id){
+		//获取当前时间
+		$now_time = date('Y-m-d H:i:s',time());
+		//两个逻辑① 展现表单 ② 接收表单数据
+        $book = D('Book');
+		$booktype = D('booktype');
+		//获取图书分类
+		$sql = "select * from tp_booktype";				
+		$booktypeinfo = $booktype -> query($sql);
+		$this -> assign('booktypeinfo', $booktypeinfo);
+
+        //两个逻辑：展示表单、收集表单
+        if(!empty($_POST)){
+            $book -> create();
+            $result = $book -> save();
+            if($result !== false){
+                echo "success";
+            } else {
+                echo "failure";
+            }
+        } else {
+            $info = $book->find($book_id); //一维数组
+            $this -> assign('info', $info);
+            $this -> display();
+        }
+    
     }
-	public function yuqibook(){
+	public function booktype(){
 		
-		$this -> display();
+	//建立数据模型
+		$booktype = D('booktype');
+		//获取记录总条数
+		$total = $booktype -> count();
+		//设置每页展示数据条数
+		$per = 10;
+		//实例化分页对象
+		$page = new \Component\Page($total, $per); //autoload
+		//拼装sql语句获取每页的记录
+		$sql = "select * from tp_booktype ".$page->limit;
+		$info = $booktype -> query($sql);
+        //4. 获得页码列表
+        $pagelist = $page -> fpage();
+		
+		//show_bug($info);
+
+		$this -> assign('info', $info);
+        $this -> assign('pagelist', $pagelist);
+        $this -> display();
     }
-	public function update(){
+	public function del($book_id){
+		$book = D("book");//造对象
+		$book_id = $book_id;
+		$sql = "select * from tp_book where book_id = '".$book_id."' And (total_amount = now_amount)";
+		$result= $book -> query($sql);
 		
+		if($result){
+			$r = $book -> delete($book_id);//调用删除方法，直接把主键值作为参数放在（）里面就可以。
+			if($r){
+				echo "删除成功";
+			}else{
+				echo "删除失败";
+			}
+		}else{
+			echo "还有图书未归还";
+		}
 	}
 }

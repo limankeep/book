@@ -1,25 +1,32 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-03 11:37:13
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 15:45:44
          compiled from "../Apps/Home/View\Center\center.html" */ ?>
-<?php /*%%SmartyHeaderCode:1294559094efe0cab47-65620154%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:259590d5771ce5829-89697714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '688ccbff2104aad6e927986465c3fb79c4a380f3' => 
     array (
       0 => '../Apps/Home/View\\Center\\center.html',
-      1 => 1493782619,
+      1 => 1494056704,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1294559094efe0cab47-65620154',
+  'nocache_hash' => '259590d5771ce5829-89697714',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59094efe37abb',
+  'unifunc' => 'content_590d577204179',
+  'variables' => 
+  array (
+    'readerinfo' => 0,
+    'v' => 0,
+    'borrowinfo' => 0,
+    'articleinfo' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59094efe37abb')) {function content_59094efe37abb($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d577204179')) {function content_590d577204179($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -65,6 +72,71 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		        </div>
 		        <div class="wrapper pd-30">
 			        <div class="center-info">
+			        	<table class="table mgt-20 ">
+								<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['readerinfo']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+				        		<tr>
+				        			<td class=" fwb tableleft">读者编号:<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
+</td>
+				        		</tr>
+								<tr>
+									<td class=" fwb tableleft">登录名:<?php echo $_smarty_tpl->tpl_vars['v']->value['uid'];?>
+</td>	
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">姓名:<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_name'];?>
+</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">性别:<?php echo $_smarty_tpl->tpl_vars['v']->value['sex'];?>
+</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">家庭地址:<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_address'];?>
+</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">电子邮箱:<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_email'];?>
+</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">身份证号:<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_idcard'];?>
+</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">可借图书总数:<?php echo $_smarty_tpl->tpl_vars['v']->value['total_amount'];?>
+</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">已借图书数:<?php echo $_smarty_tpl->tpl_vars['v']->value['now_amount'];?>
+</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">上次登录时间:<?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
+</td>
+								</tr>
+								<?php } ?>
+				        	
+				        	
+				        </table>
+				        <!--div class="clearfix">
+				        	<ul class="pagination pull-right">
+								<li class="previous"><a href="javascript:;">&laquo;</a></li>
+								<li class="active"><a href="javascript:;">1</a></li>
+								<li><a href="javascript:;">2</a></li>
+								<li><a href="javascript:;">3</a></li>
+								<li><a href="javascript:;">4</a></li>
+								<li><a href="javascript:;">5</a></li>
+								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
+							</ul>
+				        </div-->
+			        </div>
+			        <div class="center-info">
 			        	<table class="table table-hover tc mgt-20">
 				        	<thead>
 				        		<tr>
@@ -75,79 +147,77 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					        		<th class="tc fwb">价格</th>
 					        		<th class="tc fwb">总数量</th>
 					        		<th class="tc fwb">在馆数量</th>
-					        		<th class="tc fwb">上架时间</th>
+					        		<th class="tc fwb">借阅时间</th>
 				        		</tr>
 				        	</thead>
+							<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['borrowinfo']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
 				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
+							
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
+</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
+</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
+</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
+</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
+</td>
 				        		<td>111</td>
 				        		<td>2012-12-12</td>
 				        	</tr>
+				        	<?php } ?>
+				        </table>
+				        <div class="clearfix">
+				        	<ul class="pagination pull-right">
+								<li class="previous"><a href="javascript:;">&laquo;</a></li>
+								<li class="active"><a href="javascript:;">1</a></li>
+								<li><a href="javascript:;">2</a></li>
+								<li><a href="javascript:;">3</a></li>
+								<li><a href="javascript:;">4</a></li>
+								<li><a href="javascript:;">5</a></li>
+								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
+							</ul>
+				        </div>
+			        </div>
+			        <div class="center-info">
+			        	<table class="table table-hover tc mgt-20">
+				        	<thead>
+							
+				        		<tr>
+				        			
+					        		<th class="tc fwb">文章标题</th>
+					        		
+					        		<th class="tc fwb">作者</th>
+					        		<th class="tc fwb">创建时间</th>
+					        		
+				        		</tr>
+				        	</thead>
+							<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['articleinfo']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
 				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['author'];?>
+</td>
+				        		<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
+</td>
+				        		
 				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
+				        	<?php } ?>
 				        </table>
 				        <div class="clearfix">
 				        	<ul class="pagination pull-right">
@@ -185,200 +255,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				        		<td>111</td>
 				        		<td>2012-12-12</td>
 				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        </table>
-				        <div class="clearfix">
-				        	<ul class="pagination pull-right">
-								<li class="previous"><a href="javascript:;">&laquo;</a></li>
-								<li class="active"><a href="javascript:;">1</a></li>
-								<li><a href="javascript:;">2</a></li>
-								<li><a href="javascript:;">3</a></li>
-								<li><a href="javascript:;">4</a></li>
-								<li><a href="javascript:;">5</a></li>
-								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-							</ul>
-				        </div>
-			        </div>
-			        <div class="center-info">
-			        	<table class="table table-hover tc mgt-20">
-				        	<thead>
-				        		<tr>
-				        			<th class="tc fwb">图书编号</th>
-					        		<th class="tc fwb">图书名称</th>
-					        		<th class="tc fwb">分类</th>
-					        		<th class="tc fwb">作者</th>
-					        		<th class="tc fwb">价格</th>
-					        		<th class="tc fwb">总数量</th>
-					        		<th class="tc fwb">在馆数量</th>
-					        		<th class="tc fwb">上架时间</th>
-				        		</tr>
-				        	</thead>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        </table>
-				        <div class="clearfix">
-				        	<ul class="pagination pull-right">
-								<li class="previous"><a href="javascript:;">&laquo;</a></li>
-								<li class="active"><a href="javascript:;">1</a></li>
-								<li><a href="javascript:;">2</a></li>
-								<li><a href="javascript:;">3</a></li>
-								<li><a href="javascript:;">4</a></li>
-								<li><a href="javascript:;">5</a></li>
-								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-							</ul>
-				        </div>
-			        </div>
-			        <div class="center-info">
-			        	<table class="table table-hover tc mgt-20">
-				        	<thead>
-				        		<tr>
-				        			<th class="tc fwb">图书编号</th>
-					        		<th class="tc fwb">图书名称</th>
-					        		<th class="tc fwb">分类</th>
-					        		<th class="tc fwb">作者</th>
-					        		<th class="tc fwb">价格</th>
-					        		<th class="tc fwb">总数量</th>
-					        		<th class="tc fwb">在馆数量</th>
-					        		<th class="tc fwb">上架时间</th>
-				        		</tr>
-				        	</thead>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
+				        	
 				        </table>
 				        <div class="clearfix">
 				        	<ul class="pagination pull-right">

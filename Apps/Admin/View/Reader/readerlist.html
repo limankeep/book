@@ -62,7 +62,8 @@
 			<td>{$v.create_time}</td>
             <td>
                 <a href="{$smarty.const.__MODULE__}/Reader/edit/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-                <button type="submit" class="btn btn-primary">详情</button>				
+                <button type="submit" class="btn btn-primary">详情</button>
+				<a href="{$smarty.const.__MODULE__}/Reader/del/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
             </td>
         </tr>	
 	{/foreach}

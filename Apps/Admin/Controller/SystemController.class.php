@@ -2,61 +2,74 @@
 namespace Admin\Controller;
 use Think\Controller;
 class SystemController extends Controller {
-    public function demo(){
-		if(empty($_POST['book_name'])){
-			
-		}
-		$book_name = $_POST['book_name'];
-		echo $str;
-		//建立数据模型
-		$book = D('book');
-		 
-		//获取记录总条数
-		$total = $book -> count();
-		//设置每页展示数据条数
-		$per = 8;
-		//实例化分页对象
-		$page = new \Component\Page($total, $per); //autoload
-		//拼装sql语句获取每页的记录
-		$sql = "select * from tp_book where book_name like '%".$book_name."%' order by create_time desc ".$page->limit;
-		
-		$info = $book -> query($sql);
-		
-		//$art=$article->where($where)->order("ID desc")->select();
-        //4. 获得页码列表
-		if(!empty($info)){
-			$pagelist = $page -> fpage();
-		
-		//show_bug($info)
-		$this -> assign('info', $info);
-        $this -> assign('pagelist', $pagelist);
-        $this -> display();
-		}
-		else{
-			$info = 0 ;
-			$this -> assign('info', $info);
-			 $this -> display();
-		}
-    }
-	public function edit($book_id){
-		 //查询被修改商品的信息并传递给模板展示$		
-        $books = D("Book");
-				
-        //两个逻辑：展示表单、收集表单
+    public function editannouncement(){
+		//两个逻辑① 展现表单 ② 接收表单数据
+        $announcement = D('announcement');
         if(!empty($_POST)){
-            $books -> create();
-			
-            $result = $books -> save();
-            if($result != false){
+             $announcement->create(); 			
+            $z = $announcement -> add();
+            if($z){
+                //展现一个提示页面，并做页面跳转
+                //success(提示信息，跳转的url路由地址)
+                //$this ->success('添加书籍成功', U('Goods/showlist'));
                 echo "success";
             } else {
-                echo "failure";
+                //$this ->error('添加书籍失败', U('Goods/showlist'));
+                echo "error";
             }
-        } else {
-            $info = $books->find($book_id); //一维数组
-            $this -> assign('info', $info);
+        }else {
+            $this -> display();
+        }
+		
+    }
+	public function announcement(){
+		$announcement = D("announcement");
+        
+       
+        
+        $sql = "select * from tp_announcement where announcement_id = 12";
+        $info = $announcement -> query($sql);
+        
+        
+        $this -> assign('info', $info);
+        
+        $this -> display();
+		
+    }
+	 public function about(){
+	$about = D("about");
+        
+       
+        
+        $sql = "select * from tp_about where about_id = 4";
+        $info = $about -> query($sql);
+        
+        
+        $this -> assign('info', $info);
+        
+        $this -> display();
+    }
+	
+	public function editabout(){
+		
+		//两个逻辑① 展现表单 ② 接收表单数据
+        $about = D('about');
+        if(!empty($_POST)){
+            $about->create(); 			
+            $z = $about -> add();
+            if($z){
+                //展现一个提示页面，并做页面跳转
+                //success(提示信息，跳转的url路由地址)
+                //$this ->success('添加书籍成功', U('Goods/showlist'));
+                echo "success";
+            } else {
+                //$this ->error('添加书籍失败', U('Goods/showlist'));
+                echo "error";
+            }
+        }else {
             $this -> display();
         }
     }
+	
 	
 }

@@ -1,40 +1,20 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-03 11:19:58
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 09:37:55
          compiled from "../Apps/Admin/View\Borrow\borrowlist.html" */ ?>
-<?php /*%%SmartyHeaderCode:2577159093ce0116ef9-10908728%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
-=======
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:13:15
-         compiled from "../Apps/Admin/View\Borrow\borrowlist.html" */ ?>
-<?php /*%%SmartyHeaderCode:91555906ec021cd051-64553968%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+<?php /*%%SmartyHeaderCode:23255590d28f31441f7-20412868%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ef198a45a6a515f2f35457f61ce8575576018763' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\borrowlist.html',
-<<<<<<< HEAD
-      1 => 1493781595,
+      1 => 1494031076,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2577159093ce0116ef9-10908728',
-=======
-      1 => 1493719993,
-      2 => 'file',
-    ),
-  ),
-  'nocache_hash' => '91555906ec021cd051-64553968',
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+  'nocache_hash' => '23255590d28f31441f7-20412868',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-<<<<<<< HEAD
-  'unifunc' => 'content_59093ce03f6c0',
-=======
-  'unifunc' => 'content_5906ec02351c6',
->>>>>>> f2ed431902361750018034b30002f461cba1e717
   'variables' => 
   array (
     'start_time' => 0,
@@ -45,12 +25,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_590d28f3570cc',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<<<<<<< HEAD
-<?php if ($_valid && !is_callable('content_59093ce03f6c0')) {function content_59093ce03f6c0($_smarty_tpl) {?><!DOCTYPE html>
-=======
-<?php if ($_valid && !is_callable('content_5906ec02351c6')) {function content_5906ec02351c6($_smarty_tpl) {?><!DOCTYPE html>
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+<?php if ($_valid && !is_callable('content_590d28f3570cc')) {function content_590d28f3570cc($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -122,11 +100,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <th>借阅日期<?php echo $_smarty_tpl->tpl_vars['nowtime']->value;?>
 </th>
         <th>应该归还日期</th>
-<<<<<<< HEAD
 		<th>是否归还</th>
-=======
-		<th>是否逾期</th>
->>>>>>> f2ed431902361750018034b30002f461cba1e717
         <th>操作</th>
     </tr>
     </thead>
@@ -153,20 +127,11 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['finish_time'];?>
 </td>
-<<<<<<< HEAD
 			<td><?php if ($_smarty_tpl->tpl_vars['v']->value['status']!="0"){?>是<?php }elseif($_smarty_tpl->tpl_vars['v']->value['status']=="0"){?>否<?php }?></td>
             <td>
                 <a href="<?php echo @__MODULE__;?>
 /Borrow/del/borrow_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['borrow_id'];?>
-" type="button" class=" btn btn-primary">删除</a>
-=======
-			<td><?php if ($_smarty_tpl->tpl_vars['v']->value['finish_time']){?>是<?php }elseif($_smarty_tpl->tpl_vars['v']->value['status']=="0"){?>否<?php }?></td>
-            <td>
-                <a href="edit.html" type="button" class=" btn btn-primary">归还<?php echo $_smarty_tpl->tpl_vars['nowtime']->value;?>
-</a>
->>>>>>> f2ed431902361750018034b30002f461cba1e717
-				
-            </td>
+" type="button" class=" btn btn-danger">删除</a>
         </tr>
 	<?php } ?> 
 	<?php }elseif($_smarty_tpl->tpl_vars['info']->value==''){?>

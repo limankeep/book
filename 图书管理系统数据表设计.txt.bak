@@ -18,15 +18,15 @@ last_time     上次登录时间  datetime
 
 查询主要根据 reader_id reader_name
 reader_id  读者编号  int 8
-uid   用户id     varchar 50  关联user表  每次先注册user  再来编辑读者信息
+uid   用户id 登录名    varchar 50  关联user表  添加读者信息的时候  同步信息到user表  这个uid就是user表的uname
 password  用户密码    varchar 50
-reader_name：用户名 	varchar 50   
+reader_name：用户真实姓名 	varchar 50   
 reader_img  读者头像地址  varchar 512
 sex 性别  tinyint 2
 reader_address 联系地址 varchar  255
 reader_IDcard  身份证号 int 18
-total_amount 可借的书的数量 tinyint 2
-now_amount  当前借的书的数量 tinyint 2
+total_amount 可借的书的数量 tinyint 2   初始化的图书数量
+now_amount  当前借的书的数量 tinyint 2  初始数量和可借数一样 每次借阅归还只更新这个字段
 reader_email 邮箱   varchar 255
 create_time 创建日期 datetime
 
@@ -46,8 +46,8 @@ create_time 入库日期 datetime
 book_detail  书籍详细信息  varchar 500   不超过两百字
 author  作者  varchar 20
 total_amount   入库数目  tinyint 3
-borrow_amount  借出数目  tinyint 3
-now_amount     当前数目  tinyint 3
+//borrow_amount  借出数目  tinyint 3 去掉这个
+now_amount     当前数目  tinyint  3   添加图书时  入库数目和当前数目相等 然后每次借阅归还图书都是更新这个字段
 
 借阅表   按书的编号 名称 和读者的读者编号 查询    
 borrow_id  借阅编号 int 12
@@ -58,8 +58,8 @@ book_type 书的类型   varchar  20
 reader_id  读者的id  int 8 
 uname   读者的姓名varchar  50   
 create_time  借出时间 datetime 
-now_time     持续时间 datetime
-finish_time  归还时间 datetime
+now_time     实际归还时间时间 datetime  //暂时没有使用这个字段
+finish_time  应该归还时间 datetime
 
 
 
@@ -67,6 +67,7 @@ finish_time  归还时间 datetime
 booktype_id   类别编号 int 8 
 booktype_name  类别名  varchar 50
 booktype_detail  类别描述 varchar 255
+create_time
 
 
 公告
@@ -79,6 +80,7 @@ create_time  创建时间  datetime
 img_id  int 4
 img_name     名称  varchar 20
 img_address  图片路径  varchar 512
+create_time
 
 
 bookrecommend  书籍推荐
@@ -87,6 +89,7 @@ book_id  书籍编号 int 12
 book_name 书籍名称 varchar 50
 reason  推荐理由   varchar 255
 recommend_score    推荐指数  满分100  按分数排行 tinyint 3
+create_time
 
 
 
@@ -97,7 +100,7 @@ status   文章状态    tinyint 1    0：待审核 1：审核通过 2 ：审核不通过
 uid  作者id  int 8
 title 标题   varchar 100
 author 作者  varchar 20
-content_text varchar 50000   文章内容
+content varchar 50000   文章内容
 create_time 创建时间  datetime 
 推荐指数
 
@@ -105,4 +108,11 @@ create_time 创建时间  datetime
 留言板
 ...
 
-吾问无为谓无无无无吾问无为谓问问
+读者文章关系表
+reader_article_id   主键id 12 int
+reader_id       读者id int 12
+article_id      文章id int 12	
+reader_name：用户真实姓名 	varchar 50
+title 标题   varchar 100					
+content varchar 50000   文章内容
+create_time 创建时间  datetime

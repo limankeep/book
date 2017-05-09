@@ -11,8 +11,6 @@
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
-	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
-	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/froala_editor.min.js"></script>
 	<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 
  
@@ -74,8 +72,9 @@
 			<td>{$v.total_amount}</td>
 			<td>{$v.now_amount}</td>
             <td>
-                 <a href="{$smarty.const.__MODULE__}/System/edit/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
+                <a href="{$smarty.const.__MODULE__}/Book/edit/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
+				
+				<a href="{$smarty.const.__MODULE__}/Book/del/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
             </td>
         </tr>
 	{/foreach}

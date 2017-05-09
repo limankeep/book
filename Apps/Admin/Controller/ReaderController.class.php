@@ -33,7 +33,7 @@ class ReaderController extends Controller {
         $reader = D('reader');
 		//查询注册的用户是否注册过
 		$quchong['uid'] = $uid;
-		$quchong['reader_IDcard'] = $reader_IDcard ;
+		$quchong['reader_idcard'] = $reader_idcard ;
 		$re1 = $reader -> where($quchong)->select();
 		if($re1){
 			echo '信息已被注册，请重新注册';
@@ -56,7 +56,7 @@ class ReaderController extends Controller {
 					$uname = $reader -> query($sqlreader_uname);					
 					$arr1 = array_map('array_shift', $uname);   
 					$uname= $arr1[0];
-					$user = D('user');
+					$login = D('login');
 					$ar = array(
 							'uid'=> $reader_id,
 							'uname'=> $uname,
@@ -75,7 +75,7 @@ class ReaderController extends Controller {
 		}
         
     }
-	public function edit(){
+	public function edit($reader_id){
 		
 		 //查询被修改商品的信息并传递给模板展示$		
         $readers = D("reader");
@@ -84,8 +84,8 @@ class ReaderController extends Controller {
         if(!empty($_POST)){
             $readers -> create();
 			
-            $result = $readers -> save();
-            if($result != false){
+            $result = $readers-> save();
+            if($result !== false){
                 echo "success";
             } else {
                 echo "failure";
@@ -96,5 +96,24 @@ class ReaderController extends Controller {
             $this -> display();
         }
     }
+	public function del($reader_id){
+		$reader = D("reader");//造对象
+		$reader_id = $reader_id;
+		$sql = "select * from tp_reader where reader_id = '".$reader_id."' And (total_amount = now_amount)";
+		$result= $reader -> query($sql);
+		
+		if($result){
+			$r = $reader -> delete($reader_id);//调用删除方法，直接把主键值作为参数放在（）里面就可以。
+			if($r){
+				echo "删除成功";
+			}else{
+				echo "删除失败";
+			}
+		}else{
+			echo "还有图书未归还";
+		}
+		
+		
+	}
 
 }

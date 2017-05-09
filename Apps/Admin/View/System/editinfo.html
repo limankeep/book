@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
+    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
+    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
+	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/layer.js"></script>
+</head>
+<body>
+<!-- 弹出框提示 -->
+<!-- Button to trigger modal -->
+<!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->
+ 
+<!-- Modal -->
+<!-- 二级弹窗图书修改页 -->
+<div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
+<div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">个人信息</h3>
+    </div>
+   <form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20">
+<table class="table table-bordered table-hover definewidth m10">
+				{*隐藏域传递被修改的商品id信息*}
+                <input type="hidden" name="book_id" value="{$info.book_id}" />
+	<tr>
+        <td class="tableleft">姓名</td>
+        <td><input type="text" name="book_name" value="{$info.book_name}"/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">身份</td>
+        <td><input type="text" name="author" value="{$info.author}"/></td>
+    </tr>
+	<tr>
+        <td class="tableleft">家庭住址</td>
+        <td><input type="text" name="book_type" value="{$info.book_type}"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">电子邮箱</td>
+        <td><input type="text" name="press" value="{$info.press}"/></td>
+    </tr>
+    <tr>
+        <td class="tableleft">联系电话</td>
+        <td><input type="text" name="price" value="{$info.price}"/></td>
+    </tr>
+	
+    <tr>
+        <td class="tableleft"></td>
+        <td>
+            <a href="#myModal2" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a> &nbsp;&nbsp;
+			<a href="{$smarty.const.__MODULE__}/System/demo" type="button" class="btn btn-success" name="backid" id="backid">返回列表</a>
+        </td>
+    </tr>
+	<!-- 弹出框提示 -->
+<!-- Button to trigger modal -->
+<!--a href="#myModal" role="button" class="btn" data-toggle="modal">弹出框</a-->
+ 
+<!-- Modal -->
+<div id="myModal2" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3 id="myModalLabel">系统提示</h3>
+    </div>
+    <div class="modal-body">
+    <p>您确定保存该图书吗？</p>
+    </div>
+    <div class="modal-footer">
+        <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+        <button type="submit" class="btn btn-info">确定</button>
+    </div>
+</div>
+</table>
+</form>
+</div>
+</body>
+</html>
+<script>
+  
+</script>

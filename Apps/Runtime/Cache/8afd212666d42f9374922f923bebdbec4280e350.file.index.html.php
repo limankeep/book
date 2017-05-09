@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-01 09:45:32
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 15:47:43
          compiled from "../Apps/Admin/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:147655906933cdc41a8-71115924%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:23126590d28f28d42a8-81102602%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8afd212666d42f9374922f923bebdbec4280e350' => 
     array (
       0 => '../Apps/Admin/View\\Index\\index.html',
-      1 => 1493600637,
+      1 => 1494316062,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '147655906933cdc41a8-71115924',
+  'nocache_hash' => '23126590d28f28d42a8-81102602',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_5906933ceacbe',
+  'unifunc' => 'content_590d28f29c5cf',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5906933ceacbe')) {function content_5906933ceacbe($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_590d28f29c5cf')) {function content_590d28f29c5cf($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
  <head>
   <title>三峡枫叶图书馆后台管理系统</title>
@@ -42,7 +42,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         </a>
       </div>
 
-    <div class="dl-log">欢迎您，<span class="dl-log-user">管理员</span><a href="###" title="退出系统" class="dl-log-quit">[退出]</a>
+    <div class="dl-log">欢迎您，<span class="dl-log-user">管理员</span><a href="<?php echo @__MODULE__;?>
+/Index/logout" title="退出系统" class="dl-log-quit">[退出]</a>
     </div>
   </div>
    <div class="content">
@@ -79,7 +80,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 {id:'borrowlist',text:'借阅列表',href:'../Borrow/borrowlist.html',closeable : false},
                 {id:'addborrow',text:'图书借阅',href:'../Borrow/addborrow.html'},
                 {id:'returnborrow',text:'图书归还',href:'../Borrow/returnborrow.html'},
-                {id:'yuqibook',text:'逾期图书',href:'../Borrow/list.html'}
+                {id:'yuqibook',text:'逾期图书',href:'../Borrow/yuqibook.html'}
               ]
             }]
           },{
@@ -90,8 +91,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 items:[
                   {id:'booklist',text:'图书列表',href:'../Book/booklist.html'},
                   {id:'addbook',text:'新增图书',href:'../Book/addbook.html'},
-                  {id:'booktype',text:'图书分类',href:'../Book/booktype.html'},
-                  {id:'yuqibook',text:'逾期图书',href:'../Book/yuqibook.html'}
+                  {id:'booktype',text:'图书分类',href:'../Book/booktype.html'}
                 ]
               },{
                 text:'分类图书',
@@ -130,14 +130,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
               }]
           },{
             id:'System',
-            homePage : 'demo',
+            homePage : 'announcement',
             menu:[{
                 text:'系统管理',
                 items:[
-                  {id:'demo',text:'公告管理',href:'../System/demo.html'},
-                  {id:'edit',text:'图书馆介绍',href:'../System/edit.html'},
-                  {id:'introduce',text:'修改密码',href:'system/introduce.html'},
-                  {id:'backup',text:'数据备份',href:'system/backup.html'}
+                  {id:'annoucement',text:'公告管理',href:'../System/announcement.html'},
+                  {id:'about',text:'图书馆介绍',href:'../System/about.html'},
+                  {id:'editpwd',text:'修改密码',href:'../system/editpwd.html'},
+				  {id:'editinfo',text:'个人信息修改',href:'../system/editinfo.html'},
+                  {id:'backup',text:'数据备份',href:'../system/backup.html'}
                 ]
               }]
           }];

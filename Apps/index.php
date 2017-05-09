@@ -30,6 +30,7 @@ define("SITE_URL","www.tpbook.com");
 define('APP_PATH','../Apps/');
 define("PUBLIC_URL","/Public/Admin"); //css
 define("HOME_URL","/Public/Home"); //css
+define("UE_URL","/Public/kindeditor-4.1.7");
 
 // 引入ThinkPHP入口文件
 require '../ThinkPHP/ThinkPHP.php';

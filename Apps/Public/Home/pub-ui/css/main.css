@@ -3,7 +3,7 @@ body{
 	max-width: 1060px;
 	margin: auto;
 }
-*:not(ul,div.center-info){
+*:not(div.center-info){
 	-webkit-transition: all .6s;
 	-moz-transition: all .6s;
 	-ms-transition: all .6s;
@@ -65,6 +65,9 @@ a:hover{
 	overflow: hidden;
 	text-overflow: ellipsis;
 	white-space: nowrap;
+}
+.content-box>div ul p{
+	word-wrap:break-word;
 }
 /*reader.html*/
 .reader-content{

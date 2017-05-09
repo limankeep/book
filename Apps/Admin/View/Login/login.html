@@ -77,6 +77,17 @@
       .container .credit {
         margin: 20px 0;
       }
+	  .TxtValidateCodeCssClass{
+		width:80px;
+	  }
+	  #pad-top{
+		display:block;
+		line-height:34px;
+		margin:2px;
+	  }
+	  #captcha{
+		margin:2px;
+	  }
 	  {/literal}
     </style>
 	</head>
@@ -88,10 +99,13 @@
 					<div>账号：<input type="text" name="uname" value="请输入账号"  id="LoginId" class="input-block-level" placeholder="Email address" /></div>
 					
 					<div>密码：<input type="password" name="password" value="请输入密码" id="LoginPassword" class="input-block-level" placeholder="Password" /></div>
-					<div>请输入验证码： 
-						<img src="{$smarty.const.__CONTROLLER__}/verifyImg"  alt="" >
-						<input class="TxtValidateCodeCssClass" id="captcha" name="captcha" type="text">
-                        
+					
+					<div class="clearfix">
+						<span class="pull-left" id="pad-top">验证码：</span>
+						
+						<input class="TxtValidateCodeCssClass pull-left" id="captcha" name="captcha" type="text">
+                        <img src="{$smarty.const.__CONTROLLER__}/verifyImg"  alt="" id="verify_img" class="pull-left">
+						
 					</div>
 					
 					<div><input type="submit" name="LoginBtn" value="登录" id="LoginBtn" class="btn btn-success btn-lmedium btn-primary "/></div>
@@ -111,4 +125,18 @@
 		 
 		</script>
 	</body>
+	<script>
+	
+		$("#verify_img").click(function() {
+			var verifyURL = "{$smarty.const.__CONTROLLER__}/verifyImg";
+    		var time = new Date().getTime();
+    		$("#verify_img").attr({
+			"src" : verifyURL + "/" + time
+    		});
+ 		});
+		
+
+		 
+	
+	</script>
 </html>

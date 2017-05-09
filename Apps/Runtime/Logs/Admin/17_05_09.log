@@ -1,0 +1,206 @@
+[ 2017-05-09T13:26:21+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 10' at line 1
+ [ SQL语句 ] : select * from tp_borrow where status = 0Limit 0, 10
+
+[ 2017-05-09T13:41:53+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 无法加载控制器:Borrow
+
+[ 2017-05-09T13:41:53+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 无法加载控制器:Borrow
+
+[ 2017-05-09T13:42:14+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
+ERR: 无法加载控制器:Borrow
+
+[ 2017-05-09T13:42:15+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 无法加载控制器:Borrow
+
+[ 2017-05-09T13:42:16+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 无法加载控制器:Borrow
+
+[ 2017-05-09T13:42:17+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 无法加载控制器:Borrow
+
+[ 2017-05-09T13:48:25+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T13:48:25+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow where status = 0Limit 0, 8
+
+[ 2017-05-09T13:48:26+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrow where status = 0Limit 0, 8
+
+[ 2017-05-09T13:48:49+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T13:48:49+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 10' at line 1
+ [ SQL语句 ] : select * from tp_borrow where status = 0Limit 0, 10
+
+[ 2017-05-09T13:48:50+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T13:48:50+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 10' at line 1
+ [ SQL语句 ] : select * from tp_borrow where status = 0Limit 0, 10
+
+[ 2017-05-09T13:49:10+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T13:52:38+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:07:08+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:07:26+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:08:05+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:08:06+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:08:40+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:08:41+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:08:41+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '0, 8' at line 1
+ [ SQL语句 ] : select * from tp_borrowLimit 0, 8
+
+[ 2017-05-09T14:09:15+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/del/borrow_id/84
+ERR: 1065:Query was empty
+
+[ 2017-05-09T14:09:36+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/del/borrow_id/27
+ERR: 1065:Query was empty
+
+[ 2017-05-09T14:11:08+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/del/borrow_id/27
+ERR: 1065:Query was empty
+
+[ 2017-05-09T14:11:23+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/del/borrow_id/27
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from tp_borrow where (borrow_id = '27' And (status = 1)
+
+[ 2017-05-09T14:12:02+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/del/borrow_id/27
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '' at line 1
+ [ SQL语句 ] : select * from tp_borrow where (borrow_id = '27' And (status = 1) 
+
+[ 2017-05-09T14:14:32+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-05-09T14:15:05+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-05-09T14:47:15+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-05-09T14:47:17+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-05-09T14:48:39+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/list.html
+ERR: 非法操作:list
+
+[ 2017-05-09T14:55:25+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/47
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '> '2017-05-09 14:55:25'' at line 1
+ [ SQL语句 ] : select * from finish_time > '2017-05-09 14:55:25' 
+
+[ 2017-05-09T14:58:32+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnborrow.html
+ERR: Syntax Error in template "../Apps/Admin/View\Borrow\returnborrow.html"  on line 75 "&lt;td&gt;{if $finish_time &gt;= $now_time }是{else if }否{/if}&lt;/td&gt;"  - Unexpected "}"
+
+[ 2017-05-09T14:59:28+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/47
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '> '2017-05-09 14:59:28'' at line 1
+ [ SQL语句 ] : select * from finish_time > '2017-05-09 14:59:28' 
+
+[ 2017-05-09T15:00:00+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/47
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where finish_time > '2017-05-09 15:00:00'' at line 1
+ [ SQL语句 ] : select * from where finish_time > '2017-05-09 15:00:00' 
+
+[ 2017-05-09T15:03:22+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/47
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'where finish_time > '2017-05-09 15:03:22'' at line 1
+ [ SQL语句 ] : select * from where finish_time > '2017-05-09 15:03:22'
+
+[ 2017-05-09T15:06:06+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/54
+ERR: 1054:Unknown column 'borrow' in 'where clause'
+ [ SQL语句 ] : select * from  tp_borrow where (finish_time < '2017-05-09 15:06:06') And (borrow = '54')
+
+[ 2017-05-09T15:06:27+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/54
+ERR: 1054:Unknown column 'borrow' in 'where clause'
+ [ SQL语句 ] : select * from  tp_borrow where (finish_time > '2017-05-09 15:06:27') And (borrow = '54')
+
+[ 2017-05-09T15:07:02+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/54
+ERR: 1054:Unknown column 'borrow' in 'where clause'
+ [ SQL语句 ] : select * from  tp_borrow where (finish_time > '2017-05-09 15:07:02') And (borrow = '54') 
+
+[ 2017-05-09T15:07:13+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/54
+ERR: 1054:Unknown column 'borrow' in 'where clause'
+ [ SQL语句 ] : select * from  tp_borrow where (finish_time > '2017-05-09 15:07:13') And (borrow = 54) 
+
+[ 2017-05-09T15:07:49+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/returnbook/borrow_id/54
+ERR: 1054:Unknown column 'borrow' in 'where clause'
+ [ SQL语句 ] : select * from  tp_borrow where finish_time > '2017-05-09 15:07:49' And borrow = 54  
+
+[ 2017-05-09T15:20:44+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/borrowlist.html
+ERR: 1065:Query was empty
+
+[ 2017-05-09T15:21:02+08:00 ] 127.0.0.1 /index.php/Admin/Book/edit/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\edit.html"  on line 38 "&lt;form action=&quot;{:U('User/edit')}&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot;&gt;"  - Unexpected ":"
+
+[ 2017-05-09T15:27:22+08:00 ] 127.0.0.1 /index.php/Admin/Book/edit/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\edit.html"  on line 38 "&lt;form action=&quot;{:U('User/edit')}&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot;&gt;"  - Unexpected ":"
+
+[ 2017-05-09T15:28:45+08:00 ] 127.0.0.1 /index.php/Admin/Book/edit/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\edit.html"  on line 38 "&lt;form action=&quot;{:U('User/edit')}&quot; method=&quot;post&quot; class=&quot;definewidth m20&quot;&gt;"  - Unexpected ":"
+
+[ 2017-05-09T15:29:15+08:00 ] 127.0.0.1 /index.php/Admin/Book/edit/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\edit.html"  on line 83 "window.location.href=&quot;{:U('User/index')}&quot;;"  - Unexpected ":"
+
+[ 2017-05-09T15:29:19+08:00 ] 127.0.0.1 /index.php/Admin/Book/edit/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\edit.html"  on line 83 "window.location.href=&quot;{:U('User/index')}&quot;;"  - Unexpected ":"
+
+[ 2017-05-09T15:41:16+08:00 ] 127.0.0.1 /index.php/Admin/Book/edit/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\edit.html"  on line 60 "{else if }"  - Unexpected "}"
+
+[ 2017-05-09T15:50:07+08:00 ] 127.0.0.1 /index.php/Admin/reader/k.html
+ERR: 非法操作:k
+
+[ 2017-05-09T15:50:31+08:00 ] 127.0.0.1 /index.php/Admin/Index/System/announcement.html
+ERR: 非法操作:System
+
+[ 2017-05-09T16:18:20+08:00 ] 127.0.0.1 /index.php/Admin/Reader/edit/reader_id/1
+ERR: 1062:Duplicate entry '1' for key 'PRIMARY'
+ [ SQL语句 ] : UPDATE `tp_reader` SET `reader_id`='1',`uid`='23123',`reader_name`='123',`sex`='3' WHERE ( 1 )
+
+[ 2017-05-09T16:19:06+08:00 ] 127.0.0.1 /index.php/Admin/Reader/edit/reader_id/1
+ERR: 1062:Duplicate entry '1' for key 'PRIMARY'
+ [ SQL语句 ] : UPDATE `tp_reader` SET `reader_id`='1',`uid`='23123',`reader_name`='123',`sex`='3' WHERE ( 1 )
+
+[ 2017-05-09T17:09:26+08:00 ] 127.0.0.1 /index.php/Admin/reader/k.html
+ERR: 非法操作:k
+
+[ 2017-05-09T17:09:28+08:00 ] 127.0.0.1 /index.php/Admin/reader/k.html
+ERR: 非法操作:k
+
+[ 2017-05-09T18:33:56+08:00 ] 127.0.0.1 /index.php/Admin/Book/del/book_id/1000000006
+ERR: 1054:Unknown column 'reader_id' in 'where clause'
+ [ SQL语句 ] : select * from tp_book where reader_id = '' And (total_amount = now_amount)
+
+[ 2017-05-09T18:34:20+08:00 ] 127.0.0.1 /index.php/Admin/Book/del/book_id/1
+ERR: 1054:Unknown column 'reader_id' in 'where clause'
+ [ SQL语句 ] : select * from tp_book where reader_id = '1' And (total_amount = now_amount)
+

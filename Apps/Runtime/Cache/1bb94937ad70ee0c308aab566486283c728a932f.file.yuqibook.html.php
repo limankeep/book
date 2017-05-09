@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-03 09:31:41
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-08 21:40:04
          compiled from "../Apps/Admin/View\Book\yuqibook.html" */ ?>
-<?php /*%%SmartyHeaderCode:10255590932fd262db7-32943503%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:1048759107534dc0dc7-30435997%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,15 +11,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10255590932fd262db7-32943503',
+  'nocache_hash' => '1048759107534dc0dc7-30435997',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590932fd4e423',
+  'unifunc' => 'content_59107534f0126',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590932fd4e423')) {function content_590932fd4e423($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_59107534f0126')) {function content_59107534f0126($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>

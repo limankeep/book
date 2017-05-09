@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>UMEDITOR 完整demo</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+    <link rel="stylesheet" href="{$smarty.const.UE_URL}/themes/default/default.css" />
+	<script charset="utf-8" src="{$smarty.const.UE_URL}/kindeditor-min.js"></script>
+	<script charset="utf-8" src="{$smarty.const.UE_URL}/lang/zh_CN.js"></script>
+    <style type="text/css">
+        
+    </style>
+	<script>
+			var editor;
+			KindEditor.ready(function(K) {
+				editor = K.create('textarea[name="content"]', {
+					resizeType : 1,
+					allowPreviewEmoticons : false,
+					allowImageUpload : false,
+					items : [
+						'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+						'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
+				});
+			});
+		</script>
+
+</head>
+<body>
+<form action="{$smarty.const.__MODULE__/System/editannouncement}" method="post">
+	<input type="hidden" name="announcement_id" value="{$info.announcement_id}" />
+	<textarea id="editor_id" name="content" style="width:700px;height:300px;" value="{$info.content}">
+		{$info.content}
+	</textarea>
+	<input type="submit" value="提交">
+</form>
+
+
+<script type="text/javascript">
+    
+</script>
+
+</body>
+</html>

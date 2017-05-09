@@ -40,6 +40,55 @@
 		        </div>
 		        <div class="wrapper pd-30">
 			        <div class="center-info">
+			        	<table class="table mgt-20 ">
+								{foreach $readerinfo as $k => $v}
+				        		<tr>
+				        			<td class=" fwb tableleft">读者编号:{$v.reader_id}</td>
+				        		</tr>
+								<tr>
+									<td class=" fwb tableleft">登录名:{$v.uid}</td>	
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">姓名:{$v.reader_name}</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">性别:{$v.sex}</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">家庭地址:{$v.reader_address}</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">电子邮箱:{$v.reader_email}</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">身份证号:{$v.reader_idcard}</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">可借图书总数:{$v.total_amount}</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">已借图书数:{$v.now_amount}</td>
+								</tr>
+								<tr>
+									<td class=" fwb tableleft">上次登录时间:{$v.create_time}</td>
+								</tr>
+								{/foreach}
+				        	
+				        	
+				        </table>
+				        <!--div class="clearfix">
+				        	<ul class="pagination pull-right">
+								<li class="previous"><a href="javascript:;">&laquo;</a></li>
+								<li class="active"><a href="javascript:;">1</a></li>
+								<li><a href="javascript:;">2</a></li>
+								<li><a href="javascript:;">3</a></li>
+								<li><a href="javascript:;">4</a></li>
+								<li><a href="javascript:;">5</a></li>
+								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
+							</ul>
+				        </div-->
+			        </div>
+			        <div class="center-info">
 			        	<table class="table table-hover tc mgt-20">
 				        	<thead>
 				        		<tr>
@@ -50,79 +99,56 @@
 					        		<th class="tc fwb">价格</th>
 					        		<th class="tc fwb">总数量</th>
 					        		<th class="tc fwb">在馆数量</th>
-					        		<th class="tc fwb">上架时间</th>
+					        		<th class="tc fwb">借阅时间</th>
 				        		</tr>
 				        	</thead>
+							{foreach $borrowinfo as $k => $v}
 				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
+							
+				        		<td>{$v.book_id}</td>
+				        		<td>{$v.book_name}</td>
+				        		<td>{$v.book_type}</td>
+				        		<td>{$v.uname}</td>
+				        		<td>{$v.uname}</td>
+				        		<td>{$v.uname}</td>
 				        		<td>111</td>
 				        		<td>2012-12-12</td>
 				        	</tr>
+				        	{/foreach}
+				        </table>
+				        <div class="clearfix">
+				        	<ul class="pagination pull-right">
+								<li class="previous"><a href="javascript:;">&laquo;</a></li>
+								<li class="active"><a href="javascript:;">1</a></li>
+								<li><a href="javascript:;">2</a></li>
+								<li><a href="javascript:;">3</a></li>
+								<li><a href="javascript:;">4</a></li>
+								<li><a href="javascript:;">5</a></li>
+								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
+							</ul>
+				        </div>
+			        </div>
+			        <div class="center-info">
+			        	<table class="table table-hover tc mgt-20">
+				        	<thead>
+							
+				        		<tr>
+				        			
+					        		<th class="tc fwb">文章标题</th>
+					        		
+					        		<th class="tc fwb">作者</th>
+					        		<th class="tc fwb">创建时间</th>
+					        		
+				        		</tr>
+				        	</thead>
+							{foreach $articleinfo as $k => $v}
 				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
+				        		<td>{$v.title}</td>
+				        		<td>{$v.author}</td>
+				        		<td>{$v.create_time}</td>
+				        		
 				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
+				        	{/foreach}
 				        </table>
 				        <div class="clearfix">
 				        	<ul class="pagination pull-right">
@@ -160,200 +186,7 @@
 				        		<td>111</td>
 				        		<td>2012-12-12</td>
 				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        </table>
-				        <div class="clearfix">
-				        	<ul class="pagination pull-right">
-								<li class="previous"><a href="javascript:;">&laquo;</a></li>
-								<li class="active"><a href="javascript:;">1</a></li>
-								<li><a href="javascript:;">2</a></li>
-								<li><a href="javascript:;">3</a></li>
-								<li><a href="javascript:;">4</a></li>
-								<li><a href="javascript:;">5</a></li>
-								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-							</ul>
-				        </div>
-			        </div>
-			        <div class="center-info">
-			        	<table class="table table-hover tc mgt-20">
-				        	<thead>
-				        		<tr>
-				        			<th class="tc fwb">图书编号</th>
-					        		<th class="tc fwb">图书名称</th>
-					        		<th class="tc fwb">分类</th>
-					        		<th class="tc fwb">作者</th>
-					        		<th class="tc fwb">价格</th>
-					        		<th class="tc fwb">总数量</th>
-					        		<th class="tc fwb">在馆数量</th>
-					        		<th class="tc fwb">上架时间</th>
-				        		</tr>
-				        	</thead>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        </table>
-				        <div class="clearfix">
-				        	<ul class="pagination pull-right">
-								<li class="previous"><a href="javascript:;">&laquo;</a></li>
-								<li class="active"><a href="javascript:;">1</a></li>
-								<li><a href="javascript:;">2</a></li>
-								<li><a href="javascript:;">3</a></li>
-								<li><a href="javascript:;">4</a></li>
-								<li><a href="javascript:;">5</a></li>
-								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-							</ul>
-				        </div>
-			        </div>
-			        <div class="center-info">
-			        	<table class="table table-hover tc mgt-20">
-				        	<thead>
-				        		<tr>
-				        			<th class="tc fwb">图书编号</th>
-					        		<th class="tc fwb">图书名称</th>
-					        		<th class="tc fwb">分类</th>
-					        		<th class="tc fwb">作者</th>
-					        		<th class="tc fwb">价格</th>
-					        		<th class="tc fwb">总数量</th>
-					        		<th class="tc fwb">在馆数量</th>
-					        		<th class="tc fwb">上架时间</th>
-				        		</tr>
-				        	</thead>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
+				        	
 				        </table>
 				        <div class="clearfix">
 				        	<ul class="pagination pull-right">

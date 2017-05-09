@@ -16,4 +16,9 @@ class IndexController extends Controller {
             $this->redirect('Login/login');
         }
 	}
+	 //退出系统
+    function logout(){
+        session(null);
+        $this -> redirect("Login/login");
+    }
 }

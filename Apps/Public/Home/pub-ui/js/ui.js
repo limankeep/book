@@ -21,10 +21,10 @@
 		var $contentP = $contentW.parent()
 		var activeName = this.options.activeName;
 		$ele.on("click","h4",function(){
-			var $this = $(this)
-			c = $this.data("collaspe");
-			if( $contentP.find("ul[data-collaspe="+c+"]").data("collaspe") == c ){
-				$this.toggleClass("on").siblings("h4").removeClass("on");
+			var $this = $(this);
+			var c = $this.data("collaspe");
+			$this.toggleClass("on").siblings("h4").removeClass("on");
+			if( $contentP.find("ul[data-collaspe="+c+"]").data("collaspe") == c  ){
 				$contentP.find("ul[data-collaspe]").not("ul[data-collaspe="+c+"]").slideUp();
 				$contentP.find("ul[data-collaspe="+c+"]").slideToggle();
 			}

@@ -1,25 +1,33 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-03 11:37:11
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-07 10:59:38
          compiled from "../Apps/Home/View\Book\booksearch.html" */ ?>
-<?php /*%%SmartyHeaderCode:26317590950678ed827-84743098%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:20153590d5803de6967-19740842%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1e54cb97b480ea1d38a6dd0f3ccddbb28d017a18' => 
     array (
       0 => '../Apps/Home/View\\Book\\booksearch.html',
-      1 => 1493782412,
+      1 => 1494125976,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '26317590950678ed827-84743098',
+  'nocache_hash' => '20153590d5803de6967-19740842',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59095067a5ada',
+  'unifunc' => 'content_590d580408413',
+  'variables' => 
+  array (
+    'start_time' => 0,
+    'end_time' => 0,
+    'info' => 0,
+    'v' => 0,
+    'pagelist' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59095067a5ada')) {function content_59095067a5ada($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d580408413')) {function content_590d580408413($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -30,6 +38,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /pub-ui/asset/css/bootstrap.css" />
 		<link rel="stylesheet" href="<?php echo @HOME_URL;?>
 /pub-ui/css/main.css" />
+		<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 	</head>
 	<body class="book-search">
 		<!--<header></header>-->
@@ -44,24 +53,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<div class="book-content mgt-20 radius">	        
 			<div class="book-sidebar">
 				<div class="collaspeContent" id="collaspeContent">
-					<h4 data-collaspe="collaspe1">一级菜单</h4>
-					<ul data-collaspe="collaspe1">
-						<li><a href="javascript:;">二级菜单</a></li>
-						<li><a href="javascript:;">二级菜单</a></li>
-					</ul>
+					<h4 data-collaspe="collaspe1">图书搜索</h4>
+					
 					<h4 data-collaspe="collaspe2">一级菜单</h4>
 					<ul data-collaspe="collaspe2">
 						<li><a href="javascript:;" class=" on">二级菜单</a></li>
 						<li><a href="javascript:;">二级菜单</a></li>
 					</ul>
-					<h4 data-collaspe="collaspe3">一级菜单</h4>
-					<ul data-collaspe="collaspe3">
-						<li><a href="javascript:;">二级菜单</a></li>
-					</ul>
-					<h4 data-collaspe="collaspe5">一级菜单</h4>
-					<ul data-collaspe="collaspe5">
-						<li><a href="javascript:;">二级菜单</a></li>
-					</ul>
+					
 				</div>
 			</div>
 			<div class="book-list pd-20">
@@ -70,22 +69,25 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				        <h3 class="panel-title">搜索</h3>
 				    </div>
 				    <div class="panel-body clearfix pd-10">		
-			            <form role="form" class="form-horizontal form-inline">
+			            <form role="form" class="form-horizontal form-inline" action="<?php echo @__SELF__;?>
+" method="post">
 				            <div class="form-group col-sm-5 col-xs-5">
-							    <label class="control-label col-sm-4 col-xs-4 tc">图书编号</label>
+							    <label class="control-label col-sm-4 col-xs-4 tc">图书名称</label>
 							    <div class="col-sm-7 col-xs-7 pd-0">
-							        <input type="text" name="num" class="form-control input-sm">
+							        <input type="text" name="book_name" id="book_name" class="form-control input-sm">
 							    </div>
 							</div>
 							<div class="form-group col-sm-7 col-xs-7">
 								<label class="control-label col-sm-2 col-xs-2 tc">时间</label>
 							    <div class="col-sm-10 col-xs-10 pd-0">
-							        <input type="text" name="start" class="form-control input-sm">
+							        <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="<?php echo $_smarty_tpl->tpl_vars['start_time']->value;?>
+" size="17" class="date form-control input-sm"  style="width:120px;">
 							        	-
-							        <input type="text" name="end" class="form-control input-sm">
+							        <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="<?php echo $_smarty_tpl->tpl_vars['end_time']->value;?>
+" size="17"  class="date form-control input-sm" style="width:120px;">
 							    </div>
 							</div>
-							<button class="btn btn-primary btn-sm" type="button">查询</button>
+							<button class="btn btn-primary btn-sm" type="submit">查询</button>
 						</form>
 				    </div>
 				</div>
@@ -102,119 +104,49 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			        		<th class="tc fwb">上架时间</th>
 		        		</tr>
 		        	</thead>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
+		        	<?php if ($_smarty_tpl->tpl_vars['info']->value!=''){?>
+						<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+						<tr>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['press'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['price'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['total_amount'];?>
+</td>
+							<td><?php echo $_smarty_tpl->tpl_vars['v']->value['now_amount'];?>
+</td>
+							
+						</tr>
+					<?php } ?>
+					<?php }elseif($_smarty_tpl->tpl_vars['info']->value==''){?>
+						<tr><td>暂无数据</td><tr>
+					<?php }?>
+
+				
+		        	
 		        </table>
-		        <div class="clearfix">
-		        	<p class="pull-left">显示<label>1-10</label>条，共<label>20</label>条</p>
-		        	<ul class="pagination pull-right">
-						<li class="previous"><a href="javascript:;">&laquo;</a></li>
-						<li class="active"><a href="javascript:;">1</a></li>
-						<li><a href="javascript:;">2</a></li>
-						<li><a href="javascript:;">3</a></li>
-						<li><a href="javascript:;">4</a></li>
-						<li><a href="javascript:;">5</a></li>
-						<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-					</ul>
-		        </div>
+		        <!--分页-->
+				<div class="pagination clearfix">
+
+				<ul>
+					<?php echo $_smarty_tpl->tpl_vars['pagelist']->value;?>
+
+				</ul>
+				</div>
 			</div>
 		</div>
 		<hr>
@@ -228,6 +160,23 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			$(function(){
 				$("#collaspeContent").mcollaspe({contentWrapper:"#collaspeContent ul",activeName:"collaspe1"});
 			})
+			function selecttime(flag){
+				if(flag==1){
+					var endTime = $("#countTimeend").val();
+					if(endTime != ""){
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+					}else{
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+					}
+				}else{
+					var startTime = $("#countTimestart").val();
+					if(startTime != ""){
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+					}else{
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+					}    
+				}
+			}
 			
 		</script>
 	</body>

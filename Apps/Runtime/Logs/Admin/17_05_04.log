@@ -1,8 +1,0 @@
-[ 2017-05-04T10:06:46+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
-ERR: 1054:Unknown column 'uname' in 'field list'
- [ SQL语句 ] : select total_amount,uname from tp_reader where reader_id = ' 1236'
-
-[ 2017-05-04T10:12:53+08:00 ] 127.0.0.1 /index.php/Admin/Borrow/addborrow.html
-ERR: 1048:Column 'uname' cannot be null
- [ SQL语句 ] : INSERT INTO `tp_borrow` (`book_id`,`reader_id`,`create_time`,`finish_time`,`book_name`,`book_type`,`uname`) VALUES ('1000000001','1236','2017-05-04 10:12:53','2017-05-11 10:12:53',NULL,NULL,NULL)
-

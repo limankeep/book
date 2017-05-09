@@ -37,13 +37,22 @@ class LoginController extends Controller {
         //以下类Verify在之前并没有include引入
         //走自动加载Think.class.php  autoload()
         $config = array(
-            'imageH'    => 24,               // 验证码图片高度
+            'imageH'    => 35,               // 验证码图片高度
             'imageW'    => 105, 
-            'fontSize'  => 14,
+            'fontSize'  => 16,
             'fontttf'   => '4.ttf',              // 验证码字体，不设置随机获取
             'length'    => 4,               // 验证码位数
         );
         $verify = new \Think\Verify($config);
         $verify -> entry();
+    }
+	//ajax异步更新验证码
+	public function check_verify($code, $id = ''){
+		
+         $verify = new \Think\Verify();
+		 
+         $res = $verify->check($code, $id);
+		 
+         $this->ajaxReturn($res, 'json');
     }
 }

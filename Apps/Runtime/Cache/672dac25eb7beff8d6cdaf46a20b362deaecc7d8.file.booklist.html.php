@@ -1,30 +1,22 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 19:22:35
-=======
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:39:36
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 18:33:51
          compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
-<?php /*%%SmartyHeaderCode:1732159072d30641d99-33139258%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:10847590d5921ba2168-53165904%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booklist.html',
-<<<<<<< HEAD
-      1 => 1493724152,
-=======
-      1 => 1493721572,
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+      1 => 1494325965,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1732159072d30641d99-33139258',
+  'nocache_hash' => '10847590d5921ba2168-53165904',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59072d308336e',
+  'unifunc' => 'content_590d5921e7e38',
   'variables' => 
   array (
     'start_time' => 0,
@@ -35,7 +27,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59072d308336e')) {function content_59072d308336e($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d5921e7e38')) {function content_590d5921e7e38($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -56,10 +48,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
-	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
-/Js/common.js"></script>
-	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
-/Js/froala_editor.min.js"></script>
 	<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 
  
@@ -138,10 +126,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['now_amount'];?>
 </td>
             <td>
-                 <a href="<?php echo @__MODULE__;?>
-/System/edit/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+                <a href="<?php echo @__MODULE__;?>
+/Book/edit/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
 " type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
+				
+				<a href="<?php echo @__MODULE__;?>
+/Book/del/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
             </td>
         </tr>
 	<?php } ?>

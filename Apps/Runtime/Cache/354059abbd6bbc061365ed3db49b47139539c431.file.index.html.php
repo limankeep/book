@@ -1,25 +1,35 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-04 17:07:00
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 20:09:08
          compiled from "../Apps/Home/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:1349659094d1aebbe88-51359852%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:18240590d33c8f031d7-51069041%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '354059abbd6bbc061365ed3db49b47139539c431' => 
     array (
       0 => '../Apps/Home/View\\Index\\index.html',
-      1 => 1493878085,
+      1 => 1494072541,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1349659094d1aebbe88-51359852',
+  'nocache_hash' => '18240590d33c8f031d7-51069041',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59094d1b0b3c4',
+  'unifunc' => 'content_590d33c914fab',
+  'variables' => 
+  array (
+    'announcement_list' => 0,
+    'v' => 0,
+    'recommendlist' => 0,
+    'k' => 0,
+    'booklist' => 0,
+    'booktypelist' => 0,
+    'articlelist' => 0,
+  ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59094d1b0b3c4')) {function content_59094d1b0b3c4($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d33c914fab')) {function content_590d33c914fab($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -35,10 +45,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<h3>阅读是你更快乐</h3>
 		<ul class="header-nav tc fwb">
 			<li class="active"><a href="javascript:;">首页</a></li>
-			<li><a href="../Center/center.html">个人中心</a></li>
-			<li><a href="../Book/booksearch.html">图书搜索</a></li>
-			<li><a href="../Reader/reader.html">读后感</a></li>
-			<li><a href="../About/aboutus.html">关于我们</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Center/center">个人中心</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Book/booksearch">图书搜索</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Reader/reader">读后感</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/About/aboutus">关于我们</a></li>
 		</ul>
 		<div id="myCarousel" class="carousel slide bg-success">
 		    <!-- 轮播（Carousel）指标 -->
@@ -75,53 +89,90 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<div class="row content-box mgb-30">
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 radius">
 					<h4>公告</h4>
+					
 					<ul class="mgb-20">
-						<p>应我校图书馆和研究生院的邀请，科睿唯安公司高级数据分析师阳小涛先生将来我校做专题学术讲座，欢迎广大师生参加！报告的具体安排如下：
-						报告题目：Web of Science和ESI数据库的分析和利用——评价学科绩效、追踪前沿研究报 告 人：阳小涛报告时间：2017年5月2日（周二）16:30</p>
+					<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['announcement_list']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+						<p><?php echo $_smarty_tpl->tpl_vars['v']->value['content'];?>
+</p>
+					<?php } ?>
 					</ul>
 					<a href="javascript:;" class="btn btn-default">view details</a>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 radius">
 					<h4>书籍推荐</h4>
 					<ul class="mgb-20">
-						<li>1、php入门指南</li>
-						<li>2、大明王朝</li>
-						<li>3、我的兄弟顺溜</li>
-						<li>4、java从入门到放弃</li>
-						<li>5、万历十五年</li>
+					<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['recommendlist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+						<li><a><?php echo $_smarty_tpl->tpl_vars['k']->value+1;?>
+、<?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
+</a></li>
+						
+					<?php } ?>
 					</ul>
 					<a href="javascript:;" class="btn btn-default">view details</a>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 radius">
 					<h4>最新图书</h4>
 					<ul class="mgb-20 list-num">
-						<li>1、格林童话</li>
-						<li>2、安徒生童话</li>
-						<li>3、伊索寓言</li>
-						<li>4、斗破苍穹</li>
-						<li>5、高数</li>
+					<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['booklist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+						<li><a><?php echo $_smarty_tpl->tpl_vars['k']->value+1;?>
+、<?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
+</a></li>
+						
+					<?php } ?>
 					</ul>
 					<a href="javascript:;" class="btn btn-default">view details</a>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 radius">
 					<h4>图书分类</h4>
 					<ul class="mgb-20 list-num">
-						<li>文学</li>
-						<li>计算机</li>
-						<li>小说</li>
-						<li>历史</li>
-						<li>生物</li>
+					<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['booktypelist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+						<li><a><?php echo $_smarty_tpl->tpl_vars['k']->value+1;?>
+、<?php echo $_smarty_tpl->tpl_vars['v']->value['booktype_name'];?>
+</a></li>
+						
+					<?php } ?>
 					</ul>
 					<a href="javascript:;" class="btn btn-default">view details</a>
 				</div>
 				<div class="col-lg-3 col-md-3 col-sm-3 col-xs-8 radius">
 					<h4>最新文章</h4>
 					<ul class="mgb-20 list-num">
-						<li>1、我的兄弟叫顺溜</li>
-						<li>2、我为什么喜欢这篇文章</li>
-						<li>3、大唐王朝的新衰</li>
-						<li>4、狄公断案</li>
-						<li>5、后现代的哥德巴赫</li>
+					<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['articlelist']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+						<li><a><?php echo $_smarty_tpl->tpl_vars['k']->value+1;?>
+、<?php echo $_smarty_tpl->tpl_vars['v']->value['title'];?>
+</a></li>
+						
+					<?php } ?>
 					</ul>
 					<a href="javascript:;" class="btn btn-default">view details</a>
 				</div>

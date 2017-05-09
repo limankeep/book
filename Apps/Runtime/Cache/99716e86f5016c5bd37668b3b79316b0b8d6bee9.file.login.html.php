@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-04 11:00:48
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 10:23:40
          compiled from "../Apps/Home/View\Login\login.html" */ ?>
-<?php /*%%SmartyHeaderCode:19197590a99603f3e46-61101384%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:29497590d3270e66903-99366389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '99716e86f5016c5bd37668b3b79316b0b8d6bee9' => 
     array (
       0 => '../Apps/Home/View\\Login\\login.html',
-      1 => 1493821291,
+      1 => 1494037418,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '19197590a99603f3e46-61101384',
+  'nocache_hash' => '29497590d3270e66903-99366389',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590a99604d9fc',
+  'unifunc' => 'content_590d327113ab6',
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590a99604d9fc')) {function content_590a99604d9fc($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d327113ab6')) {function content_590d327113ab6($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -101,10 +101,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	.container {
         width: auto;
         max-width: 680px;
-      }
-      .container .credit {
+    }
+    .container .credit {
         margin: 20px 0;
-      }
+    }
+	.TxtValidateCodeCssClass{
+		width:80px;
+	}
+	#pad-top{
+		display:block;
+		line-height:34px;
+		margin:2px;
+	}
+	#captcha{
+		margin:2px;
+	}
 	  
     </style>
 	</head>
@@ -117,11 +128,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 					<div>账号：<input type="text" name="uname" value="请输入账号"  id="LoginId" class="input-block-level" placeholder="Email address" /></div>
 					
 					<div>密码：<input type="password" name="password" value="请输入密码" id="LoginPassword" class="input-block-level" placeholder="Password" /></div>
-					<div>请输入验证码： 
-						<img src="<?php echo @__CONTROLLER__;?>
-/verifyImg"  alt="" >
-						<input class="TxtValidateCodeCssClass" id="captcha" name="captcha" type="text">
-                        
+					
+					<div class="clearfix">
+						<span class="pull-left" id="pad-top">验证码：</span>
+						
+						<input class="TxtValidateCodeCssClass pull-left" id="captcha" name="captcha" type="text">
+                        <img src="<?php echo @__CONTROLLER__;?>
+/verifyImg"  alt="" id="verify_img" class="pull-left">
+						
 					</div>
 					
 					<div><input type="submit" name="LoginBtn" value="登录" id="LoginBtn" class="btn btn-success btn-lmedium btn-primary "/></div>
@@ -141,5 +155,16 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		 
 		</script>
 	</body>
+	<script>
+		("#verify_img").click(function() {
+			var verifyURL = "<?php echo @__CONTROLLER__;?>
+/verifyImg";
+    		var time = new Date().getTime();
+    		$("#verify_img").attr({
+			"src" : verifyURL + "/" + time
+    		});
+ 		});
+	</script>
 </html>
+
 <?php }} ?>

@@ -37,6 +37,7 @@
 <body>
 <form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20">
 <input type="hidden" name="reader_id" value="{$info.reader_id}" />
+
     <table class="table table-bordered table-hover definewidth m10">
         <tr>
             <td width="10%" class="tableleft">登录名</td>
@@ -52,21 +53,21 @@
         </tr>
 		<tr>
             <td width="10%" class="tableleft">家庭住址</td>
-            <td><input type="text" name="username" value="{$info.reader_address}"/></td>
+            <td><input type="text" name="reader_address" value="{$info.reader_address}"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">身份证号</td>
-            <td><input type="text" name="username" value="{$info.reader_IDcard}"/></td>
+            <td><input type="text" name="reader_idcard" value="{$info.reader_idcard}"/></td>
         </tr>
         <tr>
             <td class="tableleft">邮箱</td>
-            <td><input type="text" name="email" value="{$info.email}"/></td>
+            <td><input type="text" name="reader_email" value="{$info.reader_email}"/></td>
         </tr>
 
         <tr>
             <td class="tableleft"></td>
             <td>
-                <button type="submit" class="btn btn-primary" type="button">保存</button>				 &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+                <button type="submit" class="btn btn-primary" type="button">保存</button>&nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
             </td>
         </tr>
     </table>

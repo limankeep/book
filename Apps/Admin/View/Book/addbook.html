@@ -53,21 +53,12 @@
     </tr>
 	<tr>
         <td class="tableleft">图书类别</td>
-<<<<<<< HEAD
+
         <td><select class="selectpicker" name="book_type">
-				<option>历史</option>
-				<option>文学</option>
-				<option>计算机</option>
-				<option>语言</option>
-				<option>物理</option>
-=======
-        <td><select class="selectpicker">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+		{foreach $booktypeinfo as $k => $v}
+				<option>{$v.booktype_name}</option>
+				
+		{/foreach}
 			</select>
 		</td>
     </tr>
@@ -107,6 +98,7 @@
         <td>
             <a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a> &nbsp;&nbsp;
 			<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+			{$name}
         </td>
     </tr>
 	<!-- 弹出框提示 -->

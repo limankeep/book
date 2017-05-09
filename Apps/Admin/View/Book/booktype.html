@@ -50,15 +50,17 @@
         <th>操作</th>
     </tr>
     </thead>
+	{foreach $info as $k => $v}
 	     <tr>
-            <td>2</td>
-            <td>it</td>
-            <td>计算机和软件相关</td>
-            <td>2016年12月7日</td>
+            <td>{$v.booktype_id}</td>
+            <td>{$v.booktype_name}</td>
+            <td>{$v.booktype_detail}</td>
+            <td>{$v.create_time}</td>
             <td>
                 <a href="edit.html">编辑</a>                
             </td>
         </tr>	
+	{/foreach}
 </table>
 </body>
 </html>

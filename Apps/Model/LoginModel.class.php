@@ -22,6 +22,7 @@ class LoginModel extends Model{
             //验证密码(查询出来的密码与用户输入的密码进行比较)
             if($info['password'] != $password){
                 return false;
+				
             } else {
                 return $info;
             }

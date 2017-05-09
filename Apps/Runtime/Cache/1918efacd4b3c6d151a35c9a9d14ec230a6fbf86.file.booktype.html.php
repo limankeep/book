@@ -1,25 +1,30 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 19:29:23
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-08 21:43:14
          compiled from "../Apps/Admin/View\Book\booktype.html" */ ?>
-<?php /*%%SmartyHeaderCode:1470259086d934a0946-26481528%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:32745590d93af695708-87575864%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '1918efacd4b3c6d151a35c9a9d14ec230a6fbf86' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booktype.html',
-      1 => 1492353955,
+      1 => 1494250990,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1470259086d934a0946-26481528',
+  'nocache_hash' => '32745590d93af695708-87575864',
   'function' => 
   array (
   ),
-  'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59086d9373ff5',
+  'unifunc' => 'content_590d93af794d3',
+  'variables' => 
+  array (
+    'info' => 0,
+    'v' => 0,
+  ),
+  'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59086d9373ff5')) {function content_59086d9373ff5($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d93af794d3')) {function content_590d93af794d3($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -79,15 +84,27 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <th>操作</th>
     </tr>
     </thead>
+	<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['info']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
 	     <tr>
-            <td>2</td>
-            <td>it</td>
-            <td>计算机和软件相关</td>
-            <td>2016年12月7日</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['booktype_id'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['booktype_name'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['booktype_detail'];?>
+</td>
+            <td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
+</td>
             <td>
                 <a href="edit.html">编辑</a>                
             </td>
         </tr>	
+	<?php } ?>
 </table>
 </body>
 </html>

@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/pc-common.css" />
 		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/asset/css/bootstrap.css" />
 		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/main.css" />
+		<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 	</head>
 	<body class="book-search">
 		<!--<header></header>-->
@@ -20,24 +21,14 @@
 		<div class="book-content mgt-20 radius">	        
 			<div class="book-sidebar">
 				<div class="collaspeContent" id="collaspeContent">
-					<h4 data-collaspe="collaspe1">一级菜单</h4>
-					<ul data-collaspe="collaspe1">
-						<li><a href="javascript:;">二级菜单</a></li>
-						<li><a href="javascript:;">二级菜单</a></li>
-					</ul>
+					<h4 data-collaspe="collaspe1">图书搜索</h4>
+					
 					<h4 data-collaspe="collaspe2">一级菜单</h4>
 					<ul data-collaspe="collaspe2">
 						<li><a href="javascript:;" class=" on">二级菜单</a></li>
 						<li><a href="javascript:;">二级菜单</a></li>
 					</ul>
-					<h4 data-collaspe="collaspe3">一级菜单</h4>
-					<ul data-collaspe="collaspe3">
-						<li><a href="javascript:;">二级菜单</a></li>
-					</ul>
-					<h4 data-collaspe="collaspe5">一级菜单</h4>
-					<ul data-collaspe="collaspe5">
-						<li><a href="javascript:;">二级菜单</a></li>
-					</ul>
+					
 				</div>
 			</div>
 			<div class="book-list pd-20">
@@ -46,22 +37,22 @@
 				        <h3 class="panel-title">搜索</h3>
 				    </div>
 				    <div class="panel-body clearfix pd-10">		
-			            <form role="form" class="form-horizontal form-inline">
+			            <form role="form" class="form-horizontal form-inline" action="{$smarty.const.__SELF__}" method="post">
 				            <div class="form-group col-sm-5 col-xs-5">
-							    <label class="control-label col-sm-4 col-xs-4 tc">图书编号</label>
+							    <label class="control-label col-sm-4 col-xs-4 tc">图书名称</label>
 							    <div class="col-sm-7 col-xs-7 pd-0">
-							        <input type="text" name="num" class="form-control input-sm">
+							        <input type="text" name="book_name" id="book_name" class="form-control input-sm">
 							    </div>
 							</div>
 							<div class="form-group col-sm-7 col-xs-7">
 								<label class="control-label col-sm-2 col-xs-2 tc">时间</label>
 							    <div class="col-sm-10 col-xs-10 pd-0">
-							        <input type="text" name="start" class="form-control input-sm">
+							        <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="{$start_time}" size="17" class="date form-control input-sm"  style="width:120px;">
 							        	-
-							        <input type="text" name="end" class="form-control input-sm">
+							        <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="{$end_time}" size="17"  class="date form-control input-sm" style="width:120px;">
 							    </div>
 							</div>
-							<button class="btn btn-primary btn-sm" type="button">查询</button>
+							<button class="btn btn-primary btn-sm" type="submit">查询</button>
 						</form>
 				    </div>
 				</div>
@@ -78,119 +69,34 @@
 			        		<th class="tc fwb">上架时间</th>
 		        		</tr>
 		        	</thead>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
-		        	<tr>
-		        		<td>1231231</td>
-		        		<td>金瓶梅</td>
-		        		<td>111</td>
-		        		<td>李二狗子</td>
-		        		<td>22.2</td>
-		        		<td>333</td>
-		        		<td>111</td>
-		        		<td>2012-12-12</td>
-		        	</tr>
+		        	{if $info != ""}
+						{foreach $info as $k => $v}
+						<tr>
+							<td>{$v.book_id}</td>
+							<td>{$v.book_name}</td>
+							<td>{$v.uname}</td>
+							<td>{$v.book_type}</td>
+							<td>{$v.press}</td>
+							<td>{$v.price}</td>
+							<td>{$v.total_amount}</td>
+							<td>{$v.now_amount}</td>
+							
+						</tr>
+					{/foreach}
+					{else if $info == ""}
+						<tr><td>暂无数据</td><tr>
+					{/if}
+
+				
+		        	
 		        </table>
-		        <div class="clearfix">
-		        	<p class="pull-left">显示<label>1-10</label>条，共<label>20</label>条</p>
-		        	<ul class="pagination pull-right">
-						<li class="previous"><a href="javascript:;">&laquo;</a></li>
-						<li class="active"><a href="javascript:;">1</a></li>
-						<li><a href="javascript:;">2</a></li>
-						<li><a href="javascript:;">3</a></li>
-						<li><a href="javascript:;">4</a></li>
-						<li><a href="javascript:;">5</a></li>
-						<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-					</ul>
-		        </div>
+		        <!--分页-->
+				<div class="pagination clearfix">
+
+				<ul>
+					{$pagelist}
+				</ul>
+				</div>
 			</div>
 		</div>
 		<hr>
@@ -202,6 +108,23 @@
 			$(function(){
 				$("#collaspeContent").mcollaspe({contentWrapper:"#collaspeContent ul",activeName:"collaspe1"});
 			})
+			function selecttime(flag){
+				if(flag==1){
+					var endTime = $("#countTimeend").val();
+					if(endTime != ""){
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+					}else{
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+					}
+				}else{
+					var startTime = $("#countTimestart").val();
+					if(startTime != ""){
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+					}else{
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+					}    
+				}
+			}
 			{/literal}
 		</script>
 	</body>

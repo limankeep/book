@@ -58,8 +58,8 @@ book_type 书的类型   varchar  20
 reader_id  读者的id  int 8 
 uname   读者的姓名varchar  50   
 create_time  借出时间 datetime 
-now_time     持续时间 datetime  //暂时没有使用这个字段
-finish_time  归还时间 datetime
+now_time     实际归还时间时间 datetime  //暂时没有使用这个字段
+finish_time  应该归还时间 datetime
 
 
 
@@ -67,6 +67,7 @@ finish_time  归还时间 datetime
 booktype_id   类别编号 int 8 
 booktype_name  类别名  varchar 50
 booktype_detail  类别描述 varchar 255
+create_time
 
 
 公告
@@ -79,6 +80,7 @@ create_time  创建时间  datetime
 img_id  int 4
 img_name     名称  varchar 20
 img_address  图片路径  varchar 512
+create_time
 
 
 bookrecommend  书籍推荐
@@ -87,6 +89,7 @@ book_id  书籍编号 int 12
 book_name 书籍名称 varchar 50
 reason  推荐理由   varchar 255
 recommend_score    推荐指数  满分100  按分数排行 tinyint 3
+create_time
 
 
 
@@ -97,7 +100,7 @@ status   文章状态    tinyint 1    0：待审核 1：审核通过 2 ：审核不通过
 uid  作者id  int 8
 title 标题   varchar 100
 author 作者  varchar 20
-content_text varchar 50000   文章内容
+content varchar 50000   文章内容
 create_time 创建时间  datetime 
 推荐指数
 
@@ -105,4 +108,13 @@ create_time 创建时间  datetime
 留言板
 ...
 
-吾问无为谓无无无无吾问无为谓问问
+读者文章关系表
+reader_article_id   主键id 12 int
+reader_id       读者id int 12
+article_id      文章id int 12	
+reader_name：用户真实姓名 	varchar 50
+title 标题   varchar 100					
+content varchar 50000   文章内容
+create_time 创建时间  datetime
+
+

@@ -1,42 +1,32 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 19:29:22
-=======
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-02 18:30:15
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-08 22:08:26
          compiled from "../Apps/Admin/View\Book\addbook.html" */ ?>
-<?php /*%%SmartyHeaderCode:2952459085fb739e354-21212397%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:9326590d93bb221ca9-55408041%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f6735c0d3ff2b9bb8d37ee83842783c9ef381334' => 
     array (
       0 => '../Apps/Admin/View\\Book\\addbook.html',
-<<<<<<< HEAD
-      1 => 1493724485,
-=======
-      1 => 1493602939,
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+      1 => 1494252503,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2952459085fb739e354-21212397',
+  'nocache_hash' => '9326590d93bb221ca9-55408041',
   'function' => 
   array (
   ),
-<<<<<<< HEAD
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59085fb76c83d',
-=======
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+  'unifunc' => 'content_590d93bb47870',
   'variables' => 
   array (
+    'booktypeinfo' => 0,
+    'v' => 0,
     'role_checkbox' => 0,
+    'name' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_59085fb76c83d',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_59085fb76c83d')) {function content_59085fb76c83d($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_590d93bb47870')) {function content_590d93bb47870($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -106,21 +96,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </tr>
 	<tr>
         <td class="tableleft">图书类别</td>
-<<<<<<< HEAD
+
         <td><select class="selectpicker" name="book_type">
-				<option>历史</option>
-				<option>文学</option>
-				<option>计算机</option>
-				<option>语言</option>
-				<option>物理</option>
-=======
-        <td><select class="selectpicker">
-				<option>1</option>
-				<option>2</option>
-				<option>3</option>
-				<option>4</option>
-				<option>5</option>
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+		<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['booktypeinfo']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+				<option><?php echo $_smarty_tpl->tpl_vars['v']->value['booktype_name'];?>
+</option>
+				
+		<?php } ?>
 			</select>
 		</td>
     </tr>
@@ -161,6 +149,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <td>
             <a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a> &nbsp;&nbsp;
 			<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
+			<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
+
         </td>
     </tr>
 	<!-- 弹出框提示 -->

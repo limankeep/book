@@ -1,26 +1,22 @@
-<<<<<<< HEAD
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-03 10:28:05
-=======
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-01 21:36:53
->>>>>>> f2ed431902361750018034b30002f461cba1e717
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 15:15:21
          compiled from "../Apps/Admin/View\Borrow\returnborrow.html" */ ?>
-<?php /*%%SmartyHeaderCode:18620590739f57eb8e5-79830131%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:22473591151fdae21b2-66080182%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8a9bd52dd9e6442e8de20fb4381be87812af15f5' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\returnborrow.html',
-      1 => 1493778482,
+      1 => 1494314118,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18620590739f57eb8e5-79830131',
+  'nocache_hash' => '22473591151fdae21b2-66080182',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590739f59052f',
+  'unifunc' => 'content_591151fdd3181',
   'variables' => 
   array (
     'start_time' => 0,
@@ -31,13 +27,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
-<<<<<<< HEAD
-=======
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590739f59052f',
->>>>>>> f2ed431902361750018034b30002f461cba1e717
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590739f59052f')) {function content_590739f59052f($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_591151fdd3181')) {function content_591151fdd3181($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -109,7 +100,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <th>借阅日期<?php echo $_smarty_tpl->tpl_vars['nowtime']->value;?>
 </th>
         <th>应该归还日期</th>
-		<th>是否逾期</th>
         <th>操作</th>
     </tr>
     </thead>
@@ -135,8 +125,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
 </td>
 			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['finish_time'];?>
-</td>
-			<td><?php if ($_smarty_tpl->tpl_vars['v']->value['status']!="0"){?>是<?php }elseif($_smarty_tpl->tpl_vars['v']->value['status']=="0"){?>否<?php }?></td>
+</td>			
             <td>
                 <a href="<?php echo @__MODULE__;?>
 /Borrow/returnbook/borrow_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['borrow_id'];?>
