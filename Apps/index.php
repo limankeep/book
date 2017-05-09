@@ -19,11 +19,6 @@ define('APP_DEBUG',True);
 
 //define('BIND_MODULE','Admin/');//绑定Home模块到当前入口文件，可用于新增Home模块
 
-function show_bug($msg){
-    echo "<pre style='color:red'>";
-    var_dump($msg);
-    echo "</pre>";
-}
 define("SITE_URL","www.tpbook.com");
 // 定义应用目录
 //define("SITE_URL","http://www.tpbook.com/");

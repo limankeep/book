@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 16:50:21
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 19:51:51
          compiled from "../Apps/Admin/View\Reader\readerlist.html" */ ?>
 <?php /*%%SmartyHeaderCode:3451590d6210ebe430-41520450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6af1a5b792d95f0838c1ab2f3aab2f15c7de0eef' => 
     array (
       0 => '../Apps/Admin/View\\Reader\\readerlist.html',
-      1 => 1494319817,
+      1 => 1494330440,
       2 => 'file',
     ),
   ),
@@ -112,7 +112,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
                 <a href="<?php echo @__MODULE__;?>
 /Reader/edit/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
 " type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-                <button type="submit" class="btn btn-primary">详情</button>
+				<a href="<?php echo @__MODULE__;?>
+/Reader/detail/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">详情</a>
 				<a href="<?php echo @__MODULE__;?>
 /Reader/del/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
 " type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				

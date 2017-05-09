@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 10:23:40
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 19:27:11
          compiled from "../Apps/Home/View\Login\login.html" */ ?>
 <?php /*%%SmartyHeaderCode:29497590d3270e66903-99366389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '99716e86f5016c5bd37668b3b79316b0b8d6bee9' => 
     array (
       0 => '../Apps/Home/View\\Login\\login.html',
-      1 => 1494037418,
+      1 => 1494329229,
       2 => 'file',
     ),
   ),
@@ -101,21 +101,21 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	.container {
         width: auto;
         max-width: 680px;
-    }
-    .container .credit {
+      }
+      .container .credit {
         margin: 20px 0;
-    }
-	.TxtValidateCodeCssClass{
+      }
+	  .TxtValidateCodeCssClass{
 		width:80px;
-	}
-	#pad-top{
+	  }
+	  #pad-top{
 		display:block;
 		line-height:34px;
 		margin:2px;
-	}
-	#captcha{
+	  }
+	  #captcha{
 		margin:2px;
-	}
+	  }
 	  
     </style>
 	</head>
@@ -156,7 +156,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		</script>
 	</body>
 	<script>
-		("#verify_img").click(function() {
+	
+		$("#verify_img").click(function() {
 			var verifyURL = "<?php echo @__CONTROLLER__;?>
 /verifyImg";
     		var time = new Date().getTime();
@@ -164,7 +165,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			"src" : verifyURL + "/" + time
     		});
  		});
+		
+
+		 
+	
 	</script>
 </html>
-
 <?php }} ?>

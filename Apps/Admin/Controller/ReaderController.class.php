@@ -111,9 +111,16 @@ class ReaderController extends Controller {
 			}
 		}else{
 			echo "还有图书未归还";
-		}
-		
-		
+		}		
+	}
+	public function detail($reader_id){
+		//建立数据模型
+		$reader = D('reader');
+		$reader = $reader;
+		$sql="select * from tp_reader where reader_id = '".$reader_id."' ";
+		$info = $reader -> query($sql);
+		$this -> assign('info',$info);
+		$this -> display();
 	}
 
 }

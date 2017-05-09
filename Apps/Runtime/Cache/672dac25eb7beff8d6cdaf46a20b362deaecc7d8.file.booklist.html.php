@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 18:33:51
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 19:41:43
          compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
 <?php /*%%SmartyHeaderCode:10847590d5921ba2168-53165904%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booklist.html',
-      1 => 1494325965,
+      1 => 1494329451,
       2 => 'file',
     ),
   ),
@@ -132,7 +132,10 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 				
 				<a href="<?php echo @__MODULE__;?>
 /Book/del/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
-" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>
+				<a href="<?php echo @__MODULE__;?>
+/Book/detail/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">详情</a>				
             </td>
         </tr>
 	<?php } ?>

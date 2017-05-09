@@ -119,7 +119,7 @@ class BookController extends Controller {
     }
 	public function booktype(){
 		
-	//建立数据模型
+		//建立数据模型
 		$booktype = D('booktype');
 		//获取记录总条数
 		$total = $booktype -> count();
@@ -130,15 +130,41 @@ class BookController extends Controller {
 		//拼装sql语句获取每页的记录
 		$sql = "select * from tp_booktype ".$page->limit;
 		$info = $booktype -> query($sql);
-        //4. 获得页码列表
-        $pagelist = $page -> fpage();
+		//4. 获得页码列表
+		$pagelist = $page -> fpage();
 		
 		//show_bug($info);
 
 		$this -> assign('info', $info);
-        $this -> assign('pagelist', $pagelist);
-        $this -> display();
+		$this -> assign('pagelist', $pagelist);
+		$this -> display();
     }
+	public function addbooktype(){
+		//获取当前时间
+		$now_time = date('Y-m-d H:i:s',time());
+		//两个逻辑① 展现表单 ② 接收表单数据
+        $booktype = D('booktype');
+
+        if(!empty($_POST)){
+            
+            $booktype  -> create(); 
+			//$book ->now_amount = $book['total_amount'];
+            $z = $booktype-> add();
+            if($z){
+                //展现一个提示页面，并做页面跳转
+                //success(提示信息，跳转的url路由地址)
+                //$this ->success('添加书籍成功', U('Goods/showlist'));				
+				$this -> display();
+                echo "success";
+            } else {
+                //$this ->error('添加书籍失败', U('Goods/showlist'));
+                echo "error";
+            }
+        }else {
+			
+            $this -> display();
+        }
+	}
 	public function del($book_id){
 		$book = D("book");//造对象
 		$book_id = $book_id;
@@ -155,5 +181,14 @@ class BookController extends Controller {
 		}else{
 			echo "还有图书未归还";
 		}
+	}
+	public function detail($book_id){
+		//建立数据模型
+		$book = D('book');
+		$book_id = $book_id;
+		$sql ="select * from tp_book where book_id = '".$book_id."' ";
+		$info = $book ->query($sql);
+		$this -> assign('info',$info);
+		$this -> display();
 	}
 }

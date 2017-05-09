@@ -73,21 +73,21 @@
 	.container {
         width: auto;
         max-width: 680px;
-    }
-    .container .credit {
+      }
+      .container .credit {
         margin: 20px 0;
-    }
-	.TxtValidateCodeCssClass{
+      }
+	  .TxtValidateCodeCssClass{
 		width:80px;
-	}
-	#pad-top{
+	  }
+	  #pad-top{
 		display:block;
 		line-height:34px;
 		margin:2px;
-	}
-	#captcha{
+	  }
+	  #captcha{
 		margin:2px;
-	}
+	  }
 	  {/literal}
     </style>
 	</head>
@@ -126,13 +126,17 @@
 		</script>
 	</body>
 	<script>
-		("#verify_img").click(function() {
+	
+		$("#verify_img").click(function() {
 			var verifyURL = "{$smarty.const.__CONTROLLER__}/verifyImg";
     		var time = new Date().getTime();
     		$("#verify_img").attr({
 			"src" : verifyURL + "/" + time
     		});
  		});
+		
+
+		 
+	
 	</script>
 </html>
-

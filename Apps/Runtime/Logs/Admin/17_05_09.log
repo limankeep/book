@@ -204,3 +204,36 @@ ERR: 1054:Unknown column 'reader_id' in 'where clause'
 ERR: 1054:Unknown column 'reader_id' in 'where clause'
  [ SQL语句 ] : select * from tp_book where reader_id = '1' And (total_amount = now_amount)
 
+[ 2017-05-09T19:41:45+08:00 ] 127.0.0.1 /index.php/Admin/Book/detail/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\detail.html"  on line 47 "{foreach $info as $k -&gt; $v}"  - Unexpected " -> ", expected one of: "}" , " "
+
+[ 2017-05-09T19:42:15+08:00 ] 127.0.0.1 /index.php/Admin/Book/detail/book_id/1
+ERR: Syntax Error in template "../Apps/Admin/View\Book\detail.html"  on line 47 "{foreach $info as $k -&gt; $v}"  - Unexpected " -> ", expected one of: "}" , " "
+
+[ 2017-05-09T19:52:41+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklsit
+ERR: 非法操作:booklsit
+
+[ 2017-05-09T19:53:04+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklsit
+ERR: 非法操作:booklsit
+
+[ 2017-05-09T19:53:10+08:00 ] 127.0.0.1 /index.php/Admin/Book/booklsit
+ERR: 非法操作:booklsit
+
+[ 2017-05-09T19:53:26+08:00 ] 127.0.0.1 /index.php/Admin/Reader/readerlsit
+ERR: 非法操作:readerlsit
+
+[ 2017-05-09T20:01:37+08:00 ] 127.0.0.1 /index.php/Admin/Book/booktype.html
+ERR: Syntax Error in template "../Apps/Admin/View\Book\booktype.html"  on line 41 "&lt;button type=&quot;submit&quot; class=&quot;btn btn-primary&quot;&gt;查询&lt;/button&gt;&amp;nbsp;&amp;nbsp; &lt;a href=&quot;{$smarty.const,__MODULE__}/Book/addbooktype&quot; type=&quot;button&quot; class=&quot;btn btn-success&quot; id=&quot;addnew&quot;&gt;新增分类&lt;/a&gt;"  - Unexpected ",", expected one of: "}" , " "
+
+[ 2017-05-09T20:02:37+08:00 ] 127.0.0.1 /index.php/Admin/Book/add.html
+ERR: 非法操作:add
+
+[ 2017-05-09T20:02:37+08:00 ] 127.0.0.1 /index.php/Admin/Book/addbooktype
+ERR: 1065:Query was empty
+
+[ 2017-05-09T20:03:05+08:00 ] 127.0.0.1 /index.php/Admin/Book/add.html
+ERR: 非法操作:add
+
+[ 2017-05-09T20:03:34+08:00 ] 127.0.0.1 /index.php/Admin/Book/add.html
+ERR: 非法操作:add
+
