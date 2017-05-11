@@ -31,7 +31,7 @@ class BookController extends Controller {
 		if(!empty($book_name)){
 			if(empty($start_time) && empty($end_time)){			
 				//按照名称去查询
-				$sql = "select * from tp_book where book_name like '%".$book_name."%'" .$page->limit;limit;				
+				$sql = "select * from tp_book where book_name like '%".$book_name."%'" .$page->limit;		
 			}
 			if(!empty($start_time) && !empty($end_time)){
 				//按照名称和时间去查询
@@ -70,16 +70,15 @@ class BookController extends Controller {
 		$this -> assign('booktypeinfo', $booktypeinfo);
         if(!empty($_POST)){
             
-            $book  -> create(); 
-			//$book ->now_amount = $book['total_amount'];
+            $book  -> create();
+			$book -> now_amount = $_POST['total_amount'];
+			$book -> create_time = $now_time;
             $z = $book -> add();
             if($z){
                 //展现一个提示页面，并做页面跳转
                 //success(提示信息，跳转的url路由地址)
                 //$this ->success('添加书籍成功', U('Goods/showlist'));
 				
-				
-				$this -> display();
                 echo "success";
             } else {
                 //$this ->error('添加书籍失败', U('Goods/showlist'));
@@ -142,28 +141,37 @@ class BookController extends Controller {
 	public function addbooktype(){
 		//获取当前时间
 		$now_time = date('Y-m-d H:i:s',time());
+		$booktype_name = $_POST['booktype_name'];
 		//两个逻辑① 展现表单 ② 接收表单数据
         $booktype = D('booktype');
-
-        if(!empty($_POST)){
+		$sql ="select * from tp_booktype where booktype_name = '".$booktype_name."'";
+		$result = $booktype -> query($sql);
+		echo $booktype_name;
+		if(!empty($result)){
+			echo "图书类型已存在，请勿重复添加";
+		}else{
+			if(!empty($_POST)){
             
-            $booktype  -> create(); 
-			//$book ->now_amount = $book['total_amount'];
-            $z = $booktype-> add();
-            if($z){
-                //展现一个提示页面，并做页面跳转
-                //success(提示信息，跳转的url路由地址)
-                //$this ->success('添加书籍成功', U('Goods/showlist'));				
-				$this -> display();
-                echo "success";
-            } else {
-                //$this ->error('添加书籍失败', U('Goods/showlist'));
-                echo "error";
-            }
-        }else {
+				$booktype  -> create(); 
+				//$book ->now_amount = $book['total_amount'];
+				$booktype -> create_time = $now_time;
+				$z = $booktype-> add();
+				if($z){
+					//展现一个提示页面，并做页面跳转
+					//success(提示信息，跳转的url路由地址)
+					//$this ->success('添加书籍成功', U('Goods/showlist'));				
+					$this -> display();
+					echo "success";
+				} else {
+					//$this ->error('添加书籍失败', U('Goods/showlist'));
+					echo "error";
+				}
+			}else {
 			
-            $this -> display();
-        }
+				$this -> display();
+			}
+		}
+        echo $booktype_name;
 	}
 	public function del($book_id){
 		$book = D("book");//造对象

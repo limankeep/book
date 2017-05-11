@@ -4,14 +4,14 @@
     <title></title>
     <meta charset="UTF-8">
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
-    <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
+	<link href="{$smarty.const.PUBLIC_URL}/Css/easyform.css" rel="stylesheet">
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
-	<script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/layer.js"></script>
+
+	<script src="{$smarty.const.PUBLIC_URL}/Js/easyform.js"></script>
 </head>
 <body>
 <!-- 弹出框提示 -->
@@ -20,26 +20,27 @@
  
 <!-- Modal -->
 <!-- 二级弹窗图书修改页 -->
+
 <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
 <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">密码修改</h3>
     </div>
-   <form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20">
+   <form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20" id="form1">
 <table class="table table-bordered table-hover definewidth m10">
 				{*隐藏域传递被修改的商品id信息*}
-                <input type="hidden" name="book_id" value="{$info.book_id}" />
-	<tr>
-        <td class="tableleft">原始密码</td>
-        <td><input type="text" name="book_name" value="{$info.book_name}"/></td>
-    </tr>
+                <input type="hidden" name="manager_id" value="{$info.manager_id}" />
+
 	<tr>
         <td class="tableleft">新密码</td>
-        <td><input type="text" name="author" value="{$info.author}"/></td>
+        <td><input type="password" name="password" value="{$info.password}" id="psw1" data-easyform="length:6 16;"
+                               data-message="密码必须为6—16位"
+                               data-easytip="class:easy-blue;"/></td>
     </tr>
 	<tr>
         <td class="tableleft">再次输入</td>
-        <td><input type="text" name="author" value="{$info.author}"/></td>
+        <td><input type="password" name="newpwd" value="{$info.newpwd}" data-easyform="equal:#psw1;" data-message="输入不一致"
+                               data-easytip="position:top;class:easy-blue;"/></td>
     </tr>
     </tr>
     <tr>
@@ -73,5 +74,7 @@
 </body>
 </html>
 <script>
-  
+	$(document).ready(function(){
+			$('#form1').easyform();
+		});
 </script>

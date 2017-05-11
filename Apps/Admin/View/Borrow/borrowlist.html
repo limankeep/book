@@ -46,7 +46,7 @@
 	 <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="{$start_time}" size="17" class="date"  style="width:120px;">&nbsp;&nbsp; 
 	 - 
 	 <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="{$end_time}" size="17"  class="date" style="width:120px;">  &nbsp;&nbsp; 
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" >新增借阅</button>
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <a href="{$smarty.const.__MODULE__}/Borrow/addborrow" type="button" class="btn btn-success">新增借阅</a>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
@@ -56,7 +56,7 @@
         <th>图书分类</th>
         <th>借阅人</th>
         <th>借阅人id</th>
-        <th>借阅日期{$nowtime}</th>
+        <th>借阅日期</th>
         <th>应该归还日期</th>
 		<th>是否归还</th>
         <th>操作</th>

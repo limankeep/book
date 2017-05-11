@@ -24,10 +24,15 @@ class LoginController extends Controller {
 					//$this->ajaxReturn($arr,json)
                 } else {
                     //登录信息持久化$_SESSION
-                    session('uname',$rst['uname']);
-                    session('uid',$rst['uid']);
-                    //$this->ajaxReturn($arr,json)
-                    $this -> redirect('Index/index');
+					$sql = "select * from tp_login where uname = '".$_POST['uname']."' and type = '1'";
+					$result = $user -> query($sql);
+					if($result){
+						session('uname',$rst['uname']);
+						session('uid',$rst['uid']);
+						//$this->ajaxReturn($arr,json)
+						$this -> redirect('Index/index');
+					}
+						echo "请输入管理员账号登录";
                 }
             }
         } 

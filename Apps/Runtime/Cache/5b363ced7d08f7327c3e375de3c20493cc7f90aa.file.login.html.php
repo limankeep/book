@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 10:10:53
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 08:51:21
          compiled from "../Apps/Admin/View\Login\login.html" */ ?>
-<?php /*%%SmartyHeaderCode:2328590d26babf1c53-82287296%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:227415913b589596b73-43263237%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '5b363ced7d08f7327c3e375de3c20493cc7f90aa' => 
     array (
       0 => '../Apps/Admin/View\\Login\\login.html',
-      1 => 1494036650,
+      1 => 1494434428,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '2328590d26babf1c53-82287296',
+  'nocache_hash' => '227415913b589596b73-43263237',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d26bad0463',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913b58981f52',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d26bad0463')) {function content_590d26bad0463($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913b58981f52')) {function content_5913b58981f52($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -31,6 +31,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Css/bootstrap.css" rel="stylesheet" media="screen">
     <link href="<?php echo @PUBLIC_URL;?>
 /Css/bootstrap-responsive.css" rel="stylesheet">
+	<link href="<?php echo @PUBLIC_URL;?>
+/Css/easyform.css" rel="stylesheet">
     <script src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
     <script src="<?php echo @PUBLIC_URL;?>
@@ -39,6 +41,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/bootstrap.min.js"></script>
     <script src="<?php echo @PUBLIC_URL;?>
 /Js/bootstrap.js"></script>
+	<script src="<?php echo @PUBLIC_URL;?>
+/Js/easyform.js"></script>
     <style type="text/css">
 	
       body {
@@ -125,9 +129,9 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 				<form class="form-signin" action="<?php echo @__SELF__;?>
 " method="post">
 					<p><h1 class="form-signin-heading">登录</h1></p>
-					<div>账号：<input type="text" name="uname" value="请输入账号"  id="LoginId" class="input-block-level" placeholder="Email address" /></div>
+					<div>账号：<input type="text" name="uname"   id="LoginId" class="input-block-level" placeholder="登录名" /></div>
 					
-					<div>密码：<input type="password" name="password" value="请输入密码" id="LoginPassword" class="input-block-level" placeholder="Password" /></div>
+					<div>密码：<input type="password" name="password"  id="LoginPassword" class="input-block-level" placeholder="密码" /></div>
 					
 					<div class="clearfix">
 						<span class="pull-left" id="pad-top">验证码：</span>

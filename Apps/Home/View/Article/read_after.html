@@ -6,100 +6,95 @@
 		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/pc-common.css" />
 		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/asset/css/bootstrap.css" />
 		<link rel="stylesheet" href="{$smarty.const.HOME_URL}/pub-ui/css/main.css" />
+		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/js/jquery.min.js" ></script>
+		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/asset/js/bootstrap.min.js" ></script>
+		<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 	</head>
 	<body>
 		<!--<header></header>-->
 		<h3>阅读是你更快乐</h3>
 		<ul class="header-nav tc fwb">
 			<li class="active"><a href="">首页</a></li>
-			<li><a href="../Center/center.html">个人中心</a></li>
-			<li><a href="../Book/booksearch.html">图书搜索</a></li>
-			<li><a href="../Reader/reader.html">读后感</a></li>
-			<li><a href="../About/aboutus.html">关于我们</a></li>
+			<li><a href="{$smarty.const.__MODULE__}/Center/center">个人中心</a></li>
+			<li><a href="{$smarty.const.__MODULE__}/Book/booksearch">图书搜索</a></li>
+			<li><a href="{$smarty.const.__MODULE__}/Article/read_after">读后感</a></li>
+			<li><a href="{$smarty.const.__MODULE__}/About/aboutus">关于我们</a></li>
 		</ul>
 		<div class="read-content pdl-30 pdr-30 pdb-30 mgt-20 radius">
 			<h3>读后感赏析</h3>
 			<div class="read-search clearfix">
-	            <div class="input-group fr">
-	                <input type="text" class="form-control">
-	                <span class="input-group-btn">
-	                    <button class="btn btn-primary" type="button">搜索</button>
-	                </span>
-	            </div>
+						<form role="form" class="form-horizontal form-inline" action="{$smarty.const.__SELF__}" method="post">
+				            <div class="form-group col-sm-5 col-xs-5">
+							    <label class="control-label col-sm-4 col-xs-4 tc">文章名称</label>
+							    <div class="col-sm-7 col-xs-7 pd-0">
+							        <input type="text" name="title" id="title" class="form-control input-sm">
+							    </div>
+							</div>
+							<div class="form-group col-sm-7 col-xs-7">
+								<label class="control-label col-sm-2 col-xs-2 tc">时间</label>
+							    <div class="col-sm-10 col-xs-10 pd-0">
+							        <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="{$start_time}" size="17" class="date form-control input-sm"  style="width:120px;">
+							        	-
+							        <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="{$end_time}" size="17"  class="date form-control input-sm" style="width:120px;">
+							    </div>
+							</div>
+							<button class="btn btn-primary btn-sm" type="submit">查询</button>
+						</form>	
 	        </div>
 	        <table class="table table-hover tc mgt-20">
 	        	<thead>
 	        		<tr>
 	        			<th class="tc fwb">标题</th>
 		        		<th class="tc fwb">作者</th>
-		        		<th class="tc fwb">相关书籍</th>
 		        		<th class="tc fwb">发表时间</th>
 	        		</tr>
 	        	</thead>
+				{if $info != ""}
+				{foreach $info as $k=>$v}
 	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
+	        		<td><a href="{$smarty.const.__MODULE__}/Article/reader/article_id/{$v.article_id}">{$v.title}</a></td>
+	        		<td>{$v.author}</td>
+
+	        		<td>{$v.create_time}</td>
 	        	</tr>
-	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
-	        	</tr>
-	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
-	        	</tr>
-	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
-	        	</tr>
-	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
-	        	</tr>
-	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
-	        	</tr>
-	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
-	        	</tr>
-	        	<tr>
-	        		<td>1231231</td>
-	        		<td>李二狗子</td>
-	        		<td>金瓶梅</td>
-	        		<td>2012,12,12</td>
-	        	</tr>
+	        	{/foreach}
+				{else if $info == ""}
+				<tr><td>暂无数据</td><tr>
+				{/if}
 	        </table>
-	        <div class="clearfix">
-	        	<ul class="pagination pull-right">
-					<li class="previous"><a href="javascript:;">&laquo;</a></li>
-					<li class="active"><a href="javascript:;">1</a></li>
-					<li><a href="javascript:;">2</a></li>
-					<li><a href="javascript:;">3</a></li>
-					<li><a href="javascript:;">4</a></li>
-					<li><a href="javascript:;">5</a></li>
-					<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-				</ul>
-	        </div>
+			<div class="pagination">
+ 
+			<ul>
+			{$pagelist}
+			</ul>
+			</div>
 		</div>
 		<hr>
 		<p class="tc">&copy;三峡枫叶图书馆<a href="#" class="mgl-10 mgr-10">关于我们</a>联系电话1234567890</p>
-		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/js/jquery.min.js" ></script>
-		<script type="text/javascript" src="{$smarty.const.HOME_URL}/pub-ui/asset/js/bootstrap.min.js" ></script>
+		
 	</body>
+	<script>
+		{literal}
+			$(function(){
+				$("#collaspeContent").mcollaspe({contentWrapper:"#collaspeContent ul",activeName:"collaspe1"});
+			})
+			function selecttime(flag){
+				if(flag==1){
+					var endTime = $("#countTimeend").val();
+					if(endTime != ""){
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+					}else{
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+					}
+				}else{
+					var startTime = $("#countTimestart").val();
+					if(startTime != ""){
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+					}else{
+						WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+					}    
+				}
+			}
+			{/literal}
+	</script>
 </html>

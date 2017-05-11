@@ -29,7 +29,7 @@ class IndexController extends Controller {
 		$articlelist = $article -> query($articlesql);
 		$this -> assign('articlelist', $articlelist);
 		//公告
-		$announcement_sql = "select * from tp_announcement order by create_time desc limit 0,6";
+		$announcement_sql = "select * from tp_announcement where announcement_id = 12";
 		$announcement_list = $announcement -> query($announcement_sql);
 		$this -> assign('announcement_list', $announcement_list);
 		//图书分类

@@ -74,8 +74,8 @@
 			<td>{$v.total_amount}</td>
 			<td>{$v.now_amount}</td>
             <td>
-                <a href="#myModal" type="button" class="btn btn-primary" data-toggle="modal">编辑</a>
-				<a href="edit.html" type="button" class="btn btn-error">删除</a>                
+                <a href="{$smarty.const.__MODULE__}/Book/edit/book_id/{$v.book_id}" type="button" class="btn btn-primary" data-toggle="modal">编辑</a>
+				<a href="{$smarty.const.__MODULE__}/Book/del/book_id/{$v.book_id}" type="button" class="btn btn-error">删除</a>                
             </td>
         </tr>
 	{/foreach}

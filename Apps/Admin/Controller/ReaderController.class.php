@@ -4,37 +4,75 @@ use Think\Controller;
 class ReaderController extends Controller {
     public function readerlist(){
 		
-		//建立数据模型
-		$reader = D('Reader');
+		//获取当前时间
+		$now_time = date('Y-m-d H:i:s',time());
+		//传入post参数  book_name reader_id start_time end_time
+		$reader_name = $_POST['reader_name'];
+		$start_time = $_POST['start_time'];
+		$end_time = $_POST['end_time'];
+		$reader = D('reader');		 
 		//获取记录总条数
 		$total = $reader -> count();
 		//设置每页展示数据条数
-		$per = 3;
-		//实例化分页对象
-		$page = new \Component\Page($total, $per); //autoload
-		//拼装sql语句获取每页的记录
-		$sql = "select * from tp_reader ".$page->limit;
+		$per = 8;
+		$page = new \Component\Page($total, $per);
+		//名称为空时
+		if(empty($reader_name)){
+			if(empty($start_time) && empty($end_time)){				
+				//名称和时间为空		
+				$sql = "select * from tp_reader ".$page->limit;
+			}
+			if(!empty($start_time) && !empty($end_time)){
+				//名称为空，时间不为空
+				$sql = "select * from tp_reader where create_time between '".$start_time."' and '".$end_time."'".$page->limit;
+			}			
+		}
+		//名称不为空
+		if(!empty($reader_name)){
+			if(empty($start_time) && empty($end_time)){			
+				//按照名称去查询
+				$sql = "select * from tp_reader where reader_name like '%".$reader_name."%'" .$page->limit;			
+			}
+			if(!empty($start_time) && !empty($end_time)){
+				//按照名称和时间去查询
+				$sql = "select * from tp_reader where (create_time between '".$start_time."' and '".$end_time."') And (reader_name like '%".$reader_name."%')".$page->limit;
+			}			
+		}
+						
+		 //select book_name from tp_borrow where create_time between '".$start_time."' and '".$end_time."';
+		//拼装sql语句获取每页的记录		
 		$info = $reader -> query($sql);
-        //4. 获得页码列表
-        $pagelist = $page -> fpage();
-		
-		//show_bug($info);
-
-		$this -> assign('info', $info);
-        $this -> assign('pagelist', $pagelist);
-        $this -> display();
+		//$art=$article->where($where)->order("ID desc")->select();
+				
+		if(!empty($info)){
+			$pagelist = $page -> fpage();		
+			//show_bug($info)
+			$this -> assign('info', $info);
+			$this -> assign('pagelist', $pagelist);
+			$this -> display();
+		}
+		else{
+			$info = 0 ;
+			$this -> assign('info', $info);
+			
+			$this -> display();
+		}
     }
 	public function addreader(){
+		$this -> display();
+    }
+	public function add(){
 		//获取当前时间
 		$now_time = date('Y-m-d H:i:s',time());
 		
 		$uid = $_POST['uid'];
-		$reader_IDcard =$_POST['reader_IDcard'];
+		$reader_idcard =$_POST['reader_idcard'];
         $reader = D('reader');
 		//查询注册的用户是否注册过
 		$quchong['uid'] = $uid;
 		$quchong['reader_idcard'] = $reader_idcard ;
-		$re1 = $reader -> where($quchong)->select();
+		$quchongsql = "select * from tp_reader where uid = '".$uid."' or reader_idcard = '".$reader_idcard."'";
+		$re1 = $reader -> query($quchongsql);
 		if($re1){
 			echo '信息已被注册，请重新注册';
 		}else{
@@ -50,20 +88,25 @@ class ReaderController extends Controller {
 					//初始密码统一设为123456
 					$data1['password'] = 123456;
 					$data1['create_time'] = $now_time;
-					$reader_id = $z;
+					$data1['total_amount'] = 10 ;
+					$data1['now_amount'] =  10 ;
+					$readeridsql = "select reader_id from tp_reader where uid = '".$uid."'";
+					$reader_id = $reader -> query($readeridsql);
+					$arr3 = array_map('array_shift', $reader_id );   
+					$reader_id  = $arr3[0];
 					$result1 = $reader ->where($reader_id)-> save($data1);
-					$sqlreader_uname = "select uid from tp_reader where reader_id = ' ".$reader_id."'";
-					$uname = $reader -> query($sqlreader_uname);					
-					$arr1 = array_map('array_shift', $uname);   
-					$uname= $arr1[0];
+					$sqlreader_uid = "select uid from tp_reader where reader_id = ' ".$reader_id."'";
+					$uid = $reader -> query($sqlreader_uid);					
+					$arr1 = array_map('array_shift', $uid);   
+					$uid= $arr1[0];
 					$login = D('login');
 					$ar = array(
 							'uid'=> $reader_id,
-							'uname'=> $uname,
+							'uname'=> $uid,
 							'password'=> 123456,
 							'now_time' => $now_time
 						);
-					$result2 = $user->add($ar); 	
+					$result2 = $login->add($ar); 	
 				
 				} else {
 					

@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 15:45:44
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 03:23:48
          compiled from "../Apps/Home/View\Center\center.html" */ ?>
-<?php /*%%SmartyHeaderCode:259590d5771ce5829-89697714%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:11755591368c45d4015-08847838%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '688ccbff2104aad6e927986465c3fb79c4a380f3' => 
     array (
       0 => '../Apps/Home/View\\Center\\center.html',
-      1 => 1494056704,
+      1 => 1494440916,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '259590d5771ce5829-89697714',
+  'nocache_hash' => '11755591368c45d4015-08847838',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d577204179',
   'variables' => 
   array (
     'readerinfo' => 0,
@@ -25,8 +23,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'articleinfo' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_591368c47d14e',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d577204179')) {function content_590d577204179($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_591368c47d14e')) {function content_591368c47d14e($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -42,24 +42,43 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<!--<header></header>-->
 		<h3>阅读是你更快乐</h3>
 		<ul class="header-nav tc fwb">
-			<li><a href="../Index/index.html">首页</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Index/index">首页</a></li>
 			<li class="active"><a href="JavaScript:;">个人中心</a></li>
-			<li><a href="../Book/booksearch.html">图书搜索</a></li>
-			<li><a href="../Reader/reader.html">读后感</a></li>
-			<li><a href="../About/aboutus.html">关于我们</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Book/booksearch">图书搜索</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Article/read_after">读后感</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/About/aboutus">关于我们</a></li>
 		</ul>
 		<div class="center-content pdl-10 pdr-30 pdb-30 mgt-20 radius">
 			<div class="reader-info pdt-10 noborder">
 				<img src="<?php echo @HOME_URL;?>
 /pub-ui/img/2.png" class="reader-img block mgb-20" alt="touxiang"/>
-				<p>id：<span class="reader-id">李二狗</span></p>
-				<p>上次登录时间:&nbsp;<span class="reader-text">2015-12-22</span></p>
+				<?php  $_smarty_tpl->tpl_vars['v'] = new Smarty_Variable; $_smarty_tpl->tpl_vars['v']->_loop = false;
+ $_smarty_tpl->tpl_vars['k'] = new Smarty_Variable;
+ $_from = $_smarty_tpl->tpl_vars['readerinfo']->value; if (!is_array($_from) && !is_object($_from)) { settype($_from, 'array');}
+foreach ($_from as $_smarty_tpl->tpl_vars['v']->key => $_smarty_tpl->tpl_vars['v']->value){
+$_smarty_tpl->tpl_vars['v']->_loop = true;
+ $_smarty_tpl->tpl_vars['k']->value = $_smarty_tpl->tpl_vars['v']->key;
+?>
+				<p>id：<span class="reader-id"><?php echo $_smarty_tpl->tpl_vars['v']->value['reader_name'];?>
+</span></p>
+				<p>上次登录时间:&nbsp;<span class="reader-text"><?php echo $_smarty_tpl->tpl_vars['v']->value['create_time'];?>
+</span></p>
 				<ul class="center-list radius mgt-40">
 					<li class="active">我的信息</li>
 					<li>我的借阅</li>
 					<li>我的文章</li>
-					<li>修改密码</li>
+					<a type="button" class="btn btn-success" href ="<?php echo @__MODULE__;?>
+/Center/editpwd/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
+">修改密码</a>
+					<a type="button" class="btn btn-success" href ="<?php echo @__MODULE__;?>
+/Center/editarticle/uid/<?php echo $_smarty_tpl->tpl_vars['v']->value['uid'];?>
+">发表文章</a>
 				</ul>
+				<?php } ?>
 			</div>
 			<div class="center-box vt">
 				<div class="read-search clearfix mgt-40 mgb-40">
@@ -231,43 +250,9 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 							</ul>
 				        </div>
 			        </div>
-			        <div class="center-info">
-			        	<table class="table table-hover tc mgt-20">
-				        	<thead>
-				        		<tr>
-				        			<th class="tc fwb">图书编号</th>
-					        		<th class="tc fwb">图书名称</th>
-					        		<th class="tc fwb">分类</th>
-					        		<th class="tc fwb">作者</th>
-					        		<th class="tc fwb">价格</th>
-					        		<th class="tc fwb">总数量</th>
-					        		<th class="tc fwb">在馆数量</th>
-					        		<th class="tc fwb">上架时间</th>
-				        		</tr>
-				        	</thead>
-				        	<tr>
-				        		<td>1231231</td>
-				        		<td>金瓶梅</td>
-				        		<td>111</td>
-				        		<td>李二狗子</td>
-				        		<td>22.2</td>
-				        		<td>333</td>
-				        		<td>111</td>
-				        		<td>2012-12-12</td>
-				        	</tr>
-				        	
-				        </table>
-				        <div class="clearfix">
-				        	<ul class="pagination pull-right">
-								<li class="previous"><a href="javascript:;">&laquo;</a></li>
-								<li class="active"><a href="javascript:;">1</a></li>
-								<li><a href="javascript:;">2</a></li>
-								<li><a href="javascript:;">3</a></li>
-								<li><a href="javascript:;">4</a></li>
-								<li><a href="javascript:;">5</a></li>
-								<li class="next"><a hhref="javascript:;">&raquo;</a></li>
-							</ul>
-				        </div>
+			        <div class="center-info" href ="<?php echo @__MODULE__;?>
+/Center/editpwd">
+			        	
 			        </div>
 			    </div>
 			</div>

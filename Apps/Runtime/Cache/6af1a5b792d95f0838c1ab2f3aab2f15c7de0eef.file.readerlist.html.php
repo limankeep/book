@@ -1,31 +1,33 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 19:51:51
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 09:11:50
          compiled from "../Apps/Admin/View\Reader\readerlist.html" */ ?>
-<?php /*%%SmartyHeaderCode:3451590d6210ebe430-41520450%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:228395913ba56805239-60141011%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '6af1a5b792d95f0838c1ab2f3aab2f15c7de0eef' => 
     array (
       0 => '../Apps/Admin/View\\Reader\\readerlist.html',
-      1 => 1494330440,
+      1 => 1494423327,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3451590d6210ebe430-41520450',
+  'nocache_hash' => '228395913ba56805239-60141011',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d621115ff3',
   'variables' => 
   array (
+    'start_time' => 0,
+    'end_time' => 0,
     'info' => 0,
     'v' => 0,
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913ba56a0304',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d621115ff3')) {function content_590d621115ff3($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913ba56a0304')) {function content_5913ba56a0304($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -46,6 +48,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
+	<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 
  
 
@@ -73,8 +76,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <form class="form-inline definewidth m20" action="<?php echo @__SELF__;?>
 " method="post">    
     用户名称：
-    <input type="text" name="uname" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
+    <input type="text" name="reader_name" id="username" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    时间：
+	 <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="<?php echo $_smarty_tpl->tpl_vars['start_time']->value;?>
+" size="17" class="date"  style="width:120px;">&nbsp;&nbsp; 
+	 - 
+	 <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="<?php echo $_smarty_tpl->tpl_vars['end_time']->value;?>
+" size="17"  class="date" style="width:120px;">  &nbsp;&nbsp; 
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp;
+	<button type="button" class="btn btn-success" id="addnew">新增用户</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
@@ -111,13 +121,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             <td>
                 <a href="<?php echo @__MODULE__;?>
 /Reader/edit/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
-" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
+" type="button" class="edit_btn btn btn-info" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
 				<a href="<?php echo @__MODULE__;?>
 /Reader/detail/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
-" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">详情</a>
+" type="button" class="edit_btn btn btn-warning" data-toggle="modal" id="edit_btn1" value="php">详情</a>
 				<a href="<?php echo @__MODULE__;?>
 /Reader/del/reader_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['reader_id'];?>
-" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
+" type="button" class="edit_btn btn btn-danger" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
             </td>
         </tr>	
 	<?php } ?>
@@ -133,32 +143,23 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </body>
 </html>
 <script>
-    $(function () {
-        
 
-		$('#addnew').click(function(){
+	function selecttime(flag){
+    if(flag==1){
+        var endTime = $("#countTimeend").val();
+        if(endTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }
+    }else{
+        var startTime = $("#countTimestart").val();
+        if(startTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }    
+    }
+}
 
-				window.location.href="add.html";
-		 });
-
-
-    });
-
-	function del(id)
-	{
-		
-		
-		if(confirm("确定要删除吗？"))
-		{
-		
-			var url = "index.html";
-			
-			window.location.href=url;		
-		
-		}
-	
-	
-	
-	
-	}
 </script><?php }} ?>

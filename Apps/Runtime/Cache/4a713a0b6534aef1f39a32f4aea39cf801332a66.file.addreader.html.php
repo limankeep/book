@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 15:50:06
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 09:15:32
          compiled from "../Apps/Admin/View\Reader\addreader.html" */ ?>
-<?php /*%%SmartyHeaderCode:29191591174aec27268-14337193%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:283245913ba570f2070-26078217%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '4a713a0b6534aef1f39a32f4aea39cf801332a66' => 
     array (
       0 => '../Apps/Admin/View\\Reader\\addreader.html',
-      1 => 1493729138,
+      1 => 1494465324,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '29191591174aec27268-14337193',
+  'nocache_hash' => '283245913ba570f2070-26078217',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913ba5729805',
   'variables' => 
   array (
     'info' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_591174aedb63a',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_591174aedb63a')) {function content_591174aedb63a($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913ba5729805')) {function content_5913ba5729805($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -34,6 +34,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/style.css" />
+	<link rel="stylesheet" href="<?php echo @PUBLIC_URL;?>
+/Css/easyform.css">
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
@@ -44,7 +46,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
-
+	<script src="<?php echo @PUBLIC_URL;?>
+/Js/easyform.js"></script>
  
 
     <style type="text/css">
@@ -68,38 +71,37 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </style>
 </head>
 <body>
-<form action="<?php echo @__SELF__;?>
-" method="post" class="definewidth m20">
+<form action="<?php echo @__MODULE__;?>
+/Reader/add" method="post" class="definewidth m20" id="form1">
 <table class="table table-bordered table-hover definewidth m10">
         <tr>
             <td width="10%" class="tableleft">登录名</td>
-            <td><input type="text" name="uid" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['uid'];?>
-"/></td>
+            <td><input type="text" name="uid" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">姓名</td>
-            <td><input type="text" name="reader_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['reader_name'];?>
-"/></td>
+            <td><input type="text" name="reader_name" data-easyform="length:1 12;char-chinese;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">性别</td>
-            <td><input type="text" name="sex" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['sex'];?>
-"/></td>
+            <td><input type="text" name="sex" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">家庭住址</td>
-            <td><input type="text" name="reader_address" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['reader_address'];?>
-"/></td>
+            <td><input type="text" name="reader_address" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">身份证号</td>
-            <td><input type="text" name="reader_IDcard" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['reader_IDcard'];?>
-"/></td>
+            <td><input type="text" name="reader_idcard" data-easyform="length:18;number;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
+        </tr>
+		<tr>
+            <td width="10%" class="tableleft">手机号</td>
+            <td><input type="text" name="phonenum" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['phonenum'];?>
+" data-easyform="length:13;email;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
         <tr>
             <td class="tableleft">邮箱</td>
-            <td><input type="text" name="email" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['email'];?>
-"/></td>
+            <td><input type="text" name="email" data-easyform="email;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
     <tr>
         <td class="tableleft"></td>
@@ -112,10 +114,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </body>
 </html>
 <script>
-    $(function () {       
-		$('#backid').click(function(){
-				window.location.href="index.html";
-		 });
 
-    });
+	$(document).ready(function(){
+		$('#form1').easyform();
+	});
 </script><?php }} ?>

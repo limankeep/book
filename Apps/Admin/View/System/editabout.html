@@ -5,10 +5,11 @@
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
     <title>UMEDITOR 完整demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
-
+	<link href="{$smarty.const.PUBLIC_URL}/Css/easyform.css" rel="stylesheet">
     <link rel="stylesheet" href="{$smarty.const.UE_URL}/themes/default/default.css" />
 	<script charset="utf-8" src="{$smarty.const.UE_URL}/kindeditor-min.js"></script>
 	<script charset="utf-8" src="{$smarty.const.UE_URL}/lang/zh_CN.js"></script>
+	<script src="{$smarty.const.PUBLIC_URL}/Js/easyform.js"></script>
     <style type="text/css">
         
     </style>
@@ -25,13 +26,14 @@
 						'insertunorderedlist', '|', 'emoticons', 'image', 'link']
 				});
 			});
-		</script>
+	</script>
 
 </head>
 <body>
+
 <form action="{$smarty.const.__MODULE__/System/editabout}" method="post">
 	<input type="hidden" name="editabout" value="{$info.about_id}" />
-	<textarea id="editor_id" name="content" style="width:700px;height:300px;" value="{$info.content}">
+	<textarea id="editor_id" name="content" style="width:700px;height:300px;" >
 		{$info.content}
 	</textarea>
 	<input type="submit" value="提交">
@@ -39,7 +41,10 @@
 
 
 <script type="text/javascript">
-    
+
+ 
+
+
 </script>
 
 </body>

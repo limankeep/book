@@ -1,34 +1,33 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 09:37:55
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 09:17:18
          compiled from "../Apps/Admin/View\Borrow\borrowlist.html" */ ?>
-<?php /*%%SmartyHeaderCode:23255590d28f31441f7-20412868%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:102035913b5ad808022-71250380%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'ef198a45a6a515f2f35457f61ce8575576018763' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\borrowlist.html',
-      1 => 1494031076,
+      1 => 1494465435,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '23255590d28f31441f7-20412868',
+  'nocache_hash' => '102035913b5ad808022-71250380',
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913b5ada8858',
   'variables' => 
   array (
     'start_time' => 0,
     'end_time' => 0,
-    'nowtime' => 0,
     'info' => 0,
     'v' => 0,
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d28f3570cc',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d28f3570cc')) {function content_590d28f3570cc($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913b5ada8858')) {function content_5913b5ada8858($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -87,7 +86,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	 - 
 	 <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="<?php echo $_smarty_tpl->tpl_vars['end_time']->value;?>
 " size="17"  class="date" style="width:120px;">  &nbsp;&nbsp; 
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew" >新增借阅</button>
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <a href="<?php echo @__MODULE__;?>
+/Borrow/addborrow" type="button" class="btn btn-success">新增借阅</a>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
@@ -97,8 +97,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
         <th>图书分类</th>
         <th>借阅人</th>
         <th>借阅人id</th>
-        <th>借阅日期<?php echo $_smarty_tpl->tpl_vars['nowtime']->value;?>
-</th>
+        <th>借阅日期</th>
         <th>应该归还日期</th>
 		<th>是否归还</th>
         <th>操作</th>

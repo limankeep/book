@@ -25,29 +25,29 @@
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">个人信息</h3>
     </div>
-   <form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20">
+<form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20">
 <table class="table table-bordered table-hover definewidth m10">
 				{*隐藏域传递被修改的商品id信息*}
-                <input type="hidden" name="book_id" value="{$info.book_id}" />
+                <input type="hidden" name="manager_id" value="{$info.manager_id}" />
 	<tr>
         <td class="tableleft">姓名</td>
-        <td><input type="text" name="book_name" value="{$info.book_name}"/></td>
+        <td><input type="text" name="manager_name" value="{$info.manager_name}"/></td>
     </tr>
 	<tr>
-        <td class="tableleft">身份</td>
-        <td><input type="text" name="author" value="{$info.author}"/></td>
+        <td class="tableleft">身份证号</td>
+        <td><input type="text" name="manager_idcard" value="{$info.manager_idcard}"/></td>
     </tr>
 	<tr>
         <td class="tableleft">家庭住址</td>
-        <td><input type="text" name="book_type" value="{$info.book_type}"/></td>
+        <td><input type="text" name="manager_address" value="{$info.manager_address}"/></td>
     </tr>
     <tr>
         <td class="tableleft">电子邮箱</td>
-        <td><input type="text" name="press" value="{$info.press}"/></td>
+        <td><input type="text" name="manager_email" value="{$info.manager_email}"/></td>
     </tr>
     <tr>
         <td class="tableleft">联系电话</td>
-        <td><input type="text" name="price" value="{$info.price}"/></td>
+        <td><input type="text" name="phone" value="{$info.phone}"/></td>
     </tr>
 	
     <tr>

@@ -1,30 +1,30 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-07 10:40:04
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 09:04:09
          compiled from "../Apps/Home/View\About\aboutus.html" */ ?>
-<?php /*%%SmartyHeaderCode:4405590d3dadaaf6b3-71038396%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:3225913b8899b58a6-30958824%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'be136c7340e9e0721cfb991218f7b1869f83485a' => 
     array (
       0 => '../Apps/Home/View\\About\\aboutus.html',
-      1 => 1494124801,
+      1 => 1494344820,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '4405590d3dadaaf6b3-71038396',
+  'nocache_hash' => '3225913b8899b58a6-30958824',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d3dadb809e',
   'variables' => 
   array (
     'info' => 0,
     'v' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913b889a7746',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d3dadb809e')) {function content_590d3dadb809e($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913b889a7746')) {function content_5913b889a7746($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -41,9 +41,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 		<ul class="header-nav tc fwb">
 			<li><a href="<?php echo @__MODULE__;?>
 /Index/index">首页</a></li>
-			<li><a href="../Center/center.html">个人中心</a></li>
-			<li><a href="../Book/booksearch.html">图书搜索</a></li>
-			<li><a href="../Reader/reader.html">读后感</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Center/center">个人中心</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Book/booksearch">图书搜索</a></li>
+			<li><a href="<?php echo @__MODULE__;?>
+/Article/read_after">读后感</a></li>
 			<li class="active"><a href="javascript:;">关于我们</a></li>
 		</ul>
 		<hr />

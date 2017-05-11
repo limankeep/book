@@ -65,17 +65,16 @@
 	     <tr>
             <td>{$v.book_id}</td>
             <td>{$v.book_name}</td>
-			<td>{$v.uname}</td>
+			<td>{$v.author}</td>
             <td>{$v.book_type}</td>
             <td>{$v.press}</td>
 			<td>{$v.price}</td>
 			<td>{$v.total_amount}</td>
 			<td>{$v.now_amount}</td>
             <td>
-                <a href="{$smarty.const.__MODULE__}/Book/edit/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-				
-				<a href="{$smarty.const.__MODULE__}/Book/del/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>
-				<a href="{$smarty.const.__MODULE__}/Book/detail/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">详情</a>				
+                <a href="{$smarty.const.__MODULE__}/Book/edit/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-info" data-toggle="modal">编辑</a>
+				<a href="{$smarty.const.__MODULE__}/Book/detail/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-warning" data-toggle="modal">详情</a>
+				<a href="{$smarty.const.__MODULE__}/Book/del/book_id/{$v.book_id}" type="button" class="edit_btn btn btn-danger" data-toggle="modal" >删除</a>								
             </td>
         </tr>
 	{/foreach}

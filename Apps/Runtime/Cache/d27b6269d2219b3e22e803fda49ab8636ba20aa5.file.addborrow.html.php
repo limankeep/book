@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 15:34:09
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 09:16:19
          compiled from "../Apps/Admin/View\Borrow\addborrow.html" */ ?>
-<?php /*%%SmartyHeaderCode:1637590d7c718baa38-40673030%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:81305913bb6351ea14-04734439%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd27b6269d2219b3e22e803fda49ab8636ba20aa5' => 
     array (
       0 => '../Apps/Admin/View\\Borrow\\addborrow.html',
-      1 => 1494031166,
+      1 => 1494428823,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '1637590d7c718baa38-40673030',
+  'nocache_hash' => '81305913bb6351ea14-04734439',
   'function' => 
   array (
   ),
   'has_nocache_code' => false,
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d7c719a881',
+  'unifunc' => 'content_5913bb636e14e',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d7c719a881')) {function content_590d7c719a881($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913bb636e14e')) {function content_5913bb636e14e($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -76,14 +76,14 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <tr>
         <td width="10%" class="tableleft">图书编号</td> 
 
-        <td width="30%"><input type="text" name="book_id"  data-easyform="length:1 12;char-normal;real-time;" data-message="编号必须为必须为12位的英文字母或数字" data-easytip="disappear:lost-focus;theme:blue;"/></td>
+        <td width="30%"><input type="text" name="book_id"  data-easyform="length:4 12;number;real-time;" data-message="编号必须为4到12数字" data-easytip="disappear:lost-focus;theme:blue;"/></td>
 
     </tr>
   
     <tr>
         <td class="tableleft">读者编号</td>
  
-        <td width="30%"><input type="text" name="reader_id" data-easyform="length:1 12;char-normal;real-time;" data-message="用户名必须为12位的shuzi " data-easytip="disappear:lost-focus;theme:blue;"/></td>
+        <td width="30%"><input type="text" name="reader_id" data-easyform="length:4 12;number;real-time;" data-message="编号必须为4到12数字" data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
  
  
@@ -111,7 +111,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <input type="submit" class="btn btn-info" value="确定"></input>
+        <input type="submit" class="btn btn-info" value="确定" id="tijiao22"></input>
     </div>
 </div>
 </form>
@@ -120,14 +120,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </body>
 </html>
 <script>
-$("#tijiao").click(function(){
-	
-
-        $("#form1").easyform();
-
-
+$(document).ready(function(){
+	$('#form1').easyform();
 });
 
-
-    
 </script><?php }} ?>

@@ -6,12 +6,11 @@
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
+	<link rel="stylesheet" href="{$smarty.const.PUBLIC_URL}/Css/easyform.css">
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
-    <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
-
+	<script src="{$smarty.const.PUBLIC_URL}/Js/easyform.js"></script>
  
 
     <style type="text/css">
@@ -35,31 +34,35 @@
     </style>
 </head>
 <body>
-<form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20">
+<form action="{$smarty.const.__MODULE__}/Reader/add" method="post" class="definewidth m20" id="form1">
 <table class="table table-bordered table-hover definewidth m10">
         <tr>
             <td width="10%" class="tableleft">登录名</td>
-            <td><input type="text" name="uid" value="{$info.uid}"/></td>
+            <td><input id="uid" type="text" name="uid" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">姓名</td>
-            <td><input type="text" name="reader_name" value="{$info.reader_name}"/></td>
+            <td><input id="reader_name" type="text" name="reader_name" data-easyform="length:1 12;char-chinese;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">性别</td>
-            <td><input type="text" name="sex" value="{$info.sex}"/></td>
+            <td><input id="sex" type="text" name="sex" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">家庭住址</td>
-            <td><input type="text" name="reader_address" value="{$info.reader_address}"/></td>
+            <td><input id="reader_address" type="text" name="reader_address" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">身份证号</td>
-            <td><input type="text" name="reader_IDcard" value="{$info.reader_IDcard}"/></td>
+            <td><input id="reader_idcard" type="text" name="reader_idcard" data-easyform="length:18;number;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
+        </tr>
+		<tr>
+            <td width="10%" class="tableleft">手机号</td>
+            <td><input id="phonenum" type="text" name="phonenum" value="{$info.phonenum}" data-easyform="length:13;email;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
         <tr>
             <td class="tableleft">邮箱</td>
-            <td><input type="text" name="email" value="{$info.email}"/></td>
+            <td><input id="email" type="text" name="email" data-easyform="email;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
     <tr>
         <td class="tableleft"></td>
@@ -72,10 +75,54 @@
 </body>
 </html>
 <script>
-    $(function () {       
-		$('#backid').click(function(){
-				window.location.href="index.html";
-		 });
-
-    });
+$(document).ready(function(){
+		
+	var $uid = $('#uid'),
+		$reader_name = $('#reader_name'),
+		$sex = $('#sex'),
+		$reader_address = $('#reader_address'),
+		$reader_idcard = $('#reader_idcard'),
+		$phonenum = $('#phonenum'),
+		$email = $('#email');
+	var ef = $('#form1').easyform();
+	$('#form1')[0].onsubmit = function () { return false };
+	$('#subbtn')[0].onclick = function () {
+		$reader_name.trigger('blur');
+		$sex('blur');
+		$reader_address.trigger('blur');
+		$reader_idcard.trigger('blur');
+		$phonenum.trigger('blur');
+		$email.trigger('blur');
+		$uid.trigger('blur');
+		if($uid.val().length == 0) {
+			$uid.trigger('blur');
+			return;
+		}
+		if($reader_name.val().length == 0) {
+			$reader_name.trigger('blur');
+			return;
+		}
+		if($reader_idcard.val().length <= 18) {
+			$reader_idcard.trigger('blur');
+			return;
+		}
+		if($sex.val().length == 0) {
+			$sex.trigger('blur');
+			return;
+		}
+		if($reader_address.val().length == 0) {
+			$reader_address.trigger('blur');
+			return;
+		}
+		if($phonenum.val().length <= 13) {
+			$phonenum.trigger('blur');
+			return;
+		}
+		if($email.val().length == 0) {
+			$email.trigger('blur');
+			return;
+		}
+		$('#form1')[0].submit();
+	};
+});
 </script>

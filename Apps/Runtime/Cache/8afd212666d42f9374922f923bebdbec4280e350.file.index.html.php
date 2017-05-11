@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 15:47:43
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 08:51:56
          compiled from "../Apps/Admin/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:23126590d28f28d42a8-81102602%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:268585913b5ace10594-22216795%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '8afd212666d42f9374922f923bebdbec4280e350' => 
     array (
       0 => '../Apps/Admin/View\\Index\\index.html',
-      1 => 1494316062,
+      1 => 1494403281,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '23126590d28f28d42a8-81102602',
+  'nocache_hash' => '268585913b5ace10594-22216795',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d28f29c5cf',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913b5ad06f5e',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d28f29c5cf')) {function content_590d28f29c5cf($_smarty_tpl) {?><!DOCTYPE HTML>
+<?php if ($_valid && !is_callable('content_5913b5ad06f5e')) {function content_5913b5ad06f5e($_smarty_tpl) {?><!DOCTYPE HTML>
 <html>
  <head>
   <title>三峡枫叶图书馆后台管理系统</title>
@@ -37,7 +37,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   <div class="header">
     
       <div class="dl-title">
-        <a href="http://www.builive.com" title="文档库地址" target="_blank"><!-- 仅仅为了提供文档的快速入口，项目中请删除链接 -->
+        <a href="#" title="文档库地址" target="_blank"><!-- 仅仅为了提供文档的快速入口，项目中请删除链接 -->
           <span class="lp-title-port">枫叶</span><span class="dl-title-text">图书后台管理</span>
         </a>
       </div>
@@ -125,7 +125,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                 items:[
                   {id:'articlelist',text:'文章列表',href:'../article/articlelist.html'},
                   {id:'addarticle',text:'待审核文章',href:'../article/addarticle.html'},
-                  {id:'deleted_article',text:'已删除文章',href:'../article/deleted_article.html'}
+                  {id:'deleted_article',text:'审核不通过文章',href:'../article/deleted_article.html'}
                 ]
               }]
           },{
@@ -137,7 +137,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
                   {id:'annoucement',text:'公告管理',href:'../System/announcement.html'},
                   {id:'about',text:'图书馆介绍',href:'../System/about.html'},
                   {id:'editpwd',text:'修改密码',href:'../system/editpwd.html'},
-				  {id:'editinfo',text:'个人信息修改',href:'../system/editinfo.html'},
+				  {id:'manager',text:'个人信息',href:'../System/manager.html'},
                   {id:'backup',text:'数据备份',href:'../system/backup.html'}
                 ]
               }]

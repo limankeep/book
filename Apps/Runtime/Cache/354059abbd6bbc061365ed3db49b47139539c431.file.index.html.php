@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 20:09:08
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 08:59:09
          compiled from "../Apps/Home/View\Index\index.html" */ ?>
-<?php /*%%SmartyHeaderCode:18240590d33c8f031d7-51069041%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:130625913b75d17c3f7-26921381%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '354059abbd6bbc061365ed3db49b47139539c431' => 
     array (
       0 => '../Apps/Home/View\\Index\\index.html',
-      1 => 1494072541,
+      1 => 1494344831,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '18240590d33c8f031d7-51069041',
+  'nocache_hash' => '130625913b75d17c3f7-26921381',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d33c914fab',
   'variables' => 
   array (
     'announcement_list' => 0,
@@ -28,8 +26,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'articlelist' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913b75d369c8',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d33c914fab')) {function content_590d33c914fab($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913b75d369c8')) {function content_5913b75d369c8($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -50,7 +50,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 			<li><a href="<?php echo @__MODULE__;?>
 /Book/booksearch">图书搜索</a></li>
 			<li><a href="<?php echo @__MODULE__;?>
-/Reader/reader">读后感</a></li>
+/Article/read_after">读后感</a></li>
 			<li><a href="<?php echo @__MODULE__;?>
 /About/aboutus">关于我们</a></li>
 		</ul>

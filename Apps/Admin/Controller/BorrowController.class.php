@@ -84,6 +84,7 @@ class BorrowController extends Controller {
 			$sqlreader = "select now_amount from tp_reader where reader_id = ' ".$reader_id."'";
 			$sqlreader2 = "select reader_name from tp_reader where reader_id = ' ".$reader_id."'";
 			$sqlreader3 = "select uid from tp_reader where reader_id = ' ".$reader_id."'";
+			
 			$reader_now_amount = $reader -> query($sqlreader);
 			$reader_name = $reader -> query($sqlreader2);
 			$reader_uid= $reader -> query($sqlreader3);

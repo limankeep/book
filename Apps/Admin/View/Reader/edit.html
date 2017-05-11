@@ -6,11 +6,13 @@
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/bootstrap-responsive.css" />
     <link rel="stylesheet" type="text/css" href="{$smarty.const.PUBLIC_URL}/Css/style.css" />
+	<link rel="stylesheet" href="{$smarty.const.PUBLIC_URL}/Css/easyform.css">
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
+	<script src="{$smarty.const.PUBLIC_URL}/Js/easyform.js"></script>
 
  
 
@@ -35,33 +37,33 @@
     </style>
 </head>
 <body>
-<form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20">
+<form action="{$smarty.const.__SELF__}" method="post" class="definewidth m20" id="form1">
 <input type="hidden" name="reader_id" value="{$info.reader_id}" />
 
     <table class="table table-bordered table-hover definewidth m10">
         <tr>
             <td width="10%" class="tableleft">登录名</td>
-            <td><input type="text" name="uid" value="{$info.uid}"/></td>
+            <td><input type="text" name="uid" value="{$info.uid}" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">姓名</td>
-            <td><input type="text" name="reader_name" value="{$info.reader_name}"/></td>
+            <td><input type="text" name="reader_name" value="{$info.reader_name}" data-easyform="length:1 12;char-chinese;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">性别</td>
-            <td><input type="text" name="sex" value="{$info.sex}"/></td>
+            <td><input type="text" name="sex" value="{$info.sex}" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">家庭住址</td>
-            <td><input type="text" name="reader_address" value="{$info.reader_address}"/></td>
+            <td><input type="text" name="reader_address" value="{$info.reader_address}" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">身份证号</td>
-            <td><input type="text" name="reader_idcard" value="{$info.reader_idcard}"/></td>
+            <td><input type="text" name="reader_idcard" value="{$info.reader_idcard}" data-easyform="length:18;number;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
 		<tr>
             <td width="10%" class="tableleft">手机号</td>
-            <td><input type="text" name="phonenum" value="{$info.phonenum}"/></td>
+            <td><input type="text" name="phonenum" value="{$info.phonenum}" data-easyform="length:18;email;real-time;" data-message="格式不正确" data-easytip="disappear:lost-focus;theme:blue;"/></td>
         </tr>
         <tr>
             <td class="tableleft">邮箱</td>
@@ -79,5 +81,7 @@
 </body>
 </html>
 <script>
-   
+   $(document).ready(function(){
+		$('#form1').easyform();
+	});
 </script>

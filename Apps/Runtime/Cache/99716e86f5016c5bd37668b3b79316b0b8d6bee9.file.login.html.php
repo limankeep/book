@@ -1,25 +1,25 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 19:27:11
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 09:25:02
          compiled from "../Apps/Home/View\Login\login.html" */ ?>
-<?php /*%%SmartyHeaderCode:29497590d3270e66903-99366389%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:4925913bd6ed10dc4-95736630%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '99716e86f5016c5bd37668b3b79316b0b8d6bee9' => 
     array (
       0 => '../Apps/Home/View\\Login\\login.html',
-      1 => 1494329229,
+      1 => 1494408144,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '29497590d3270e66903-99366389',
+  'nocache_hash' => '4925913bd6ed10dc4-95736630',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d327113ab6',
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913bd6ee2cb8',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d327113ab6')) {function content_590d327113ab6($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913bd6ee2cb8')) {function content_5913bd6ee2cb8($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
@@ -122,12 +122,12 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<body>
 		<div id="wrap">
 			<div class="container">
-				<form class="form-signin" action="<?php echo @__SELF__;?>
-" method="post">
+				<form class="form-signin" action="<?php echo @__MODULE__;?>
+/Login/login" method="post">
 					<p><h1 class="form-signin-heading">登录</h1></p>
-					<div>账号：<input type="text" name="uname" value="请输入账号"  id="LoginId" class="input-block-level" placeholder="Email address" /></div>
+					<div>账号：<input type="text" name="uname" id="LoginId" class="input-block-level" placeholder="请输入账号" /></div>
 					
-					<div>密码：<input type="password" name="password" value="请输入密码" id="LoginPassword" class="input-block-level" placeholder="Password" /></div>
+					<div>密码：<input type="password" name="password" id="LoginPassword" class="input-block-level" placeholder="请输入密码" /></div>
 					
 					<div class="clearfix">
 						<span class="pull-left" id="pad-top">验证码：</span>

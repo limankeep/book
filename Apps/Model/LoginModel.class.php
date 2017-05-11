@@ -8,12 +8,12 @@ class LoginModel extends Model{
     //制作一个方法对用户名和密码进行校验
     function checkNamePwd($uname,$password){
         //1. 根据$name查询是否有此记录
-        //select  *  from  sw_manager where mg_name=$name;
-        //select()  find()  
+        //$sql= "select  *  from  tp_login where uname= '"$uname."'";
+		
         //根据指定字段进行查询getByXXX();  getByMg_name($name);
         //getBymg_pwd();  父类Model利用__call()封装的方法
         //getByXXX()函数返回一维数组信息
-        $info = $this -> getByMg_uname($uname);
+        $info = $this -> getBy_uname($uname);
         //$info =null  说明用户名错误
         //$info = 一维数组  用户名正确
         
@@ -30,4 +30,5 @@ class LoginModel extends Model{
             return false;
         }
     }
+
 }

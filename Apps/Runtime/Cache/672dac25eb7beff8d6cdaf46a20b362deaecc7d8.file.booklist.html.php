@@ -1,22 +1,20 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-09 19:41:43
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 08:52:00
          compiled from "../Apps/Admin/View\Book\booklist.html" */ ?>
-<?php /*%%SmartyHeaderCode:10847590d5921ba2168-53165904%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:252085913b5b06573f6-95140150%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     '672dac25eb7beff8d6cdaf46a20b362deaecc7d8' => 
     array (
       0 => '../Apps/Admin/View\\Book\\booklist.html',
-      1 => 1494329451,
+      1 => 1494428008,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '10847590d5921ba2168-53165904',
+  'nocache_hash' => '252085913b5b06573f6-95140150',
   'function' => 
   array (
   ),
-  'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d5921e7e38',
   'variables' => 
   array (
     'start_time' => 0,
@@ -26,8 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'pagelist' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.6',
+  'unifunc' => 'content_5913b5b08a6ea',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d5921e7e38')) {function content_590d5921e7e38($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913b5b08a6ea')) {function content_5913b5b08a6ea($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -113,7 +113,7 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_name'];?>
 </td>
-			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['uname'];?>
+			<td><?php echo $_smarty_tpl->tpl_vars['v']->value['author'];?>
 </td>
             <td><?php echo $_smarty_tpl->tpl_vars['v']->value['book_type'];?>
 </td>
@@ -128,14 +128,13 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
             <td>
                 <a href="<?php echo @__MODULE__;?>
 /Book/edit/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
-" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-				
-				<a href="<?php echo @__MODULE__;?>
-/Book/del/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
-" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>
+" type="button" class="edit_btn btn btn-info" data-toggle="modal">编辑</a>
 				<a href="<?php echo @__MODULE__;?>
 /Book/detail/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
-" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">详情</a>				
+" type="button" class="edit_btn btn btn-warning" data-toggle="modal">详情</a>
+				<a href="<?php echo @__MODULE__;?>
+/Book/del/book_id/<?php echo $_smarty_tpl->tpl_vars['v']->value['book_id'];?>
+" type="button" class="edit_btn btn btn-danger" data-toggle="modal" >删除</a>								
             </td>
         </tr>
 	<?php } ?>

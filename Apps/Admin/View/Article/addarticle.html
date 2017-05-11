@@ -35,50 +35,79 @@
     </style>
 </head>
 <body>
-<form action="index.html" method="post" class="definewidth m20">
-<table class="table table-bordered table-hover definewidth m10">
-    <tr>
-        <td width="10%" class="tableleft">登录名</td>
-        <td><input type="text" name="username"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">密码</td>
-        <td><input type="password" name="password"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">真实姓名</td>
-        <td><input type="text" name="realname"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">邮箱</td>
-        <td><input type="text" name="email"/></td>
-    </tr>
-    <tr>
-        <td class="tableleft">状态</td>
-        <td>
-            <input type="radio" name="status" value="1" checked/> 启用
-           <input type="radio" name="status" value="0"/> 禁用
-        </td>
-    </tr>
-    <tr>
-        <td class="tableleft">角色</td>
-        <td>{$role_checkbox}</td>
-    </tr>
-    <tr>
-        <td class="tableleft"></td>
-        <td>
-            <button type="submit" class="btn btn-primary" type="button">保存</button> &nbsp;&nbsp;<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
-        </td>
-    </tr>
-</table>
+<form class="form-inline definewidth m20" action="index.html" method="get">    
+    用户名称：
+    <input type="text" name="username" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
 </form>
+<table class="table table-bordered table-hover definewidth m10">
+    <thead>
+    <tr>
+        <th>文章编号</th>
+        <th>作者</th>
+        <th>文章名称</th>
+        <th>用户名</th>
+		<th>状态</th>
+		<th>创建日期</th>
+		<th>操作</th>
+    </tr>
+    </thead>
+	{if $info != ""}
+	{foreach $info as $k => $v}
+	     <tr>
+            <td>{$v.article_id}</td>
+            <td>{$v.author}</td>
+            <td>{$v.title}</td>
+            <td>{$v.uid}</td>
+			<td>{if $v.status == '0'}未审核{else if $v.status == '1'}已审核{else if $v.status == '2'}审核不通过{/if}</td>
+			<td>{$v.create_time}</td>
+            <td>
+                <a href="{$smarty.const.__MODULE__}/Article/reader/article_id/{$v.article_id}" type="btn" class="btn btn-primary">详情</a>
+				<a href="{$smarty.const.__MODULE__}/Article/shangjia/article_id/{$v.article_id}" type="btn" class="btn btn-primary">上架</a>
+				<a href="{$smarty.const.__MODULE__}/Article/del/article_id/{$v.article_id}" type="btn" class="btn btn-danger">删除</a>                
+            </td>
+        </tr>	
+	{/foreach}
+	{else if $info == ""}
+	<tr><td>暂无数据</td><tr>
+	{/if}
+</table>
+<!--分页-->
+<div class="pagination">
+
+  <ul>
+  {$pagelist}
+  </ul>
+</div>
 </body>
 </html>
 <script>
-    $(function () {       
-		$('#backid').click(function(){
-				window.location.href="index.html";
+    $(function () {
+        
+
+		$('#addnew').click(function(){
+
+				window.location.href="add.html";
 		 });
 
+
     });
+
+	function del(id)
+	{
+		
+		
+		if(confirm("确定要删除吗？"))
+		{
+		
+			var url = "index.html";
+			
+			window.location.href=url;		
+		
+		}
+	
+	
+	
+	
+	}
 </script>

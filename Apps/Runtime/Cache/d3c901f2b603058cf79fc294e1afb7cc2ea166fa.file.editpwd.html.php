@@ -1,29 +1,29 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-06 22:04:40
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 12:58:08
          compiled from "../Apps/Admin/View\System\editpwd.html" */ ?>
-<?php /*%%SmartyHeaderCode:9185590db60abef404-59187042%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:110745913b7ce677150-50796121%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'd3c901f2b603058cf79fc294e1afb7cc2ea166fa' => 
     array (
       0 => '../Apps/Admin/View\\System\\editpwd.html',
-      1 => 1494079476,
+      1 => 1494478683,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9185590db60abef404-59187042',
+  'nocache_hash' => '110745913b7ce677150-50796121',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590db60ad3338',
+  'unifunc' => 'content_5913b7ce76265',
   'variables' => 
   array (
     'info' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590db60ad3338')) {function content_590db60ad3338($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913b7ce76265')) {function content_5913b7ce76265($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -31,21 +31,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/bootstrap.css" />
     <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
-/Css/bootstrap-responsive.css" />
-    <link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/style.css" />
+	<link href="<?php echo @PUBLIC_URL;?>
+/Css/easyform.css" rel="stylesheet">
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
-    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
-/Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/bootstrap.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/ckform.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/common.js"></script>
-	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
-/Js/layer.js"></script>
+
+	<script src="<?php echo @PUBLIC_URL;?>
+/Js/easyform.js"></script>
 </head>
 <body>
 <!-- 弹出框提示 -->
@@ -54,30 +53,30 @@ $_valid = $_smarty_tpl->decodeProperties(array (
  
 <!-- Modal -->
 <!-- 二级弹窗图书修改页 -->
+
 <div id="myModal" class="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" >
 <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
         <h3 id="myModalLabel">密码修改</h3>
     </div>
    <form action="<?php echo @__SELF__;?>
-" method="post" class="definewidth m20">
+" method="post" class="definewidth m20" id="form1">
 <table class="table table-bordered table-hover definewidth m10">
-                <input type="hidden" name="book_id" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['book_id'];?>
+                <input type="hidden" name="manager_id" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['manager_id'];?>
 " />
-	<tr>
-        <td class="tableleft">原始密码</td>
-        <td><input type="text" name="book_name" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['book_name'];?>
-"/></td>
-    </tr>
+
 	<tr>
         <td class="tableleft">新密码</td>
-        <td><input type="text" name="author" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['author'];?>
-"/></td>
+        <td><input type="password" name="password" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['password'];?>
+" id="psw1" data-easyform="length:6 16;"
+                               data-message="密码必须为6—16位"
+                               data-easytip="class:easy-blue;"/></td>
     </tr>
 	<tr>
         <td class="tableleft">再次输入</td>
-        <td><input type="text" name="author" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['author'];?>
-"/></td>
+        <td><input type="password" name="newpwd" value="<?php echo $_smarty_tpl->tpl_vars['info']->value['newpwd'];?>
+" data-easyform="equal:#psw1;" data-message="输入不一致"
+                               data-easytip="position:top;class:easy-blue;"/></td>
     </tr>
     </tr>
     <tr>
@@ -112,6 +111,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </body>
 </html>
 <script>
-  
+	$(document).ready(function(){
+			$('#form1').easyform();
+		});
 </script>
 <?php }} ?>

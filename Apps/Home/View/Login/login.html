@@ -94,11 +94,11 @@
 	<body>
 		<div id="wrap">
 			<div class="container">
-				<form class="form-signin" action="{$smarty.const.__SELF__}" method="post">
+				<form class="form-signin" action="{$smarty.const.__MODULE__}/Login/login" method="post">
 					<p><h1 class="form-signin-heading">登录</h1></p>
-					<div>账号：<input type="text" name="uname" value="请输入账号"  id="LoginId" class="input-block-level" placeholder="Email address" /></div>
+					<div>账号：<input type="text" name="uname" id="LoginId" class="input-block-level" placeholder="请输入账号" /></div>
 					
-					<div>密码：<input type="password" name="password" value="请输入密码" id="LoginPassword" class="input-block-level" placeholder="Password" /></div>
+					<div>密码：<input type="password" name="password" id="LoginPassword" class="input-block-level" placeholder="请输入密码" /></div>
 					
 					<div class="clearfix">
 						<span class="pull-left" id="pad-top">验证码：</span>

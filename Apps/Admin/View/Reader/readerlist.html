@@ -11,6 +11,7 @@
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/bootstrap.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/ckform.js"></script>
     <script type="text/javascript" src="{$smarty.const.PUBLIC_URL}/Js/common.js"></script>
+	<script type="text/javascript" src="/Public/Admin/Js/WdatePicker.js"></script>
 
  
 
@@ -37,8 +38,13 @@
 <body>
 <form class="form-inline definewidth m20" action="{$smarty.const.__SELF__}" method="post">    
     用户名称：
-    <input type="text" name="uname" id="username"class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
-    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp; <button type="button" class="btn btn-success" id="addnew">新增用户</button>
+    <input type="text" name="reader_name" id="username" class="abc input-default" placeholder="" value="">&nbsp;&nbsp;  
+    时间：
+	 <input type="text" name="start_time" id="countTimestart" onfocus="selecttime(1)" value="{$start_time}" size="17" class="date"  style="width:120px;">&nbsp;&nbsp; 
+	 - 
+	 <input type="text" name="end_time" id="countTimeend" onfocus="selecttime(2)" value="{$end_time}" size="17"  class="date" style="width:120px;">  &nbsp;&nbsp; 
+    <button type="submit" class="btn btn-primary">查询</button>&nbsp;&nbsp;
+	<button type="button" class="btn btn-success" id="addnew">新增用户</button>
 </form>
 <table class="table table-bordered table-hover definewidth m10">
     <thead>
@@ -61,9 +67,9 @@
             <td>{$v.reader_address}</td>
 			<td>{$v.create_time}</td>
             <td>
-                <a href="{$smarty.const.__MODULE__}/Reader/edit/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
-				<a href="{$smarty.const.__MODULE__}/Reader/detail/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">详情</a>
-				<a href="{$smarty.const.__MODULE__}/Reader/del/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-primary" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
+                <a href="{$smarty.const.__MODULE__}/Reader/edit/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-info" data-toggle="modal" id="edit_btn1" value="php">编辑</a>
+				<a href="{$smarty.const.__MODULE__}/Reader/detail/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-warning" data-toggle="modal" id="edit_btn1" value="php">详情</a>
+				<a href="{$smarty.const.__MODULE__}/Reader/del/reader_id/{$v.reader_id}" type="button" class="edit_btn btn btn-danger" data-toggle="modal" id="edit_btn1" value="php">删除</a>				
             </td>
         </tr>	
 	{/foreach}
@@ -78,32 +84,23 @@
 </body>
 </html>
 <script>
-    $(function () {
-        
-
-		$('#addnew').click(function(){
-
-				window.location.href="add.html";
-		 });
-
-
-    });
-
-	function del(id)
-	{
-		
-		
-		if(confirm("确定要删除吗？"))
-		{
-		
-			var url = "index.html";
-			
-			window.location.href=url;		
-		
-		}
-	
-	
-	
-	
-	}
+{literal}
+	function selecttime(flag){
+    if(flag==1){
+        var endTime = $("#countTimeend").val();
+        if(endTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',maxDate:endTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }
+    }else{
+        var startTime = $("#countTimestart").val();
+        if(startTime != ""){
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss',minDate:startTime});
+        }else{
+            WdatePicker({dateFmt:'yyyy-MM-dd HH:mm:ss'});
+        }    
+    }
+}
+{/literal}
 </script>

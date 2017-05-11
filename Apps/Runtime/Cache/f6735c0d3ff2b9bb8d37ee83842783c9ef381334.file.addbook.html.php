@@ -1,32 +1,31 @@
-<?php /* Smarty version Smarty-3.1.6, created on 2017-05-08 22:08:26
+<?php /* Smarty version Smarty-3.1.6, created on 2017-05-11 12:24:35
          compiled from "../Apps/Admin/View\Book\addbook.html" */ ?>
-<?php /*%%SmartyHeaderCode:9326590d93bb221ca9-55408041%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:262955913b5d6c14e83-71787113%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'f6735c0d3ff2b9bb8d37ee83842783c9ef381334' => 
     array (
       0 => '../Apps/Admin/View\\Book\\addbook.html',
-      1 => 1494252503,
+      1 => 1494476671,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '9326590d93bb221ca9-55408041',
+  'nocache_hash' => '262955913b5d6c14e83-71787113',
   'function' => 
   array (
   ),
   'version' => 'Smarty-3.1.6',
-  'unifunc' => 'content_590d93bb47870',
+  'unifunc' => 'content_5913b5d6e45c1',
   'variables' => 
   array (
     'booktypeinfo' => 0,
     'v' => 0,
-    'role_checkbox' => 0,
     'name' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_590d93bb47870')) {function content_590d93bb47870($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5913b5d6e45c1')) {function content_5913b5d6e45c1($_smarty_tpl) {?><!DOCTYPE html>
 <html>
 <head>
     <title></title>
@@ -39,24 +38,19 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 /Css/style.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
 /Css/bootstrap-select.css" />
-	<link rel="stylesheet" type="text/css" href="<?php echo @PUBLIC_URL;?>
-/Css/froala_editor.min.css" />
 	<link href="<?php echo @PUBLIC_URL;?>
 /Css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link rel="stylesheet" href="<?php echo @PUBLIC_URL;?>
+/Css/easyform.css">
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/jquery.sorted.js"></script>
     <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/bootstrap.js"></script>
-    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
-/Js/ckform.js"></script>
-    <script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
-/Js/common.js"></script>
 	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
 /Js/bootstrap-select.js"></script>
-	<script type="text/javascript" src="<?php echo @PUBLIC_URL;?>
-/Js/froala_editor.min.js"></script>
+
 	<script src="<?php echo @PUBLIC_URL;?>
 /Js/easyform.js"></script>
  
@@ -84,15 +78,15 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 </head>
 <body>
 <form action="<?php echo @__SELF__;?>
-" method="post" class="definewidth m20 form-control">
+" method="post" class="definewidth m20 form-control" id ="form1">
 <table class="table table-bordered table-hover definewidth m10">
 	<tr  class="col-xs-14">
         <td class="tableleft">图书名</td>
-        <td><input type="text" name="book_name" class="form-control input-lg" /></td>
+        <td><input id="book_name" type="text" name="book_name" class="form-control input-lg" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
 	<tr>
         <td class="tableleft">作者</td>
-        <td><input type="text" name="author"/></td>
+        <td><input id="author" type="text" name="author" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
 	<tr>
         <td class="tableleft">图书类别</td>
@@ -114,40 +108,30 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
     </tr>
     <tr>
         <td class="tableleft">出版社</td>
-        <td><input type="text" name="press"/></td>
+        <td><input id="press" type="text" name="press" data-easyform="length:1 12;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
     <tr>
         <td class="tableleft">价格</td>
-        <td><input type="text" name="price"/></td>
+        <td><input id="price" type="text" name="price" data-easyform="length:1 12;number;real-time;" data-message="不能为空,必须为数字" data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
 	<tr>
         <td class="tableleft">入库数目</td>
-        <td><input type="text" name="total_amount"/></td>
+        <td><input type="text" name="total_amount"  data-easyform="length:1 3;number;real-time;" data-message="不能为空,必须为数字" data-easytip="disappear:lost-focus;theme:blue;" id="total_amount"/></td>
     </tr>
 	<tr>
         <td class="tableleft">当前数目</td>
-        <td><input type="text" name="now_amount"/></td>
+        <td><input id="now_amount" type="text" name="now_amount" data-easyform="length:1 3;number;equal:#total_amount;real-time;" data-message="不能为空,必须为数字" data-easytip="disappear:lost-focus;theme:blue;"/></td>
     </tr>
 	<tr>
         <td class="tableleft">图书详情介绍</td>
-        <!td><div rows="3" name="book_detail" id="edit"></div></td>
+        <td><input type="text"  name="book_detail" id="edit" data-easyform="length:1 30;char-normal;real-time;" data-message="不能为空" data-easytip="disappear:lost-focus;theme:blue;"></td>
     </tr>
-    <tr>
-        <td class="tableleft">状态</td>
-        <td>
-            <input type="radio" name="status" value="1" checked/> 上架
-           <input type="radio" name="status" value="0"/> 不上架
-        </td>
-    </tr>
-    <tr>
-        <td class="tableleft">角色</td>
-        <td><?php echo $_smarty_tpl->tpl_vars['role_checkbox']->value;?>
-</td>
-    </tr>
+
     <tr>
         <td class="tableleft"></td>
         <td>
-            <a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a> &nbsp;&nbsp;
+			<!--a href="#myModal" data-toggle="modal" type="submit" class="btn btn-primary" type="button">保存</a--> &nbsp;&nbsp;
+			<button id="subbtn" type="submit" class="btn btn-info subbtn">保存</button>
 			<button type="button" class="btn btn-success" name="backid" id="backid">返回列表</button>
 			<?php echo $_smarty_tpl->tpl_vars['name']->value;?>
 
@@ -164,12 +148,14 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
         <h3 id="myModalLabel">系统提示</h3>
     </div>
     <div class="modal-body">
-    <p>您确定保存该图书吗？</p>
+    <p class="hint">您确定保存该图书吗？</p>
     </div>
     <div class="modal-footer">
         <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
-        <button type="submit" class="btn btn-info">确定</button>
+        <!--button type="submit" class="btn btn-info subbtn">确定</button-->
     </div>
+	
+
 </div>
 </table>
 </form>
@@ -192,10 +178,62 @@ $_smarty_tpl->tpl_vars['v']->_loop = true;
 </html>
 
 <script>
-
-    $(function () {       
-		$('#backid').click(function(){
-				window.location.href="boolist.html";
-		 });
+$(document).ready(function(){
+	//$('#form1')[0].onsubmit = function() {
+		//return false;
+	//};
+	//console.log(1234);
+	//$('#form1 .subbtn').on('click', function() {
+		//console.log('124');
+		//$('#myModal hint').text('号卡激活');	////return false;
+	//});
+	var $book_name = $('#book_name'),
+		$author = $('#author'),
+		$press = $('#press'),
+		$price = $('#price'),
+		$total_amount = $('#total_amount'),
+		$now_amount = $('#now_amount'),
+		$edit = $('#edit');
+	var ef = $('#form1').easyform();
+	$('#form1')[0].onsubmit = function () { return false };
+	$('#subbtn')[0].onclick = function () {
+		$book_name.trigger('blur');
+		$author.trigger('blur');
+		$press.trigger('blur');
+		$total_amount.trigger('blur');
+		$now_amount.trigger('blur');
+		$edit.trigger('blur');
+		$price.trigger('blur');
+		if($book_name.val().length == 0) {
+			$book_name.trigger('blur');
+			return;
+		}
+		if($author.val().length == 0) {
+			$author.trigger('blur');
+			return;
+		}
+		if($press.val().length == 0) {
+			$press.trigger('blur');
+			return;
+		}
+		if($price.val().length == 0) {
+			$price.trigger('blur');
+			return;
+		}
+		if($total_amount.val().length == 0) {
+			$total_amount.trigger('blur');
+			return;
+		}
+		if($now_amount.val().length == 0) {
+			$now_amount.trigger('blur');
+			return;
+		}
+		if($edit.val().length == 0) {
+			$edit.trigger('blur');
+			return;
+		}
+		$('#form1')[0].submit();
+	};
+});
 
 </script><?php }} ?>
